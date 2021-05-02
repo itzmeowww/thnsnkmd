@@ -52,7 +52,13 @@ const Index = () => {
           🔥 visit these 🔥
         </Text>
 
-        <Flex align="flex-start" justify="center" w="100%" h="100%">
+        <Flex
+          align="flex-start"
+          justify="center"
+          w="90vw"
+          h="100%"
+          flexDir="row"
+        >
           <ScaleFade in={true} unmountOnExit={true}>
             {linkList.map((x, key) => {
               return (
