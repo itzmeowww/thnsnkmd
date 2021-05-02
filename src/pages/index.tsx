@@ -33,12 +33,12 @@ const Index = () => {
             fontWeight="thin"
             color="grey"
           >
-            but, what's down there?
+            but, what's below?
           </Text>
         </ScaleFade>
         <Box height="5vh" w="100%"></Box>
         <Button size="sm" fontFamily="mono" fontWeight="thin" onClick={scroll}>
-          👇 bring me down 👇
+          👇 bring me there 👇
         </Button>
       </Container>
       <Container minH="100vh" pb="20vh">
