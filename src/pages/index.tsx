@@ -37,9 +37,16 @@ const Index = () => {
           </Text>
         </ScaleFade>
         <Box height="5vh" w="100%"></Box>
-        <Button size="sm" fontFamily="mono" fontWeight="thin" onClick={scroll}>
-          👇 bring me there 👇
-        </Button>
+        <ScaleFade in={true}>
+          <Button
+            size="sm"
+            fontFamily="mono"
+            fontWeight="thin"
+            onClick={scroll}
+          >
+            👇 bring me there 👇
+          </Button>
+        </ScaleFade>
       </Container>
       <Container minH="100vh" pb="20vh">
         <Box ref={pg2ref} w="100%" h={["8vh", "10vh"]}></Box>
