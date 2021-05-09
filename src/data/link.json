@@ -1,5 +1,11 @@
 [
   {
+    "imgSrc": "./me.jpg",
+    "url": "/me",
+    "name": "👉 Me",
+    "isExternal": false
+  },
+  {
     "imgSrc": "https://itzmeowww.github.io/pages/images/oreo-bg.png",
     "url": "https://itzmeowww.github.io/pages/oreo",
     "name": "👉 OREO"

@@ -14,8 +14,14 @@ const Index = () => {
     });
   };
   return (
-    <Box>
-      <Container height="100vh">
+    <Container myTitle="Thanasan Kumdee">
+      <Flex
+        h="100vh"
+        w="100%"
+        justify="flex-start"
+        flexDir="column"
+        align="center"
+      >
         <Box height="40vh" w="100%"></Box>
         <ScaleFade in={true}>
           <Text
@@ -47,8 +53,15 @@ const Index = () => {
             👇 bring me there 👇
           </Button>
         </ScaleFade>
-      </Container>
-      <Container minH="100vh" pb="20vh">
+      </Flex>
+      <Flex
+        w="100%"
+        justify="flex-start"
+        flexDir="column"
+        align="center"
+        minH="100vh"
+        pb="20vh"
+      >
         <Box ref={pg2ref} w="100%" h={["8vh", "10vh"]}></Box>
         <Text
           fontSize={["sm", "md"]}
@@ -65,22 +78,25 @@ const Index = () => {
           w="90vw"
           h="100%"
           flexDir="row"
+          flexWrap="wrap"
+          pt="20px"
         >
-          <ScaleFade in={true} unmountOnExit={true}>
-            {linkList.map((x, key) => {
-              return (
+          {linkList.map((x, key) => {
+            return (
+              <ScaleFade in={true} unmountOnExit={true}>
                 <Card
                   key={key}
                   imgSrc={x.imgSrc}
                   url={x.url}
                   name={x.name}
+                  isExternal={x.isExternal ? true : false}
                 ></Card>
-              );
-            })}
-          </ScaleFade>
+              </ScaleFade>
+            );
+          })}
         </Flex>
-      </Container>
-    </Box>
+      </Flex>
+    </Container>
   );
 };
 

@@ -6,8 +6,9 @@ type Props = {
   imgSrc: any;
   url: any;
   name: any;
+  isExternal: boolean;
 };
-export const Card = ({ imgSrc, url, name }: Props) => {
+export const Card = ({ imgSrc, url, name, isExternal = false }: Props) => {
   const MotionImage = motion(Image);
 
   return (
@@ -20,7 +21,7 @@ export const Card = ({ imgSrc, url, name }: Props) => {
       boxShadow="md"
       roundedBottom="md"
       flexDir="column"
-      m="40px"
+      m="20px"
     >
       <Box height="140px" overflow="hidden">
         <MotionImage
@@ -34,7 +35,7 @@ export const Card = ({ imgSrc, url, name }: Props) => {
       </Box>
 
       <Box w="100%" h="15px"></Box>
-      <ChakraLink as={Link} href={url} isExternal>
+      <ChakraLink as={Link} href={url} isExternal={isExternal}>
         <Button variant="solid" colorScheme="orange" size="sm">
           {name}
         </Button>
