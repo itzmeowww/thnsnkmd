@@ -15,7 +15,7 @@ const Me = () => {
         <ScaleFade in={true}>
           <Text
             fontFamily="mono"
-            fontSize="4xl"
+            fontSize={["2xl", "4xl"]}
             fontWeight="bold"
             bgGradient="linear(to-l, #fd746c,#ff9068)"
             bgClip="text"
@@ -23,13 +23,13 @@ const Me = () => {
             Thanasan Kumdee
           </Text>
         </ScaleFade>
-        <Divider w="30%" />
+        <Divider w={["40%", "30%"]} />
         <ScaleFade in={true}>
           <Text
-            fontSize="md"
+            fontSize={["xs", "md"]}
             fontFamily="mono"
             color="grey"
-            w="40%"
+            w={["50%", "40%"]}
             textAlign="center"
             m="auto"
           >
