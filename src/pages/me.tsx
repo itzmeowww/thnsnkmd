@@ -1,9 +1,10 @@
 import { Container } from "../components/Container";
 import { Flex, Box, Text, Divider, Code, ScaleFade } from "@chakra-ui/react";
-
+import { Nav } from "../components/Nav";
 const Me = () => {
   return (
     <Container myTitle="Thanasan Kumdee">
+      <Nav />
       <Flex
         h="100vh"
         w="100vw"
