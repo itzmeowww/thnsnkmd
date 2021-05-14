@@ -1,0 +1,19 @@
+{
+  "Education": [
+    {
+      "section-name": "School",
+      "display-section-name": true,
+      "section-detail": [
+        {
+          "title": "Kamnoetvidya Science Academy",
+          "time": "2019-2022",
+          "desc": ""
+        }
+      ]
+    }
+  ],
+  "Awards": [],
+  "Research": [],
+  "Experience": [],
+  "Skills": []
+}

@@ -1,26 +1,21 @@
 import { Container } from "../components/Container";
-import {
-  Link as ChakraLink,
-  Button,
-  Box,
-  Text,
-  ScaleFade,
-} from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Text, ScaleFade } from "@chakra-ui/react";
+
+import { Nav } from "../components/Nav";
 const Listen = () => {
   return (
     <Container height="100vh">
-      <Box height="40vh" w="100%"></Box>
+      <Nav />
+      <Box height="20vh" w="100%"></Box>
       <ScaleFade in={true}>
-        <ChakraLink
-          as={Link}
-          href="https://open.spotify.com/playlist/17BFeQfJK2Mv8i5oF2gdKH?si=66105e9e819b41b0"
-          isExternal
-        >
-          <Button size="md" fontFamily="mono" fontWeight="thin">
-            🎵 listen 🎵
-          </Button>
-        </ChakraLink>
+        <iframe
+          src="https://open.spotify.com/embed/playlist/17BFeQfJK2Mv8i5oF2gdKH"
+          width="300"
+          height="380"
+          frameBorder="0"
+          allowTransparency={true}
+          allow="encrypted-media"
+        ></iframe>
       </ScaleFade>
       <Box height="5vh" w="100%"></Box>
       <ScaleFade in={true}>
@@ -30,7 +25,7 @@ const Listen = () => {
           fontWeight="thin"
           color="grey"
         >
-          ⭐ just for you ⭐
+          ⭐⭐⭐
         </Text>
       </ScaleFade>
     </Container>
