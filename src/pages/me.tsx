@@ -55,12 +55,14 @@ const Me = () => {
             fontSize={["xs", "md"]}
             fontFamily="mono"
             color="grey"
-            w={["60%", "40%"]}
+            w={["60%", "37%"]}
             textAlign="center"
             m="auto"
           >
-            a random student who has an extremely strong passions in{" "}
-            <Code>coding</Code>, <Code>music</Code>, and <Code>art</Code>.
+            a random student with strong passions in <Code>coding</Code>
+            {", "}
+            <Code>music</Code>
+            {", and"} <Code>art</Code>.
           </Text>
         </ScaleFade>
         <Box h={["20vh", "20vh"]} w="100%"></Box>

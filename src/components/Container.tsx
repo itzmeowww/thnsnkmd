@@ -20,7 +20,7 @@ export const Container = (props: ContainerProps) => {
         </title>
         <meta
           name="description"
-          content="Hi!, I'm Thanasan Kumdee. A random student who has an extremely strong passions in coding, music, and art."
+          content="Hi! I'm Thanasan Kumdee, a random student with strong passions in coding, music, and art."
         ></meta>
         <link rel="icon" href="./icon.jpg"></link>
       </Head>
