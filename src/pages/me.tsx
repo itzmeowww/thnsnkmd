@@ -30,7 +30,7 @@ const Me = () => {
     })!;
   };
   return (
-    <Container myTitle="Thanasan Kumdee">
+    <Container myTitle="about me — Thanasan Kumdee">
       <Nav />
       <Flex
         h="100vh"
@@ -138,7 +138,62 @@ const Me = () => {
         sectionKey={2}
         sectionName={topicList[2]}
         sectionRef={refList[2]}
-      ></Section>
+      >
+        {cv["Research"].map((x, idx) => {
+          return (
+            <>
+              <Flex
+                bgColor="gray.700"
+                borderRadius="md"
+                p="10px"
+                my="20px"
+                flexDir="column"
+                key={idx}
+                maxW={["80%", "60%"]}
+              >
+                <Text fontSize="sm" fontFamily="mono">
+                  {x["section-detail"].title}
+                </Text>
+                <Text
+                  fontSize="xs"
+                  fontFamily="mono"
+                  color="gray.300"
+                  mb="10px"
+                >
+                  {x["section-detail"].time}
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="green.200">
+                  Researchers
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                  - {x["section-detail"].name[0]}
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                  - {x["section-detail"].name[1]}
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="green.200">
+                  Advisers
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                  - {x["section-detail"].name[2]}
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                  - {x["section-detail"].name[3]}
+                </Text>
+              </Flex>
+              {idx == cv["Research"].length - 1 ? (
+                <></>
+              ) : (
+                <Divider
+                  height="20px"
+                  bgColor="orange"
+                  orientation="vertical"
+                />
+              )}
+            </>
+          );
+        })}
+      </Section>
       <Section
         sectionKey={3}
         sectionName={topicList[3]}

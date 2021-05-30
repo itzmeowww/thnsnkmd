@@ -1,8 +1,15 @@
-import { Flex, Button, Box, Text, ScaleFade } from "@chakra-ui/react";
+import {
+  Link as ChakraLink,
+  Flex,
+  Button,
+  Box,
+  Text,
+  ScaleFade,
+} from "@chakra-ui/react";
 
 import { Container } from "../components/Container";
 import { useRef } from "react";
-
+import Link from "next/link";
 import { Card } from "../components/Card";
 import linkList from "../data/link.json";
 
@@ -34,17 +41,39 @@ const Index = () => {
           >
             Hi!, I'm Thanasan Kumdee
           </Text>
-          <Text
+          <ChakraLink as={Link} href={"/me"}>
+            <Button
+              my="5px"
+              size="sm"
+              fontFamily="mono"
+              fontWeight="thin"
+              variant="outline"
+            >
+              about me
+            </Button>
+          </ChakraLink>
+          <Button
+            ml="10px"
+            my="5px"
+            size="sm"
+            variant="outline"
+            fontFamily="mono"
+            fontWeight="thin"
+            onClick={scroll}
+          >
+            projects
+          </Button>
+          {/* <Text
             fontSize={["sm", "md"]}
             fontFamily="mono"
             fontWeight="thin"
             color="grey"
           >
             but, what's below?
-          </Text>
+          </Text> */}
         </ScaleFade>
-        <Box height="5vh" w="100%"></Box>
-        <ScaleFade in={true}>
+        <Box height="20vh" w="100%"></Box>
+        {/* <ScaleFade in={true}>
           <Button
             size="sm"
             fontFamily="mono"
@@ -53,7 +82,7 @@ const Index = () => {
           >
             👇 bring me there 👇
           </Button>
-        </ScaleFade>
+        </ScaleFade> */}
       </Flex>
       <Flex
         w="100%"
@@ -70,7 +99,7 @@ const Index = () => {
           fontWeight="thin"
           color="grey"
         >
-          🔥 visit these 🔥
+          💡 my projects 💡
         </Text>
 
         <Flex
@@ -90,7 +119,6 @@ const Index = () => {
                   imgSrc={x.imgSrc}
                   url={x.url}
                   name={x.name}
-                  isExternal={x.isExternal ? true : false}
                 ></Card>
               </ScaleFade>
             );

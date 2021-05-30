@@ -6,9 +6,10 @@ type Props = {
   imgSrc: any;
   url: any;
   name: any;
-  isExternal: boolean;
+  isExternal?: boolean;
+  alt?: string;
 };
-export const Card = ({ imgSrc, url, name, isExternal = false }: Props) => {
+export const Card = ({ imgSrc, url, name, isExternal = false, alt }: Props) => {
   const MotionImage = motion(Image);
 
   return (
@@ -31,6 +32,7 @@ export const Card = ({ imgSrc, url, name, isExternal = false }: Props) => {
           height={"140px"}
           objectFit="cover"
           src={imgSrc}
+          alt={alt}
         ></MotionImage>
       </Box>
 

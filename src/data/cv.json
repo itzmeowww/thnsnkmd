@@ -3,7 +3,7 @@
     {
       "section-detail": {
         "title": "Kamnoetvidya Science Academy",
-        "time": "2019-2022",
+        "time": "Now - 2019",
         "gpa": 4.0,
         "desc": ""
       }
@@ -11,7 +11,7 @@
     {
       "section-detail": {
         "title": "Prommanusorn Phetchaburi School",
-        "time": "2016-2019",
+        "time": "2019 - 2016",
         "gpa": 3.99,
         "desc": ""
       }
@@ -19,14 +19,28 @@
     {
       "section-detail": {
         "title": "Watdonkaitia School",
-        "time": "2010-2016",
+        "time": "2016 - 2010",
         "gpa": 4.0,
         "desc": ""
       }
     }
   ],
   "Awards": [],
-  "Research": [],
+  "Research": [
+    {
+      "section-detail": {
+        "title": "Deep Transfer Learning-based Hit Compound Classification for Therapeutic Targets in Heart Failure Drug Discovery on Small Datasets",
+        "time": "Now - 2020",
+        "name": [
+          "Parajaree Ungudonpakdee",
+          "Thanasan Kumdee",
+          "Thanasan Nilsu",
+          "Bundit Boonyarit"
+        ],
+        "desc": ""
+      }
+    }
+  ],
   "Experience": [],
   "Skills": []
 }
