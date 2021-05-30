@@ -8,8 +8,11 @@ import {
   ScaleFade,
   Button,
 } from "@chakra-ui/react";
+import { Section } from "../components/Section";
 import { Nav } from "../components/Nav";
 import { useRef } from "react";
+import cv from "../data/cv.json";
+
 const Me = () => {
   // JUST BRUTE FORCE FOR NOW
   const refEdu = useRef<HTMLDivElement>(null)!;
@@ -87,33 +90,65 @@ const Me = () => {
           </Flex>
         </ScaleFade>
       </Flex>
-      {topicList.map((x, idx) => {
-        return (
-          <Flex
-            key={idx}
-            w="100vw"
-            maxW="100%"
-            align="center"
-            justify="center"
-            flexDir="column"
-            ref={refList[idx]}
-            id={x.toLowerCase()}
-          >
-            <Divider w="80vw" />
-            <Flex minH="100vh" pt="5vh" justify="center">
-              <Text
-                fontSize="2xl"
-                fontFamily="mono"
-                fontWeight="bold"
-                bgGradient="linear(to-l, #fd746c,#ff9068)"
-                bgClip="text"
+      <Section
+        sectionKey={0}
+        sectionName={topicList[0]}
+        sectionRef={refList[0]}
+      >
+        {cv["Education"].map((x, idx) => {
+          return (
+            <>
+              <Flex
+                bgColor="gray.700"
+                borderRadius="md"
+                p="10px"
+                my="20px"
+                flexDir="column"
+                key={idx}
               >
-                {x}
-              </Text>
-            </Flex>
-          </Flex>
-        );
-      })}
+                <Text fontSize="sm" fontFamily="mono">
+                  {x["section-detail"].title}
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                  {x["section-detail"].time}
+                </Text>
+                <Text fontSize="xs" fontFamily="mono" color="green.200">
+                  GPA : {x["section-detail"].gpa.toPrecision(3)}
+                </Text>
+              </Flex>
+              {idx == cv["Education"].length - 1 ? (
+                <></>
+              ) : (
+                <Divider
+                  height="20px"
+                  bgColor="orange"
+                  orientation="vertical"
+                />
+              )}
+            </>
+          );
+        })}
+      </Section>
+      <Section
+        sectionKey={1}
+        sectionName={topicList[1]}
+        sectionRef={refList[1]}
+      ></Section>
+      <Section
+        sectionKey={2}
+        sectionName={topicList[2]}
+        sectionRef={refList[2]}
+      ></Section>
+      <Section
+        sectionKey={3}
+        sectionName={topicList[3]}
+        sectionRef={refList[3]}
+      ></Section>
+      <Section
+        sectionKey={4}
+        sectionName={topicList[4]}
+        sectionRef={refList[4]}
+      ></Section>
     </Container>
   );
 };

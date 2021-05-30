@@ -1,15 +1,28 @@
 {
   "Education": [
     {
-      "section-name": "School",
-      "display-section-name": true,
-      "section-detail": [
-        {
-          "title": "Kamnoetvidya Science Academy",
-          "time": "2019-2022",
-          "desc": ""
-        }
-      ]
+      "section-detail": {
+        "title": "Kamnoetvidya Science Academy",
+        "time": "2019-2022",
+        "gpa": 4.0,
+        "desc": ""
+      }
+    },
+    {
+      "section-detail": {
+        "title": "Prommanusorn Phetchaburi School",
+        "time": "2016-2019",
+        "gpa": 3.99,
+        "desc": ""
+      }
+    },
+    {
+      "section-detail": {
+        "title": "Watdonkaitia School",
+        "time": "2010-2016",
+        "gpa": 4.0,
+        "desc": ""
+      }
     }
   ],
   "Awards": [],

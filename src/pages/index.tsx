@@ -5,6 +5,7 @@ import { useRef } from "react";
 
 import { Card } from "../components/Card";
 import linkList from "../data/link.json";
+
 const Index = () => {
   const pg2ref = useRef<HTMLDivElement>(null)!;
 

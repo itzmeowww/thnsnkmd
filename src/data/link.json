@@ -6,17 +6,17 @@
     "isExternal": false
   },
   {
-    "imgSrc": "https://itzmeowww.github.io/pages/images/oreo-bg.png",
+    "imgSrc": "./oreo-bg.png",
     "url": "https://itzmeowww.github.io/pages/oreo",
     "name": "👉 OREO"
   },
   {
-    "imgSrc": "https://thai-synonym.vercel.app/images/og_image.png",
+    "imgSrc": "./thai-synonym-bg.png",
     "url": "https://thai-synonym.vercel.app/",
     "name": "👉 Thai Synonym"
   },
   {
-    "imgSrc": "https://miro.medium.com/fit/c/680/680/1*De5oj8hpY8_AduxDL957lg.png",
+    "imgSrc": "./me2.png",
     "url": "https://medium.com/@itzmeowww",
     "name": "👉 Medium"
   }
