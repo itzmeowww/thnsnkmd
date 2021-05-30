@@ -1,1 +1,1 @@
-[thnsnkmd](https://thnskmd.vercel.app)
+[thnsnkmd](https://thnsnkmd.vercel.app)
