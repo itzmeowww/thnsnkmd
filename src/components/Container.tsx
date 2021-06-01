@@ -22,6 +22,19 @@ export const Container = (props: ContainerProps) => {
           name="description"
           content="Hi! I'm Thanasan Kumdee, a random student with strong passions in coding, music, and art."
         ></meta>
+        <meta property="og:image" content="./me2.png"></meta>
+        <script type="application/ld+json">
+          {{
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            name: "Thanasan Kumdee",
+            sameAs: [
+              "https://www.facebook.com/thanasan.kumdee/",
+              "https://github.com/itzmeowww",
+              "https://www.instagram.com/thnsn_kmd/",
+            ],
+          }}
+        </script>
         <link rel="icon" href="./icon.jpg"></link>
       </Head>
       <Flex
