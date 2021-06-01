@@ -103,6 +103,7 @@ const Index = () => {
         </Text>
 
         <Flex
+          id="projects"
           align="flex-start"
           justify="center"
           w="90vw"

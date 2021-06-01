@@ -28,12 +28,20 @@ export const Container = (props: ContainerProps) => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org/",
-              "@type": "Person",
-              name: "Thanasan Kumdee",
-              sameAs: [
-                "https://www.facebook.com/thanasan.kumdee/",
-                "https://github.com/itzmeowww",
-                "https://www.instagram.com/thnsn_kmd/",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "About Thanansan Kumdee",
+                  item: "https://thnsnkmd.vercel.app/me",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Projects  by Thanansan Kumdee",
+                  item: "https://thnsnkmd.vercel.app/#projects",
+                },
               ],
             }),
           }}
