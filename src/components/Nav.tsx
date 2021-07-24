@@ -12,7 +12,7 @@ export const Nav = () => {
   const paths = router.asPath.split("/");
 
   return (
-    <Flex position="absolute" top="5vh">
+    <Flex position="absolute" top="5vh" color="gray.400">
       <Breadcrumb separator="/">
         {paths.map((x, idx) => {
           let href = paths.slice(0, idx + 1).join("/");

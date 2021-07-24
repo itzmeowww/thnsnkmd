@@ -97,7 +97,7 @@ const Index = () => {
           fontSize={["sm", "md"]}
           fontFamily="mono"
           fontWeight="thin"
-          color="grey"
+          color="white"
         >
           💡 my projects 💡
         </Text>

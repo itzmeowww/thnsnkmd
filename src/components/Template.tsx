@@ -64,8 +64,9 @@ const Template = ({ idx }: Props) => {
       flexDir="column"
       align="center"
     >
-      <Box height="10vh" w="100%"></Box>
+      {" "}
       <Nav />
+      <Box height="15vh" w="100%"></Box>
       <ScaleFade in={true}>
         <Text
           fontSize={["2xl", "4xl"]}
