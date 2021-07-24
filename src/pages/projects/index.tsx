@@ -1,4 +1,4 @@
-import { Flex, Box, Text, ScaleFade } from "@chakra-ui/react";
+import { Flex, Text, ScaleFade } from "@chakra-ui/react";
 
 import { Container } from "../../components/Container";
 import { Nav } from "../../components/Nav";
