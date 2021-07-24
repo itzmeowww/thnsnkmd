@@ -3,9 +3,9 @@ import { Container } from "../../components/Container";
 
 const Tanabata = () => {
   return (
-    <Container myTitle="tanabata — Thanasan Kumdee">
+    <Container myTitle="menu memo — Thanasan Kumdee">
       {" "}
-      <Template idx={0} />
+      <Template idx={1} />
     </Container>
   );
 };

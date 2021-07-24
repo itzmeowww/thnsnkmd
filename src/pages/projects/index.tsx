@@ -17,7 +17,7 @@ const Index = () => {
         pb="20vh"
       >
         <Nav />
-        <Box w="100%" h={["8vh", "10vh"]}></Box>
+        <Box w="100%" h={["10vh", "10vh"]}></Box>
         <Text
           fontSize={["sm", "md"]}
           fontFamily="mono"
