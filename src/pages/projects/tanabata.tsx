@@ -1,5 +1,4 @@
 import {
-  Link as ChakraLink,
   Flex,
   Button,
   Divider,
@@ -17,20 +16,19 @@ import {
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Container } from "../../components/Container";
-
+import { Nav } from "../../components/Nav";
 import { useState } from "react";
 import Link from "next/link";
-
+import linkList from "../../data/link.json";
 const Tanabata = () => {
   const [imgIdx, setImgIdx] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const img = [
-    "../../projects/tanabata/tanabata01.png",
-    "../../projects/tanabata/tanabata02.png",
-    "../../projects/tanabata/tanabata03.png",
-  ];
-  const handlePrevious = () => {
+  const img = linkList[0].img ? linkList[0].img : [""];
+  const links = linkList[0].links ? linkList[0].links : [""];
+  const desc = linkList[0].desc;
+
+  const handleNext = () => {
     setLoading(true);
     if (imgIdx + 1 < img.length) {
       setImgIdx(imgIdx + 1);
@@ -39,7 +37,7 @@ const Tanabata = () => {
     }
   };
 
-  const handleNext = () => {
+  const handlePrevious = () => {
     setLoading(true);
     if (imgIdx - 1 >= 0) {
       setImgIdx(imgIdx - 1);
@@ -51,7 +49,7 @@ const Tanabata = () => {
     setLoading(false);
   };
   return (
-    <Container myTitle="Thanasan Kumdee">
+    <Container myTitle="tanabata — Thanasan Kumdee">
       <Flex
         minH="130vh"
         w="100%"
@@ -62,6 +60,7 @@ const Tanabata = () => {
         align="center"
       >
         <Box height="10vh" w="100%"></Box>
+        <Nav />
         <ScaleFade in={true}>
           <Text
             fontSize={["3xl", "4xl"]}
@@ -76,8 +75,8 @@ const Tanabata = () => {
           <Text
             fontSize={["lg", "xl"]}
             textAlign="center"
-            fontFamily="display"
-            fontWeight="100"
+            fontFamily="sanSerif"
+            fontWeight="300"
             color="gray.300"
           >
             A minimal website for making a wish on tanabata day
@@ -89,12 +88,12 @@ const Tanabata = () => {
             variant="enclosed"
             size="md"
             fontFamily="sanSerif"
-            fontWeight="100"
+            fontWeight="300"
             colorScheme="yellow"
           >
             <TabList>
-              <Tab>Preview</Tab>
-              <Tab>Detail</Tab>
+              <Tab fontFamily="sanSerif">Preview</Tab>
+              <Tab fontFamily="sanSerif">Detail</Tab>
             </TabList>
 
             <TabPanels>
@@ -132,17 +131,31 @@ const Tanabata = () => {
                 </Flex>
               </TabPanel>
               <TabPanel>
-                <Link href="https://tanabatawish.vercel.app">
-                  <Button
-                    colorScheme="yellow"
-                    fontWeight="100"
-                    variant="outline"
-                    size="sm"
+                <Flex flexDir="column">
+                  {links.map((x: any, k: any) => {
+                    return (
+                      <Link href={x.to} key={k}>
+                        <Button
+                          colorScheme="yellow"
+                          variant="outline"
+                          size="sm"
+                          m="5px"
+                        >
+                          {x.title}
+                        </Button>
+                      </Link>
+                    );
+                  })}
+                </Flex>
+                <Box mt="10px" maxW="220px">
+                  <Text
+                    fontFamily="sanSerif"
+                    fontWeight="300"
+                    textAlign="center"
                   >
-                    Visit This Website
-                  </Button>
-                </Link>
-                <Box mt="20px">This is description</Box>
+                    {desc}
+                  </Text>
+                </Box>
               </TabPanel>
             </TabPanels>
           </Tabs>

@@ -6,12 +6,12 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
-            rel="stylesheet"
-          />
+          <style>
+            <style>
+              @import
+              url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+            </style>
+          </style>
         </Head>
         <body>
           {/* Make Color mode to persists when you refresh the page. */}

@@ -29,7 +29,7 @@ export const Card = ({ imgSrc, url, name, isExternal = false, alt }: Props) => {
           transition={{ duration: 0.3 }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.2 }}
-          height={"140px"}
+          width={"140px"}
           objectFit="cover"
           src={imgSrc}
           alt={alt}
