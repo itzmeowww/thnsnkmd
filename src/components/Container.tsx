@@ -3,6 +3,7 @@ import Head from "next/head";
 
 interface ContainerProps extends FlexProps {
   myTitle?: string;
+  myDesc?: string;
 }
 export const Container = (props: ContainerProps) => {
   const { colorMode } = useColorMode();
@@ -20,34 +21,12 @@ export const Container = (props: ContainerProps) => {
         </title>
         <meta
           name="description"
-          content="Hi! I'm Thanasan Kumdee, a random student with strong passions in coding, music, and art."
+          content={
+            props.myDesc !== undefined
+              ? "Hi! I'm Thanasan Kumdee, a random student with strong passions in coding, music, and art."
+              : props.myDesc
+          }
         ></meta>
-        <meta property="og:image" content="./me2.png"></meta>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org/",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "About Thanansan Kumdee",
-                  item: "https://thnsnkmd.vercel.app/me",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Projects  by Thanansan Kumdee",
-                  item: "https://thnsnkmd.vercel.app/#projects",
-                },
-              ],
-            }),
-          }}
-        />
-
-        <link rel="icon" href="./icon.jpg"></link>
       </Head>
       <Flex
         direction="column"

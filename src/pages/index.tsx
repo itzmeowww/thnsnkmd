@@ -16,11 +16,12 @@ import linkList from "../data/link.json";
 const Index = () => {
   const pg2ref = useRef<HTMLDivElement>(null)!;
 
-  const scroll = () => {
+  const scroll2 = () => {
     pg2ref.current?.scrollIntoView({
       behavior: "smooth",
     });
   };
+
   return (
     <Container myTitle="Thanasan Kumdee">
       <Flex
@@ -31,6 +32,7 @@ const Index = () => {
         align="center"
       >
         <Box height="40vh" w="100%"></Box>
+
         <ScaleFade in={true}>
           <Text
             fontSize={["xl", "3xl"]}
@@ -59,7 +61,7 @@ const Index = () => {
             variant="outline"
             fontFamily="mono"
             fontWeight="thin"
-            onClick={scroll}
+            onClick={scroll2}
           >
             projects
           </Button>

@@ -14,7 +14,7 @@ import { useRef } from "react";
 import cv from "../data/cv.json";
 
 const Me = () => {
-  // JUST BRUTE FORCE FOR NOW
+  //JUST BRUTE FORCE FOR NOW
   const refEdu = useRef<HTMLDivElement>(null)!;
   const refAwa = useRef<HTMLDivElement>(null)!;
   const refRes = useRef<HTMLDivElement>(null)!;
@@ -41,6 +41,7 @@ const Me = () => {
         justify="flex-start"
       >
         <Box h="30vh" w="100%"></Box>
+
         <ScaleFade in={true}>
           <Text
             fontFamily="mono"
@@ -52,6 +53,7 @@ const Me = () => {
             Thanasan Kumdee
           </Text>
         </ScaleFade>
+
         <Divider w={["50%", "30%"]} />
         <ScaleFade in={true}>
           <Text
@@ -68,6 +70,7 @@ const Me = () => {
             {", and"} <Code>art</Code>.
           </Text>
         </ScaleFade>
+
         <Box h={["20vh", "20vh"]} w="100%"></Box>
         <ScaleFade in={true}>
           <Flex w="95vw" justify="center" flexDir="row" flexWrap="wrap">
