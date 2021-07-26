@@ -1,4 +1,4 @@
-import { Flex, Text, ScaleFade } from "@chakra-ui/react";
+import { Flex, Text, SlideFade, ScaleFade } from "@chakra-ui/react";
 
 import { Container } from "../../components/Container";
 import { Nav } from "../../components/Nav";
@@ -40,14 +40,16 @@ const Index = () => {
         >
           {linkList.map((x, key) => {
             return (
-              <ScaleFade in={true} unmountOnExit={true}>
-                <Card
-                  key={key}
-                  imgSrc={x.imgSrc}
-                  url={x.url}
-                  name={x.name}
-                ></Card>
-              </ScaleFade>
+              <SlideFade in={true} offsetY="40px">
+                <ScaleFade in={true}>
+                  <Card
+                    key={key}
+                    imgSrc={x.imgSrc}
+                    url={x.url}
+                    name={x.name}
+                  ></Card>
+                </ScaleFade>
+              </SlideFade>
             );
           })}
         </Flex>

@@ -11,12 +11,10 @@ import {
   TabPanels,
   TabPanel,
   Image,
-  IconButton,
-  Spinner,
 } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+
 import { Nav } from "../components/Nav";
-import { useState } from "react";
+
 import Link from "next/link";
 import linkList from "../data/link.json";
 
@@ -25,35 +23,12 @@ type Props = {
 };
 
 const Template = ({ idx }: Props) => {
-  const [imgIdx, setImgIdx] = useState(0);
-  const [loading, setLoading] = useState(false);
-
   const img = linkList[idx] ? linkList[idx].img : [""];
   const links = linkList[idx] ? linkList[idx].links : [""];
   const desc = linkList[idx].desc;
   const title = linkList[idx] ? linkList[idx].title : "";
   const subtitle = linkList[idx] ? linkList[idx].subtitle : "";
 
-  const handleNext = () => {
-    setLoading(true);
-    if (imgIdx + 1 < img.length) {
-      setImgIdx(imgIdx + 1);
-    } else {
-      setImgIdx(0);
-    }
-  };
-
-  const handlePrevious = () => {
-    setLoading(true);
-    if (imgIdx - 1 >= 0) {
-      setImgIdx(imgIdx - 1);
-    } else {
-      setImgIdx(img.length - 1);
-    }
-  };
-  const handleLoaded = () => {
-    setLoading(false);
-  };
   return (
     <Flex
       minH="130vh"
@@ -67,7 +42,7 @@ const Template = ({ idx }: Props) => {
       {" "}
       <Nav />
       <Box height="15vh" w="100%"></Box>
-      <ScaleFade in={true}>
+      <ScaleFade in={true} initialScale={1.5}>
         <Text
           fontSize={["2xl", "4xl"]}
           textAlign="center"
@@ -104,40 +79,21 @@ const Template = ({ idx }: Props) => {
 
           <TabPanels>
             <TabPanel>
-              {loading ? (
-                <Flex justify="center" align="center" h="390px" w="100%">
-                  <Spinner></Spinner>
-                </Flex>
-              ) : (
-                <></>
-              )}
-              <Image
-                align="center"
-                mx="auto"
-                maxH="410px"
-                src={img[imgIdx]}
-                onLoad={handleLoaded}
-              ></Image>
-              {img.length > 1 ? (
-                <Flex align="center" justify="center" mt="20px">
-                  <IconButton
-                    mx="10px"
-                    colorScheme="yellow"
-                    aria-label="previous"
-                    icon={<ChevronLeftIcon />}
-                    onClick={handlePrevious}
-                  />{" "}
-                  <IconButton
-                    mx="10px"
-                    colorScheme="yellow"
-                    aria-label="next"
-                    icon={<ChevronRightIcon />}
-                    onClick={handleNext}
-                  />
-                </Flex>
-              ) : (
-                <></>
-              )}
+              <Flex flexDir="row" maxW="300px" overflowX="scroll">
+                {img.map((x, k) => {
+                  return (
+                    <Image
+                      key={k}
+                      align="center"
+                      maxH="410px"
+                      objectFit="contain"
+                      src={x}
+                      m="5px"
+                      borderRadius="20px"
+                    ></Image>
+                  );
+                })}{" "}
+              </Flex>
             </TabPanel>
             <TabPanel>
               <Flex flexDir="column">

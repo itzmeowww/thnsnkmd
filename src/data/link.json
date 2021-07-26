@@ -24,26 +24,40 @@
     ],
     "title": "Tanabata Day Website",
     "subtitle": "A minimal website for making a wish on tanabata day",
-    "desc": "Tanabata website is a minimal website that everyone can make a wish on Tanabata Day (7/7). In 2021, I created this website using a simple jQuery, html, and CSS. In 2021, I created the website using React and Material UI"
+    "desc": "Tanabata website is a minimal website that everyone can make a wish on Tanabata Day (7/7). In 2020, I created this website using a simple jQuery, html, and CSS. In 2021, I created the website using React and Material UI"
   },
   {
     "imgSrc": "./menumemo.jpeg",
     "alt": "Menu Memo",
     "url": "/projects/menumemo",
     "name": "Menu Memo",
-    "img": ["../menumemo.jpeg"],
+    "img": [
+      "../menumemo.jpeg",
+      "../projects/menumemo/01.jpg",
+      "../projects/menumemo/02.jpg",
+      "../projects/menumemo/03.jpg"
+    ],
 
-    "links": [],
+    "links": [
+      {
+        "title": "Read On MEDIUM",
+        "to": "https://medium.com/@itzmeowww/menu-memo-%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C%E0%B8%9A%E0%B8%AD%E0%B8%97%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-57ad464f62cd"
+      }
+    ],
     "title": "Menu Memo",
     "subtitle": "A LINE bot for telling menu",
-    "desc": ""
+    "desc": "Menu Memo is a LINE bot that can ask for menu in each day. "
   },
   {
     "imgSrc": "./thai-synonym-bg.png",
     "alt": "Thai Synonym Browser",
     "url": "/projects/thaisynonym",
     "name": "Thai Synonym",
-    "img": ["../thai-synonym-bg.png"],
+    "img": [
+      "../thai-synonym-bg.png",
+      "../projects/thaisynonym/01.jpg",
+      "../projects/thaisynonym/02.jpg"
+    ],
     "links": [
       {
         "title": "Visit Website",
@@ -51,7 +65,7 @@
       }
     ],
     "title": "Thai Synonym",
-    "subtitle": "A minimal wesbite for finding synonym of Thai words",
-    "desc": ""
+    "subtitle": "A minimal website for finding synonym of Thai words",
+    "desc": "Thai Synonym is a install-able web application for searching Thai synonym."
   }
 ]
