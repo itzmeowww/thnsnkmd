@@ -7,10 +7,14 @@ import {
   Code,
   ScaleFade,
   Button,
+  Tag,
+  Checkbox,
+  Stack,
+  HStack,
 } from "@chakra-ui/react";
 import { Section } from "../components/Section";
 import { Nav } from "../components/Nav";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import cv from "../data/cv.json";
 
 const Me = () => {
@@ -23,7 +27,16 @@ const Me = () => {
 
   const refList = [refEdu, refAwa, refRes, refExp, refSki];
 
-  const topicList = ["Education", "Awards", "Research", "Experience", "Skills"];
+  const [isCoding, setIsCoding] = useState(true);
+  const [isResearch, setIsResearch] = useState(true);
+
+  const topicList = [
+    "Education",
+    "Achievement",
+    "Research",
+    "Experience",
+    "Skills",
+  ];
   const scroll = (idx: any) => {
     refList[idx].current?.scrollIntoView({
       behavior: "smooth",
@@ -136,7 +149,96 @@ const Me = () => {
         sectionKey={1}
         sectionName={topicList[1]}
         sectionRef={refList[1]}
-      ></Section>
+      >
+        <Stack spacing={6} direction="row" fontFamily="mono" fontWeight="100">
+          <Checkbox
+            colorScheme="yellow"
+            isChecked={isCoding}
+            onChange={(e) => setIsCoding(e.target.checked)}
+          >
+            Coding
+          </Checkbox>
+          <Checkbox
+            colorScheme="yellow"
+            isChecked={isResearch}
+            onChange={(e) => setIsResearch(e.target.checked)}
+          >
+            Research
+          </Checkbox>
+        </Stack>
+        <Flex flexDir="column" h="80vh" mt="10px" maxH="80vh" overflowY="auto">
+          {!isCoding && !isResearch ? (
+            <Flex
+              bgColor="gray.700"
+              borderRadius="md"
+              p="10px"
+              my="20px"
+              minW="200px"
+              maxW="250px"
+              justify="center"
+              bg="red.200"
+            >
+              <Text fontFamily="mono" color="black">
+                No Tag Selected
+              </Text>
+            </Flex>
+          ) : (
+            cv["Achievement"].map((x, idx) => {
+              if (
+                (isCoding && x.tags.includes("Coding")) ||
+                (isResearch && x.tags.includes("Research"))
+              )
+                return (
+                  <Flex
+                    bgColor="gray.700"
+                    borderRadius="md"
+                    p="10px"
+                    my="20px"
+                    minW="200px"
+                    maxW="300px"
+                    flexDir="column"
+                    key={idx}
+                  >
+                    <HStack justify="space-between">
+                      <Text fontSize="md" fontFamily="mono">
+                        {x.title}
+                      </Text>
+                      <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                        {x.time}
+                      </Text>
+                    </HStack>
+                    <HStack dir="row" spacing={3}>
+                      {x.tags.map((tag, k) => {
+                        return (
+                          <Tag
+                            size="sm"
+                            my="5px"
+                            fontFamily="sanSerif"
+                            fontWeight="300"
+                            key={k}
+                            borderRadius="full"
+                          >
+                            {tag}
+                          </Tag>
+                        );
+                      })}
+                    </HStack>{" "}
+                    <Divider my="5px" />
+                    <Text
+                      fontSize="sm"
+                      fontFamily="sanSerif"
+                      color="gray.300"
+                      textAlign="left"
+                      letterSpacing="wide"
+                    >
+                      {x.desc}
+                    </Text>
+                  </Flex>
+                );
+            })
+          )}
+        </Flex>
+      </Section>
       <Section
         sectionKey={2}
         sectionName={topicList[2]}

@@ -25,7 +25,38 @@
       }
     }
   ],
-  "Awards": [],
+  "Achievement": [
+    {
+      "title": "TOI17",
+      "time": "TBA",
+      "desc": "I was selected as a representative of for MWIT Computer Center",
+      "tags": ["Coding"]
+    },
+    {
+      "title": "KSASF2021",
+      "time": "29 JUN — 1 JUL 2021",
+      "desc": "My team were selected as KVIS representative for KSASF2021 virtual science fair",
+      "tags": ["Research"]
+    },
+    {
+      "title": "ThaiPASS’21",
+      "time": "26 APR — 30 JUN 2021",
+      "desc": "I was selected as KVIS representative to join The 3rd Thailand-UK Python+Astronomy Summer School 2021",
+      "tags": ["Coding"]
+    },
+    {
+      "title": "Kolmogorov Reading",
+      "time": "3 — 6 MAY 2021",
+      "desc": "My team were selected as KVIS representative for Kolmogorov Reading, International Science Conference for high school students",
+      "tags": ["Research"]
+    },
+    {
+      "title": "TOI16",
+      "time": "28 NOV — 1 DEC 2020",
+      "desc": "I got bronze medal from TOI16",
+      "tags": ["Coding"]
+    }
+  ],
   "Research": [
     {
       "section-detail": {
