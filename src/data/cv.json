@@ -73,5 +73,15 @@
     }
   ],
   "Experience": [],
-  "Skills": []
+  "Skills": [
+    { "skill": "C / C++", "level": "Proficient" },
+    { "skill": "JavaScript", "level": "Proficient" },
+    { "skill": "React", "level": "Proficient" },
+    { "skill": "Python", "level": "Proficient" },
+    { "skill": "Html", "level": "Proficient" },
+    { "skill": "CSS", "level": "Proficient" },
+    { "skill": "English", "level": "Proficient" },
+    { "skill": "Thai", "level": "Native" },
+    { "skill": "Japanese", "level": "Competent" }
+  ]
 }

@@ -11,10 +11,14 @@ import {
   Checkbox,
   Stack,
   HStack,
+  IconButton,
 } from "@chakra-ui/react";
 import { Section } from "../components/Section";
 import { Nav } from "../components/Nav";
 import { useRef, useState } from "react";
+
+import { TriangleUpIcon } from "@chakra-ui/icons";
+
 import cv from "../data/cv.json";
 
 const Me = () => {
@@ -22,30 +26,41 @@ const Me = () => {
   const refEdu = useRef<HTMLDivElement>(null)!;
   const refAwa = useRef<HTMLDivElement>(null)!;
   const refRes = useRef<HTMLDivElement>(null)!;
-  const refExp = useRef<HTMLDivElement>(null)!;
   const refSki = useRef<HTMLDivElement>(null)!;
 
-  const refList = [refEdu, refAwa, refRes, refExp, refSki];
+  const refScore = useRef<HTMLDivElement>(null)!;
+  const refTop = useRef<HTMLDivElement>(null)!;
+  const refList = [refEdu, refAwa, refRes, refSki, refScore];
 
   const [isCoding, setIsCoding] = useState(true);
   const [isResearch, setIsResearch] = useState(true);
 
-  const topicList = [
-    "Education",
-    "Achievement",
-    "Research",
-    "Experience",
-    "Skills",
-  ];
+  const topicList = ["Education", "Achievement", "Research", "Skills"];
   const scroll = (idx: any) => {
     refList[idx].current?.scrollIntoView({
       behavior: "smooth",
     })!;
   };
+
+  const scrollToRef = (ref: any) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Container myTitle="about me — Thanasan Kumdee">
+      <IconButton
+        position="fixed"
+        bottom="20px"
+        right="20px"
+        aria-label="Search database"
+        colorScheme="teal"
+        icon={<TriangleUpIcon />}
+        onClick={() => {
+          scrollToRef(refTop);
+        }}
+      />
       <Nav />
       <Flex
+        ref={refTop}
         h="100vh"
         w="100vw"
         maxW="100%"
@@ -166,7 +181,7 @@ const Me = () => {
             Research
           </Checkbox>
         </Stack>
-        <Flex flexDir="column" h="80vh" mt="10px" maxH="80vh" overflowY="auto">
+        <Flex flexDir="column" h="80vh" mt="10px" maxH="70vh" overflowY="auto">
           {!isCoding && !isResearch ? (
             <Flex
               bgColor="gray.700"
@@ -226,7 +241,7 @@ const Me = () => {
                     <Divider my="5px" />
                     <Text
                       fontSize="sm"
-                      fontFamily="sanSerif"
+                      fontFamily="mono"
                       color="gray.300"
                       textAlign="left"
                       letterSpacing="wide"
@@ -303,12 +318,36 @@ const Me = () => {
         sectionKey={3}
         sectionName={topicList[3]}
         sectionRef={refList[3]}
-      ></Section>
-      <Section
-        sectionKey={4}
-        sectionName={topicList[4]}
-        sectionRef={refList[4]}
-      ></Section>
+      >
+        <Flex maxW="400px" flexWrap="wrap" align="center" justify="center">
+          {cv["Skills"].map((x, k) => {
+            return (
+              <HStack key={k} m="10px">
+                <Flex fontFamily="mono" fontSize="xs">
+                  <Text
+                    bg="orange.200"
+                    color="black"
+                    p="5px"
+                    px="7px"
+                    borderLeftRadius="md"
+                    fontWeight="bold"
+                  >
+                    {x.skill}
+                  </Text>{" "}
+                  <Text
+                    bg="whiteAlpha.400"
+                    p="5px"
+                    borderRightRadius="md"
+                    letterSpacing="wide"
+                  >
+                    {x.level}
+                  </Text>{" "}
+                </Flex>
+              </HStack>
+            );
+          })}
+        </Flex>
+      </Section>
     </Container>
   );
 };
