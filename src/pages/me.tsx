@@ -28,14 +28,20 @@ const Me = () => {
   const refRes = useRef<HTMLDivElement>(null)!;
   const refSki = useRef<HTMLDivElement>(null)!;
 
-  const refScore = useRef<HTMLDivElement>(null)!;
+  const refEx = useRef<HTMLDivElement>(null)!;
   const refTop = useRef<HTMLDivElement>(null)!;
-  const refList = [refEdu, refAwa, refRes, refSki, refScore];
+  const refList = [refEdu, refAwa, refRes, refSki, refEx];
 
   const [isCoding, setIsCoding] = useState(true);
   const [isResearch, setIsResearch] = useState(true);
 
-  const topicList = ["Education", "Achievement", "Research", "Skills"];
+  const topicList = [
+    "Education",
+    "Achievement",
+    "Research",
+    "Skills",
+    "Extra Curriculum",
+  ];
   const scroll = (idx: any) => {
     refList[idx].current?.scrollIntoView({
       behavior: "smooth",
@@ -160,6 +166,7 @@ const Me = () => {
           );
         })}
       </Section>
+
       <Section
         sectionKey={1}
         sectionName={topicList[1]}
@@ -254,6 +261,64 @@ const Me = () => {
           )}
         </Flex>
       </Section>
+
+      <Section
+        sectionKey={4}
+        sectionName={topicList[4]}
+        sectionRef={refList[4]}
+      >
+        <Flex flexDir="column" h="80vh" mt="10px" maxH="70vh" overflowY="auto">
+          {cv["Extra Curriculum"].map((x, idx) => {
+            return (
+              <Flex
+                bgColor="gray.700"
+                borderRadius="md"
+                p="10px"
+                my="20px"
+                minW="200px"
+                maxW="300px"
+                flexDir="column"
+                key={idx}
+              >
+                <HStack justify="space-between">
+                  <Text fontSize="md" fontFamily="mono">
+                    {x.title}
+                  </Text>
+                  <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                    {x.time}
+                  </Text>
+                </HStack>
+                <HStack dir="row" spacing={1}>
+                  {x.tags.map((tag, k) => {
+                    return (
+                      <Tag
+                        size="sm"
+                        my="5px"
+                        fontFamily="sanSerif"
+                        fontWeight="300"
+                        key={k}
+                        borderRadius="full"
+                      >
+                        {tag}
+                      </Tag>
+                    );
+                  })}
+                </HStack>{" "}
+                <Divider my="5px" />
+                <Text
+                  fontSize="sm"
+                  fontFamily="mono"
+                  color="gray.300"
+                  textAlign="left"
+                  letterSpacing="wide"
+                >
+                  {x.desc}
+                </Text>
+              </Flex>
+            );
+          })}
+        </Flex>
+      </Section>
       <Section
         sectionKey={2}
         sectionName={topicList[2]}
@@ -271,7 +336,7 @@ const Me = () => {
                 key={idx}
                 maxW={["80%", "60%"]}
               >
-                <Text fontSize="sm" fontFamily="mono">
+                <Text fontSize="md" fontFamily="mono">
                   {x["section-detail"].title}
                 </Text>
                 <Text
@@ -282,22 +347,22 @@ const Me = () => {
                 >
                   {x["section-detail"].time}
                 </Text>
-                <Text fontSize="xs" fontFamily="mono" color="green.200">
+                <Text fontSize="sm" fontFamily="mono" color="green.200">
                   Researchers
                 </Text>
-                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                <Text fontSize="sm" fontFamily="mono" color="gray.300">
                   - {x["section-detail"].name[0]}
                 </Text>
-                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                <Text fontSize="sm" fontFamily="mono" color="gray.300">
                   - {x["section-detail"].name[1]}
                 </Text>
-                <Text fontSize="xs" fontFamily="mono" color="green.200">
+                <Text fontSize="sm" fontFamily="mono" color="green.200">
                   Advisers
                 </Text>
-                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                <Text fontSize="sm" fontFamily="mono" color="gray.300">
                   - {x["section-detail"].name[2]}
                 </Text>
-                <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                <Text fontSize="sm" fontFamily="mono" color="gray.300">
                   - {x["section-detail"].name[3]}
                 </Text>
               </Flex>
@@ -325,7 +390,7 @@ const Me = () => {
               <HStack key={k} m="10px">
                 <Flex fontFamily="mono" fontSize="xs">
                   <Text
-                    bg="orange.200"
+                    bg="yellow.200"
                     color="black"
                     p="5px"
                     px="7px"

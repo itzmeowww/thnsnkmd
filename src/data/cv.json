@@ -35,7 +35,7 @@
     {
       "title": "KSASF2021",
       "time": "29 JUN — 1 JUL 2021",
-      "desc": "My team were selected as KVIS representative for KSASF2021 virtual science fair",
+      "desc": "My research team were selected as KVIS representative for KSASF2021 virtual science fair",
       "tags": ["Research"]
     },
     {
@@ -55,6 +55,74 @@
       "time": "28 NOV — 1 DEC 2020",
       "desc": "I got bronze medal from TOI16",
       "tags": ["Coding"]
+    },
+    {
+      "title": "TechJam2019",
+      "time": "30 NOV 2019",
+      "desc": "I was a finalist in coding competition called TechJam2019",
+      "tags": ["Coding"]
+    }
+  ],
+  "Extra Curriculum": [
+    {
+      "title": "Student President",
+      "time": "2020 — 2021",
+      "desc": "I was a student president at KVIS",
+      "tags": ["Leadership"]
+    },
+    {
+      "title": "Art of Coding Club",
+      "time": "2020 — 2021",
+      "desc": "",
+      "tags": ["Leadership", "Volunteer", "Coding"]
+    },
+    {
+      "title": "สมศรี Club",
+      "time": "2020 — 2021",
+      "desc": "",
+      "tags": ["Leadership", "Volunteer", "Art"]
+    },
+    {
+      "title": "Reading Rabbit",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Volunteer"]
+    },
+    {
+      "title": "Khan Academy Roadshow",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Volunteer"]
+    },
+    {
+      "title": "Bhan Chong Koh Camp",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Volunteer"]
+    },
+    {
+      "title": "WCP Camp",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Volunteer"]
+    },
+    {
+      "title": "Open House",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Volunteer"]
+    },
+    {
+      "title": "Play Bass",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Music"]
+    },
+    {
+      "title": "Play Guitar",
+      "time": " — ",
+      "desc": "",
+      "tags": ["Music"]
     }
   ],
   "Research": [

@@ -29,6 +29,8 @@ export const Container = (props: ContainerProps) => {
         ></meta>
       </Head>
       <Flex
+        overflowX="hidden"
+        maxW="100%"
         direction="column"
         alignItems="center"
         justifyContent="flex-start"
