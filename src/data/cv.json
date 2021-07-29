@@ -67,62 +67,50 @@
     {
       "title": "Student President",
       "time": "2020 — 2021",
-      "desc": "I was a student president at KVIS",
+      "desc": "I am currently a student president at KVIS",
       "tags": ["Leadership"]
     },
     {
       "title": "Art of Coding Club",
       "time": "2020 — 2021",
-      "desc": "",
+      "desc": "I established a coding club with my friends at KVIS",
       "tags": ["Leadership", "Volunteer", "Coding"]
     },
     {
       "title": "สมศรี Club",
       "time": "2020 — 2021",
-      "desc": "",
+      "desc": "Somsri is an art club that I started with my friends",
       "tags": ["Leadership", "Volunteer", "Art"]
     },
     {
-      "title": "Reading Rabbit",
+      "title": "Reading Rabbit Club",
       "time": " — ",
-      "desc": "",
+      "desc": "I was a member of reading rabbit club in 2019 and also participate the club activities in 2020. This club aims to help kids in local area to enjoy learning English",
       "tags": ["Volunteer"]
     },
     {
-      "title": "Khan Academy Roadshow",
+      "title": "Khan Academy Club",
       "time": " — ",
-      "desc": "",
+      "desc": "I was a member of Khan Academy club, which is a club that aims to make Khan Academy's video more accessible to Thai natives",
       "tags": ["Volunteer"]
     },
     {
       "title": "Bhan Chong Koh Camp",
       "time": " — ",
-      "desc": "",
+      "desc": "I participated Bhan Chong Koh voluntary camp",
       "tags": ["Volunteer"]
     },
     {
       "title": "WCP Camp",
       "time": " — ",
-      "desc": "",
+      "desc": "I participated Wang Chan English camp",
       "tags": ["Volunteer"]
     },
     {
       "title": "Open House",
       "time": " — ",
-      "desc": "",
+      "desc": "I helped with KVIS open house video",
       "tags": ["Volunteer"]
-    },
-    {
-      "title": "Play Bass",
-      "time": " — ",
-      "desc": "",
-      "tags": ["Music"]
-    },
-    {
-      "title": "Play Guitar",
-      "time": " — ",
-      "desc": "",
-      "tags": ["Music"]
     }
   ],
   "Research": [
