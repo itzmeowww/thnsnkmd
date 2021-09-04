@@ -47,7 +47,6 @@ const Template = ({ idx }: Props) => {
           fontSize={["2xl", "4xl"]}
           textAlign="center"
           fontFamily="mono"
-          fontWeight="50"
           color="gray.100"
         >
           {title}
@@ -57,7 +56,6 @@ const Template = ({ idx }: Props) => {
           fontSize={["md", "md"]}
           textAlign="center"
           fontFamily="sanSerif"
-          fontWeight="300"
           color="gray.300"
         >
           {subtitle}
@@ -69,7 +67,6 @@ const Template = ({ idx }: Props) => {
           variant="enclosed"
           size="md"
           fontFamily="sanSerif"
-          fontWeight="300"
           colorScheme="yellow"
         >
           <TabList>
@@ -89,7 +86,7 @@ const Template = ({ idx }: Props) => {
                       objectFit="contain"
                       src={x}
                       m="5px"
-                      borderRadius="20px"
+                      borderRadius="10px"
                     ></Image>
                   );
                 })}{" "}

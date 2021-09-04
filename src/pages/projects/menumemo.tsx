@@ -5,7 +5,7 @@ const Tanabata = () => {
   return (
     <Container myTitle="menu memo — Thanasan Kumdee">
       {" "}
-      <Template idx={1} />
+      <Template idx={3} />
     </Container>
   );
 };

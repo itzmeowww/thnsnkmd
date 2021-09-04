@@ -32,7 +32,7 @@ const Index = () => {
           id="projects"
           align="flex-start"
           justify="center"
-          w="90vw"
+          w="80vw"
           h="100%"
           flexDir="row"
           flexWrap="wrap"

@@ -3,9 +3,9 @@ import { Container } from "../../components/Container";
 
 const Tanabata = () => {
   return (
-    <Container myTitle="thai synonym — Thanasan Kumdee">
+    <Container myTitle="K·NOW — Thanasan Kumdee">
       {" "}
-      <Template idx={3} />
+      <Template idx={2} />
     </Container>
   );
 };

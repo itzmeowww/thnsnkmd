@@ -27,6 +27,34 @@
     "desc": "Tanabata website is a minimal website that everyone can make a wish on Tanabata Day (7/7). In 2020, I created this website using a simple jQuery, html, and CSS. In 2021, I created the website using React and Material UI"
   },
   {
+    "imgSrc": "../codeline.jpg",
+    "alt": "Junior-Senior matcher",
+    "url": "/projects/codeline",
+    "name": "Junior-Senior matcher",
+    "img": ["../codeline.jpg"],
+    "links": [],
+    "title": "Junior-Senior matcher",
+    "subtitle": "Match a codeline for junior and senior",
+    "desc": "A simple web application for giving a hint with admin management"
+  },
+  {
+    "imgSrc": "projects/know/01.jpg",
+    "alt": "K·NOW",
+    "url": "/projects/know",
+    "name": "K·NOW",
+    "img": [
+      "../projects/know/01.jpg",
+      "../projects/know/02.jpg",
+      "../projects/know/03.jpg",
+      "../projects/know/04.jpg",
+      "../projects/know/05.jpg"
+    ],
+    "links": [],
+    "title": "K·NOW",
+    "subtitle": "All in one service installable website",
+    "desc": "Website with useful resources for KVIS students"
+  },
+  {
     "imgSrc": "./menumemo.jpeg",
     "alt": "Menu Memo",
     "url": "/projects/menumemo",
