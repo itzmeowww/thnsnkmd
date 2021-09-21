@@ -13,6 +13,7 @@ import Link from "next/link";
 import { Card } from "../components/Card";
 import linkList from "../data/link.json";
 
+
 const Index = () => {
   const pg2ref = useRef<HTMLDivElement>(null)!;
 
@@ -21,6 +22,9 @@ const Index = () => {
       behavior: "smooth",
     });
   };
+
+
+
 
   return (
     <Container myTitle="Thanasan Kumdee">
@@ -31,18 +35,21 @@ const Index = () => {
         flexDir="column"
         align="center"
       >
+        
         <Box height="40vh" w="100%"></Box>
 
-        <ScaleFade in={true}>
+        <ScaleFade in={true} >
           <Text
             fontSize={["xl", "3xl"]}
             fontFamily="mono"
             fontWeight="bold"
             bgGradient="linear(to-l, #fd746c,#ff9068)"
             bgClip="text"
+            
           >
             Hi!, I'm Thanasan Kumdee
           </Text>
+          
           <ChakraLink as={Link} href={"/me"}>
             <Button
               my="5px"
@@ -65,6 +72,19 @@ const Index = () => {
           >
             projects
           </Button>
+          <ChakraLink as={Link} href={"/designs"}>
+            <Button
+              ml="10px"
+              my="5px"
+              size="sm"
+              variant="outline"
+              fontFamily="mono"
+              fontWeight="thin"
+              
+            >
+              designs
+            </Button>
+          </ChakraLink>
           {/* <Text
             fontSize={["sm", "md"]}
             fontFamily="mono"

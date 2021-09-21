@@ -4,7 +4,7 @@ import {
   Divider,
   Box,
   Text,
-  ScaleFade,
+  Fade,
   Tabs,
   TabList,
   Tab,
@@ -42,7 +42,7 @@ const Template = ({ idx }: Props) => {
       {" "}
       <Nav />
       <Box height="15vh" w="100%"></Box>
-      <ScaleFade in={true} initialScale={1.5}>
+      <Fade in={true} >
         <Text
           fontSize={["2xl", "4xl"]}
           textAlign="center"
@@ -60,7 +60,7 @@ const Template = ({ idx }: Props) => {
         >
           {subtitle}
         </Text>
-      </ScaleFade>
+      </Fade>
       <Box height="10vh" w="100%"></Box>
       <Box bg="whiteAlpha.200" p="20px" rounded="lg">
         <Tabs
