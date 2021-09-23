@@ -17,7 +17,7 @@ export const DesignDetail = (props: ContainerProps) => {
         <Skeleton isLoaded={!loading}>
             <Image onLoad={()=>{
                 setLoading(false);
-            }} m="2" width="200px"  src={props.url}></Image>
+            }} m="2" w="200px" minH="200px"  src={props.url}></Image>
         </Skeleton>
         
         <Flex>
