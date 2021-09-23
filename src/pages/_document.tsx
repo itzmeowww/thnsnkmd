@@ -22,19 +22,19 @@ export default class Document extends NextDocument {
                   {
                     "@type": "ListItem",
                     position: 1,
-                    name: "About Thanansan Kumdee",
+                    name: "About Thanasan Kumdee",
                     item: "https://thnsnkmd.netlify.app/me",
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "Projects by Thanansan Kumdee",
+                    name: "Projects by Thanasan Kumdee",
                     item: "https://thnsnkmd.netlify.app/projects",
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "Designs by Thanansan Kumdee",
+                    name: "Designs by Thanasan Kumdee",
                     item: "https://thnsnkmd.netlify.app/designs",
                   },
                 ],
