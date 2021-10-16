@@ -28,13 +28,13 @@
   },
   {
     "imgSrc": "../codeline.jpg",
-    "alt": "Junior-Senior matcher",
+    "alt": "Student matcher",
     "url": "/projects/codeline",
-    "name": "Junior-Senior matcher",
+    "name": "Student matcher",
     "img": ["../codeline.jpg"],
     "links": [],
-    "title": "Junior-Senior matcher",
-    "subtitle": "Match a codeline for junior and senior",
+    "title": "Student matcher",
+    "subtitle": "Match a junior and senior student",
     "desc": "A simple web application for giving a hint with admin management"
   },
   {

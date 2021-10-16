@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <Container myTitle="Thanasan Kumdee">
       <Flex
-        h="90vh"
+        h="80vh"
         w="100%"
         justify="flex-start"
         flexDir="column"

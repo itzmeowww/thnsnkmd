@@ -68,15 +68,16 @@ const Template = ({ idx }: Props) => {
           size="md"
           fontFamily="sanSerif"
           colorScheme="yellow"
+          width="400px" maxW="90vw"
         >
           <TabList>
             <Tab fontFamily="sanSerif">Preview</Tab>
             <Tab fontFamily="sanSerif">Detail</Tab>
           </TabList>
 
-          <TabPanels>
-            <TabPanel>
-              <Flex flexDir="row" maxW="300px" overflowX="scroll">
+          <TabPanels >
+            <TabPanel >
+              <Flex flexDir="row" w="350px" maxW="90%" overflowX="scroll" mx="auto">
                 {img.map((x, k) => {
                   return (
                     <Image
@@ -93,7 +94,8 @@ const Template = ({ idx }: Props) => {
               </Flex>
             </TabPanel>
             <TabPanel>
-              <Flex flexDir="column">
+
+              <Flex flexDir="column" mx="auto" justifyContent="center" alignItems="center">
                 {links.map((x: any, k: any) => {
                   return (
                     <Link href={x ? x.to : "/"} key={k}>
@@ -102,6 +104,7 @@ const Template = ({ idx }: Props) => {
                         variant="outline"
                         size="sm"
                         m="5px"
+                        maxW="fit-content"
                       >
                         {x.title}
                       </Button>
@@ -111,10 +114,11 @@ const Template = ({ idx }: Props) => {
               </Flex>
               <Box
                 mt="10px"
-                maxW="220px"
+                w="90%"
                 bg="whiteAlpha.200"
                 p="10px"
                 rounded="md"
+                mx="auto"
               >
                 <Text
                   fontFamily="sanSerif"

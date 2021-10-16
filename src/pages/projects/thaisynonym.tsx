@@ -5,7 +5,7 @@ const Tanabata = () => {
   return (
     <Container myTitle="thai synonym — Thanasan Kumdee">
       {" "}
-      <Template idx={3} />
+      <Template idx={4} />
     </Container>
   );
 };
