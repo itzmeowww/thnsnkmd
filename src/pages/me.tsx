@@ -7,7 +7,6 @@ import {
   Code,
   ScaleFade,
   Button,
-  Tag,
   Checkbox,
   Stack,
   HStack,
@@ -16,10 +15,10 @@ import {
 import { Section } from "../components/Section";
 import { Nav } from "../components/Nav";
 import { useRef, useState } from "react";
-
 import { TriangleUpIcon } from "@chakra-ui/icons";
 
 import cv from "../data/cv.json";
+import { ActivityDetail } from "../components/ActivityDetail";
 
 const Me = () => {
   //JUST BRUTE FORCE FOR NOW
@@ -93,7 +92,7 @@ const Me = () => {
           <Text
             fontSize={["xs", "md"]}
             fontFamily="mono"
-            color="grey"
+            color="white"
             w={["60%", "37%"]}
             textAlign="center"
             m="auto"
@@ -134,25 +133,28 @@ const Me = () => {
       >
         {cv["Education"].map((x, idx) => {
           return (
+
             <>
-              <Flex
-                bgColor="gray.700"
-                borderRadius="md"
-                p="10px"
-                my="20px"
-                flexDir="column"
-                key={idx}
-              >
-                <Text fontSize="sm" fontFamily="mono">
-                  {x["section-detail"].title}
-                </Text>
-                <Text fontSize="xs" fontFamily="mono" color="gray.300">
-                  {x["section-detail"].time}
-                </Text>
-                <Text fontSize="xs" fontFamily="mono" color="green.200">
-                  GPA : {x["section-detail"].gpa.toPrecision(3)}
-                </Text>
-              </Flex>
+              <a href={x["section-detail"].url} >
+                <Flex
+                  bgColor="gray.700"
+                  borderRadius="md"
+                  p="10px"
+                  my="20px"
+                  flexDir="column"
+                  key={idx}
+                >
+                  <Text fontSize="sm" fontFamily="mono">
+                    {x["section-detail"].title}
+                  </Text>
+                  <Text fontSize="xs" fontFamily="mono" color="gray.300">
+                    {x["section-detail"].time}
+                  </Text>
+                  <Text fontSize="xs" fontFamily="mono" color="green.200">
+                    GPA : {x["section-detail"].gpa.toPrecision(3)}
+                  </Text>
+                </Flex>
+              </a>
               {idx == cv["Education"].length - 1 ? (
                 <></>
               ) : (
@@ -163,6 +165,7 @@ const Me = () => {
                 />
               )}
             </>
+
           );
         })}
       </Section>
@@ -188,7 +191,7 @@ const Me = () => {
             Research
           </Checkbox>
         </Stack>
-        <Flex flexDir="column" h="80vh" mt="10px" maxH="70vh" overflowY="auto">
+        <Flex flexDir="column" mt="10px" >
           {!isCoding && !isResearch ? (
             <Flex
               bgColor="gray.700"
@@ -211,51 +214,7 @@ const Me = () => {
                 (isResearch && x.tags.includes("Research"))
               )
                 return (
-                  <Flex
-                    bgColor="gray.700"
-                    borderRadius="md"
-                    p="10px"
-                    my="20px"
-                    minW="200px"
-                    maxW="300px"
-                    flexDir="column"
-                    key={idx}
-                  >
-                    <HStack justify="space-between">
-                      <Text fontSize="md" fontFamily="mono">
-                        {x.title}
-                      </Text>
-                      <Text fontSize="xs" fontFamily="mono" color="gray.300">
-                        {x.time}
-                      </Text>
-                    </HStack>
-                    <HStack dir="row" spacing={3}>
-                      {x.tags.map((tag, k) => {
-                        return (
-                          <Tag
-                            size="sm"
-                            my="5px"
-                            fontFamily="sanSerif"
-                            fontWeight="300"
-                            key={k}
-                            borderRadius="full"
-                          >
-                            {tag}
-                          </Tag>
-                        );
-                      })}
-                    </HStack>{" "}
-                    <Divider my="5px" />
-                    <Text
-                      fontSize="sm"
-                      fontFamily="mono"
-                      color="gray.300"
-                      textAlign="left"
-                      letterSpacing="wide"
-                    >
-                      {x.desc}
-                    </Text>
-                  </Flex>
+                  <ActivityDetail details={x} idx={idx} />
                 );
             })
           )}
@@ -267,54 +226,10 @@ const Me = () => {
         sectionName={topicList[4]}
         sectionRef={refList[4]}
       >
-        <Flex flexDir="column" h="80vh" mt="10px" maxH="70vh" overflowY="auto">
+        <Flex flexDir="column" mt="10px" >
           {cv["Extra Curriculum"].map((x, idx) => {
             return (
-              <Flex
-                bgColor="gray.700"
-                borderRadius="md"
-                p="10px"
-                my="20px"
-                minW="200px"
-                maxW="300px"
-                flexDir="column"
-                key={idx}
-              >
-                <HStack justify="space-between">
-                  <Text fontSize="md" fontFamily="mono">
-                    {x.title}
-                  </Text>
-                  <Text fontSize="xs" fontFamily="mono" color="gray.300">
-                    {x.time}
-                  </Text>
-                </HStack>
-                <HStack dir="row" spacing={1}>
-                  {x.tags.map((tag, k) => {
-                    return (
-                      <Tag
-                        size="sm"
-                        my="5px"
-                        fontFamily="sanSerif"
-                        fontWeight="300"
-                        key={k}
-                        borderRadius="full"
-                      >
-                        {tag}
-                      </Tag>
-                    );
-                  })}
-                </HStack>{" "}
-                <Divider my="5px" />
-                <Text
-                  fontSize="sm"
-                  fontFamily="mono"
-                  color="gray.300"
-                  textAlign="left"
-                  letterSpacing="wide"
-                >
-                  {x.desc}
-                </Text>
-              </Flex>
+              <ActivityDetail details={x} idx={idx} />
             );
           })}
         </Flex>
@@ -384,13 +299,13 @@ const Me = () => {
         sectionName={topicList[3]}
         sectionRef={refList[3]}
       >
-        <Flex maxW="400px" flexWrap="wrap" align="center" justify="center">
+        <Flex w="500px" maxW="90vw" flexWrap="wrap" align="center" justify="center">
           {cv["Skills"].map((x, k) => {
             return (
               <HStack key={k} m="10px">
                 <Flex fontFamily="mono" fontSize="xs">
                   <Text
-                    bg="yellow.200"
+                    bg={x.isCoding ? "green.200" : "yellow.200"}
                     color="black"
                     p="5px"
                     px="7px"

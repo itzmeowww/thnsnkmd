@@ -29,13 +29,13 @@ const Index = () => {
   return (
     <Container myTitle="Thanasan Kumdee">
       <Flex
-        h="100vh"
+        h="90vh"
         w="100%"
         justify="flex-start"
         flexDir="column"
         align="center"
       >
-        
+
         <Box height="40vh" w="100%"></Box>
 
         <ScaleFade in={true} >
@@ -45,11 +45,11 @@ const Index = () => {
             fontWeight="bold"
             bgGradient="linear(to-l, #fd746c,#ff9068)"
             bgClip="text"
-            
+
           >
             Hi!, I'm Thanasan Kumdee
           </Text>
-          
+
           <ChakraLink as={Link} href={"/me"}>
             <Button
               my="5px"
@@ -80,7 +80,7 @@ const Index = () => {
               variant="outline"
               fontFamily="mono"
               fontWeight="thin"
-              
+
             >
               designs
             </Button>
@@ -114,7 +114,7 @@ const Index = () => {
         minH="100vh"
         pb="20vh"
       >
-        <Box ref={pg2ref} w="100%" h={["8vh", "10vh"]}></Box>
+        <Box ref={pg2ref} w="100%" h={["0vh"]}></Box>
         <Text
           fontSize={["sm", "md"]}
           fontFamily="mono"
@@ -148,7 +148,7 @@ const Index = () => {
           })}
         </Flex>
       </Flex>
-    </Container>
+    </Container >
   );
 };
 
