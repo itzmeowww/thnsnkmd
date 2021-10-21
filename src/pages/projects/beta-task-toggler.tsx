@@ -1,13 +1,13 @@
 import Template from "../../components/Template";
 import { Container } from "../../components/Container";
 import linkList from "../../data/link";
-const Tanabata = () => {
+const BetaTaskToggler = () => {
   return (
-    <Container myTitle="tanabata — Thanasan Kumdee">
+    <Container myTitle="thai synonym — Thanasan Kumdee">
       {" "}
-      <Template data={linkList["tanabata"]} />
+      <Template data={linkList["beta-task-toggler"]} />
     </Container>
   );
 };
 
-export default Tanabata;
+export default BetaTaskToggler;

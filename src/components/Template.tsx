@@ -11,23 +11,41 @@ import {
   TabPanels,
   TabPanel,
   Image,
+  Tag
 } from "@chakra-ui/react";
 
 import { Nav } from "../components/Nav";
 
 import Link from "next/link";
-import linkList from "../data/link.json";
 
+type linkType = {
+  title: string,
+  to: string
+}
+
+type dataType = {
+  img: Array<string>,
+  links: Array<linkType>,
+  desc: string,
+  title: string,
+  subtitle: string,
+  tech: Array<string>,
+  imgSrc: string,
+  alt: string,
+  url: string,
+  name: string,
+}
 type Props = {
-  idx: number;
+  data: dataType
 };
 
-const Template = ({ idx }: Props) => {
-  const img = linkList[idx] ? linkList[idx].img : [""];
-  const links = linkList[idx] ? linkList[idx].links : [""];
-  const desc = linkList[idx].desc;
-  const title = linkList[idx] ? linkList[idx].title : "";
-  const subtitle = linkList[idx] ? linkList[idx].subtitle : "";
+const Template = ({ data }: Props) => {
+  const img = data.img;
+  const links = data.links;
+  const desc = data.desc;
+  const title = data.title;
+  const subtitle = data.subtitle;
+  const tech = data.tech;
 
   return (
     <Flex
@@ -128,12 +146,20 @@ const Template = ({ idx }: Props) => {
                 >
                   {desc}
                 </Text>
+
               </Box>
+              <Divider my="10px" />
+              <Text align="center"  >Tech stack</Text>
+              <Flex dir="row" width="full" justify="center" flexWrap="wrap">
+                {tech?.map((x, idx) => {
+                  return <Tag m="5px" key={idx} > {x}</Tag>
+                })}
+              </Flex>
             </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
-    </Flex>
+    </Flex >
   );
 };
 

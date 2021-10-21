@@ -1,11 +1,11 @@
 import Template from "../../components/Template";
 import { Container } from "../../components/Container";
-
+import linkList from "../../data/link"
 const Tanabata = () => {
   return (
-    <Container myTitle="thai synonym — Thanasan Kumdee">
+    <Container myTitle="menu memo — Thanasan Kumdee">
       {" "}
-      <Template idx={4} />
+      <Template data={linkList['menu-memo']} />
     </Container>
   );
 };

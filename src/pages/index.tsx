@@ -11,7 +11,7 @@ import { Container } from "../components/Container";
 import { useRef } from "react";
 import Link from "next/link";
 import { Card } from "../components/Card";
-import linkList from "../data/link.json";
+import linkList from "../data/link";
 
 
 const Index = () => {
@@ -22,7 +22,7 @@ const Index = () => {
       behavior: "smooth",
     });
   };
-
+  const data = [linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
 
 
 
@@ -115,15 +115,16 @@ const Index = () => {
         pb="20vh"
       >
         <Box ref={pg2ref} w="100%" h={["0vh"]}></Box>
-        <Text
-          fontSize={["sm", "md"]}
-          fontFamily="mono"
-          fontWeight="thin"
-          color="white"
-        >
-          💡 my projects 💡
-        </Text>
-
+        <ScaleFade in>
+          <Text
+            fontSize={["sm", "md"]}
+            fontFamily="mono"
+            fontWeight="thin"
+            color="white"
+          >
+            💡 my projects 💡
+          </Text>
+        </ScaleFade>
         <Flex
           id="projects"
           align="flex-start"
@@ -134,7 +135,7 @@ const Index = () => {
           flexWrap="wrap"
           pt="20px"
         >
-          {linkList.map((x, key) => {
+          {data.map((x, key) => {
             return (
               <ScaleFade in={true} unmountOnExit={true}>
                 <Card

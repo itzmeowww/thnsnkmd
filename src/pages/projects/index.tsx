@@ -3,9 +3,10 @@ import { Flex, Text, SlideFade, ScaleFade } from "@chakra-ui/react";
 import { Container } from "../../components/Container";
 import { Nav } from "../../components/Nav";
 import { Card } from "../../components/Card";
-import linkList from "../../data/link.json";
+import linkList from "../../data/link";
 
 const Index = () => {
+  const data = [linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
   return (
     <Container myTitle="projects  — Thanasan Kumdee">
       <Flex
@@ -38,7 +39,7 @@ const Index = () => {
           flexWrap="wrap"
           pt="20px"
         >
-          {linkList.map((x, key) => {
+          {data.map((x, key) => {
             return (
               <SlideFade in={true} offsetY="40px">
                 <ScaleFade in={true}>
