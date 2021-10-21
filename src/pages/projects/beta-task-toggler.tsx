@@ -3,7 +3,7 @@ import { Container } from "../../components/Container";
 import linkList from "../../data/link";
 const BetaTaskToggler = () => {
   return (
-    <Container myTitle="thai synonym — Thanasan Kumdee">
+    <Container myTitle="beta task toggler — Thanasan Kumdee">
       {" "}
       <Template data={linkList["beta-task-toggler"]} />
     </Container>
