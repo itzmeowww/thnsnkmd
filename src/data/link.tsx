@@ -136,4 +136,23 @@ export default {
     desc: 'An extension for showing/hiding/randomizing programming tasks on beta.programming.in.th',
     tech: ['Html', 'JavaScript', 'CSS'],
   },
+  wholdstill: {
+    imgSrc: 'projects/wholdstill/icon.png',
+    alt: 'Wholdstill',
+    url: '/projects/wholdstill',
+    name: 'Wholdstill',
+    img: [
+
+    ],
+    links: [
+      {
+        title: 'Visit Website',
+        to: 'https://wholdstill.netlify.app',
+      },
+    ],
+    title: 'Wholdstill',
+    subtitle: 'Wholdstill holds the whole screen still​',
+    desc: 'I am a developer of Wholdstill project, a software to make your screen still in shaky environment',
+    tech: ['Next.js', 'Tailwind CSS'],
+  },
 };

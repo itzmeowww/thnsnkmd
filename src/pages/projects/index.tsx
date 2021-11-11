@@ -6,7 +6,7 @@ import { Card } from "../../components/Card";
 import linkList from "../../data/link";
 
 const Index = () => {
-  const data = [linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
+  const data = [linkList['wholdstill'], linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
   return (
     <Container myTitle="projects  — Thanasan Kumdee">
       <Flex
