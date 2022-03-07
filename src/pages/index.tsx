@@ -22,7 +22,7 @@ const Index = () => {
       behavior: "smooth",
     });
   };
-  const data = [linkList['wholdstill'], linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
+  const data = [linkList['geacher'], linkList['wholdstill'], linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
 
 
 

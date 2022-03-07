@@ -142,7 +142,7 @@ export default {
     url: '/projects/wholdstill',
     name: 'Wholdstill',
     img: [
-
+      '../projects/wholdstill/1.jpg'
     ],
     links: [
       {
@@ -154,5 +154,32 @@ export default {
     subtitle: 'Wholdstill holds the whole screen still​',
     desc: 'I am a developer of Wholdstill project, a software to make your screen still in shaky environment',
     tech: ['Next.js', 'Tailwind CSS'],
+  },
+  geacher: {
+    imgSrc: 'projects/geacher/3.jpg',
+    alt: 'Geacher',
+    url: '/projects/geacher',
+    name: 'Geacher',
+    img: [
+      '../projects/geacher/1.jpg',
+      '../projects/geacher/2.jpg',
+      '../projects/geacher/4.jpg',
+      '../projects/geacher/5.jpg',
+      '../projects/geacher/6.jpg',
+    ],
+    links: [
+      {
+        title: 'Visit Geacher',
+        to: 'https://geacher.vercel.app',
+      },
+    ],
+    title: 'Geacher | Tutors from KVIS',
+    subtitle: 'A website for finding tutors with KVIS student degree',
+    desc: 'A website for finding tutors with KVIS student degree',
+    tech: [
+      'Next.js',
+      'Tailwind CSS',
+      'TypeScript',
+    ],
   },
 };
