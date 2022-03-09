@@ -10,9 +10,10 @@ import {
 import { Container } from "../components/Container";
 import { useRef } from "react";
 import Link from "next/link";
+import Head from "next/head"
 import { Card } from "../components/Card";
-import linkList from "../data/link";
-
+import projects from "../data/link.json";
+import { Project } from "../models/project";
 
 const Index = () => {
   const pg2ref = useRef<HTMLDivElement>(null)!;
@@ -22,12 +23,20 @@ const Index = () => {
       behavior: "smooth",
     });
   };
-  const data = [linkList['geacher'], linkList['wholdstill'], linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
+  const data: Project[] = projects.sort((a, b) => {
+    const dateA = Date.parse(a.date);
+    const dateB = Date.parse(b.date);
+    return dateB - dateA
+  });
 
 
 
   return (
-    <Container myTitle="Thanasan Kumdee">
+    <Container >
+      <Head>
+        <title>Thanasan Kumdee"</title>
+        <meta name="description" content="Thanasan Kumdee's Personal website" />
+      </Head>
       <Flex
         h="80vh"
         w="100%"
@@ -137,9 +146,9 @@ const Index = () => {
         >
           {data.map((x, key) => {
             return (
-              <ScaleFade in={true} unmountOnExit={true}>
+              <ScaleFade key={key} in={true} unmountOnExit={true}>
                 <Card
-                  key={key}
+
                   imgSrc={x.imgSrc}
                   url={x.url}
                   name={x.name}

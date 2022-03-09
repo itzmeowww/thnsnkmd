@@ -3,12 +3,21 @@ import { Flex, Text, SlideFade, ScaleFade } from "@chakra-ui/react";
 import { Container } from "../../components/Container";
 import { Nav } from "../../components/Nav";
 import { Card } from "../../components/Card";
-import linkList from "../../data/link";
-
+import projects from "../../data/link.json";
+import { Project } from "../../models/project";
+import Head from "next/head"
 const Index = () => {
-  const data = [linkList['geacher'], linkList['wholdstill'], linkList['beta-task-toggler'], linkList['tanabata'], linkList['codeline'], linkList['know'], linkList['menu-memo'], linkList['thai-synonym']];
+  const data: Project[] = projects.sort((a, b) => {
+    const dateA = Date.parse(a.date);
+    const dateB = Date.parse(b.date);
+    return dateB - dateA
+  });
   return (
-    <Container myTitle="projects  — Thanasan Kumdee">
+    <Container>
+      <Head>
+        <title>projects - Thanasan Kumdee"</title>
+        <meta name="description" content="Outstanding projects by Thanasan Kumdee" />
+      </Head>
       <Flex
         w="100%"
         justify="flex-start"
@@ -41,10 +50,10 @@ const Index = () => {
         >
           {data.map((x, key) => {
             return (
-              <SlideFade in={true} offsetY="40px">
+              <SlideFade key={key} in={true} offsetY="40px">
                 <ScaleFade in={true}>
                   <Card
-                    key={key}
+
                     imgSrc={x.imgSrc}
                     url={x.url}
                     name={x.name}

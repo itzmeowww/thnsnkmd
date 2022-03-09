@@ -1,0 +1,195 @@
+[
+  {
+    "alias": "tanabata",
+    "imgSrc": "projects/tanabata/tanabata01.png",
+    "alt": "Tanabata Day",
+    "url": "/projects/tanabata",
+    "name": "Tababata Day",
+    "img": [
+      "../projects/tanabata/tanabata01.png",
+      "../projects/tanabata/tanabata02.png",
+      "../projects/tanabata/tanabata03.png",
+      "../projects/tanabata/tanabata04.png",
+      "../projects/tanabata/tanabata05.png",
+      "../projects/tanabata/tanabata06.png"
+    ],
+    "links": [
+      {
+        "title": "Visit 2021 Website",
+        "to": "https://tanabatawish.vercel.app"
+      },
+      {
+        "title": "Visit 2020 Website",
+        "to": "https://itzmeowww.github.io/tanabata2020"
+      }
+    ],
+    "title": "Tanabata Day Website",
+    "subtitle": "A minimal website for making a wish on tanabata day",
+    "desc": "Tanabata website is a minimal website that everyone can make a wish on Tanabata Day (7/7). In 2020, I created this website using a simple jQuery, html, and CSS. In 2021, I created the website using Next.js and Material UI",
+    "tech": [
+      "Next.js",
+      "Firebase",
+      "Material UI",
+      "jQuery",
+      "Html",
+      "JavaScript",
+      "CSS"
+    ],
+    "date": "7 July 2021"
+  },
+  {
+    "alias": "codeline",
+    "imgSrc": "../codeline.jpg",
+    "alt": "Student matcher",
+    "url": "/projects/codeline",
+    "name": "Student matcher",
+    "img": [
+      "../projects/codeline/1.jpg",
+      "../projects/codeline/2.jpg",
+      "../projects/codeline/3.jpg",
+      "../projects/codeline/4.jpg",
+      "../projects/codeline/5.jpg"
+    ],
+    "links": [],
+    "title": "Student matcher",
+    "subtitle": "Match a junior and senior student",
+    "desc": "A simple web application for giving a hint with admin management",
+    "tech": ["Next.js", "Firebase", "Chakra UI"],
+    "date": "25 Jun 2021"
+  },
+  {
+    "alias": "know",
+    "imgSrc": "projects/know/01.jpg",
+    "alt": "K·NOW",
+    "url": "/projects/know",
+    "name": "K·NOW",
+    "img": [
+      "../projects/know/01.jpg",
+      "../projects/know/02.jpg",
+      "../projects/know/03.jpg",
+      "../projects/know/04.jpg",
+      "../projects/know/05.jpg"
+    ],
+    "links": [],
+    "title": "K·NOW",
+    "subtitle": "All in one service installable website",
+    "desc": "Website with useful resources for KVIS students",
+    "tech": ["Next.js", "Firebase", "Chakra UI"],
+    "date": "24 Oct 2020"
+  },
+  {
+    "alias": "menumemo",
+    "imgSrc": "./menumemo.jpeg",
+    "alt": "Menu Memo",
+    "url": "/projects/menu-memo",
+    "name": "Menu Memo",
+    "img": [
+      "../menumemo.jpeg",
+      "../projects/menumemo/01.jpg",
+      "../projects/menumemo/02.jpg",
+      "../projects/menumemo/03.jpg"
+    ],
+    "links": [
+      {
+        "title": "Read On MEDIUM",
+        "to": "https://medium.com/@itzmeowww/menu-memo-%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C%E0%B8%9A%E0%B8%AD%E0%B8%97%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-57ad464f62cd"
+      }
+    ],
+    "title": "Menu Memo",
+    "subtitle": "A LINE bot for telling menu",
+    "desc": "Menu Memo is a LINE bot that can ask for menu in each day. ",
+    "tech": ["Node.js"],
+    "date": "12 Oct 2020"
+  },
+  {
+    "alias": "thai-synonym",
+    "imgSrc": "./thai-synonym-bg.png",
+    "alt": "Thai Synonym Browser",
+    "url": "/projects/thai-synonym",
+    "name": "Thai Synonym",
+    "img": [
+      "../thai-synonym-bg.png",
+      "../projects/thaisynonym/01.jpg",
+      "../projects/thaisynonym/02.jpg"
+    ],
+    "links": [
+      {
+        "title": "Visit Website",
+        "to": "https://thai-synonym.vercel.app"
+      }
+    ],
+    "title": "Thai Synonym",
+    "subtitle": "A minimal website for finding synonym of Thai words",
+    "desc": "Thai Synonym is a install-able web application for searching Thai synonym.",
+    "tech": ["Next.js", "Chakra UI"],
+    "date": "29 Jan 2021"
+  },
+  {
+    "alias": "beta-task-toggler",
+    "imgSrc": "./beta-task-toggler.png",
+    "alt": "Thai Synonym Browser",
+    "url": "/projects/beta-task-toggler",
+    "name": "Beta Task Toggler",
+    "img": [
+      "../projects/beta-task-toggler/preview.png",
+      "../projects/beta-task-toggler/screenshot_1.jpg",
+      "../projects/beta-task-toggler/screenshot_2.jpg",
+      "../projects/beta-task-toggler/screenshot_3.jpg"
+    ],
+    "links": [
+      {
+        "title": "Get Extension",
+        "to": "https://chrome.google.com/webstore/detail/beta-task-toggler/mgicmhhkcdbopogdbphnecplndijgfbn"
+      }
+    ],
+    "title": "Beta Task Toggler",
+    "subtitle": "Toggle, Random, Solve!",
+    "desc": "An extension for showing/hiding/randomizing programming tasks on beta.programming.in.th",
+    "tech": ["Html", "JavaScript", "CSS"],
+    "date": "11 Oct 2021"
+  },
+  {
+    "alias": "wholdstill",
+    "imgSrc": "projects/wholdstill/icon.png",
+    "alt": "Wholdstill",
+    "url": "/projects/wholdstill",
+    "name": "Wholdstill",
+    "img": ["../projects/wholdstill/1.jpg"],
+    "links": [
+      {
+        "title": "Visit Website",
+        "to": "https://wholdstill.netlify.app"
+      }
+    ],
+    "title": "Wholdstill",
+    "subtitle": "Wholdstill holds the whole screen still​",
+    "desc": "I am a developer of Wholdstill project, a software to make your screen still in shaky environment",
+    "tech": ["Next.js", "Tailwind CSS"],
+    "date": "1 Nov 2021"
+  },
+  {
+    "alias": "geacher",
+    "imgSrc": "projects/geacher/3.jpg",
+    "alt": "Geacher",
+    "url": "/projects/geacher",
+    "name": "Geacher",
+    "img": [
+      "../projects/geacher/1.jpg",
+      "../projects/geacher/2.jpg",
+      "../projects/geacher/4.jpg",
+      "../projects/geacher/5.jpg",
+      "../projects/geacher/6.jpg"
+    ],
+    "links": [
+      {
+        "title": "Visit Geacher",
+        "to": "https://geacher.vercel.app"
+      }
+    ],
+    "title": "Geacher | Tutors from KVIS",
+    "subtitle": "A website for finding tutors with KVIS student degree",
+    "desc": "A website for finding tutors with KVIS student degree",
+    "tech": ["Next.js", "Tailwind CSS", "TypeScript"],
+    "date": "7 Mar 2022"
+  }
+]

@@ -16,7 +16,7 @@ import { Section } from "../components/Section";
 import { Nav } from "../components/Nav";
 import { useRef, useState } from "react";
 import { TriangleUpIcon } from "@chakra-ui/icons";
-
+import Head from "next/head"
 import cv from "../data/cv.json";
 import { ActivityDetail } from "../components/ActivityDetail";
 
@@ -51,7 +51,13 @@ const Me = () => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Container myTitle="about me — Thanasan Kumdee">
+    <Container >
+      <Head>
+        <title>
+          about me — Thanasan Kumdee
+        </title>
+        {/* <meta name="description" content="Thanasan Kumdee's " /> */}
+      </Head>
       <IconButton
         position="fixed"
         bottom="20px"
