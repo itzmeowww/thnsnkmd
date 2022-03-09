@@ -34,8 +34,8 @@ const Index = () => {
   return (
     <Container >
       <Head>
-        <title>Thanasan Kumdee"</title>
-        <meta name="description" content="Thanasan Kumdee's Personal website" />
+        <title>Thanasan Kumdee</title>
+        <meta name="description" content="Thanasan Kumdee's personal website: projects and info" />
       </Head>
       <Flex
         h="80vh"
