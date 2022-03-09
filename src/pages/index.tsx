@@ -36,6 +36,7 @@ const Index = () => {
       <Head>
         <title>Thanasan Kumdee</title>
         <meta name="description" content="Thanasan Kumdee's personal website: projects and info" />
+        <meta property="og:image" content="https://thnsnkmd.netlify.app/preview.png" />
       </Head>
       <Flex
         h="80vh"

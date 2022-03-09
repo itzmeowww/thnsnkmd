@@ -15,8 +15,11 @@ const Index = () => {
   return (
     <Container>
       <Head>
-        <title>projects - Thanasan Kumdee"</title>
-        <meta name="description" content="Outstanding projects by Thanasan Kumdee" />
+        <title>projects - Thanasan Kumdee</title>
+        <meta name="description" content={`Checkout latest projects by Thanasan Kumdee: ${projects.map((project) => {
+          return project.name
+        }).join(", ")}`} />
+        <meta property="og:image" content="https://thnsnkmd.netlify.app/preview_project.png" />
       </Head>
       <Flex
         w="100%"

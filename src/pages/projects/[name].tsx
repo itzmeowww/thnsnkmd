@@ -38,7 +38,6 @@ const ProjectPage = ({ project }: PageProps) => {
                 <title>{`${project.name} —  a project by Thanasan Kumdee`}</title>
                 <meta name="description" content={project.desc} />
                 <meta property="og:title" content={`${project.name} —  a project by Thanasan Kumdee`} />
-                <meta property="og:title" content={`${project.name} —  a project by Thanasan Kumdee`} />
                 <meta property="og:description" content={project.desc} />
             </Head>
 

@@ -56,7 +56,8 @@ const Me = () => {
         <title>
           about me — Thanasan Kumdee
         </title>
-        {/* <meta name="description" content="Thanasan Kumdee's " /> */}
+        <meta property="og:image" content="https://thnsnkmd.netlify.app/preview_me.png" />
+        <meta name="description" content="Thanasan Kumdee, the MEXT scholarship student with strong passions in coding, music, and art." />
       </Head>
       <IconButton
         position="fixed"
@@ -93,7 +94,7 @@ const Me = () => {
           </Text>
         </ScaleFade>
 
-        <Divider w={["50%", "30%"]} />
+        <Divider w={["50%", "30%"]} my={2} />
         <ScaleFade in={true}>
           <Text
             fontSize={["xs", "md"]}
@@ -103,7 +104,7 @@ const Me = () => {
             textAlign="center"
             m="auto"
           >
-            a random student with strong passions in <Code>coding</Code>
+            the MEXT scholarship student with strong passions in <Code>coding</Code>
             {", "}
             <Code>music</Code>
             {", and"} <Code>art</Code>.
