@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
             @import
             url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
           </style>
-          <meta property="og:image" content="./me2.png"></meta>
+
           <link rel="icon" href="./icon.jpg"></link>
           <script
             type="application/ld+json"
@@ -36,7 +36,7 @@ export default class Document extends NextDocument {
                   },
                   {
                     "@type": "ListItem",
-                    position: 2,
+                    position: 3,
                     name: "Designs by Thanasan Kumdee",
                     item: "https://thnsnkmd.netlify.app/designs",
                   },
