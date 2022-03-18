@@ -39,7 +39,7 @@
   },
   {
     "alias": "codeline",
-    "imgSrc": "../codeline.jpg",
+    "imgSrc": "../projects/codeline/codeline.jpg",
     "alt": "Student matcher",
     "url": "/projects/codeline",
     "name": "Student matcher",
@@ -48,12 +48,13 @@
       "../projects/codeline/2.jpg",
       "../projects/codeline/3.jpg",
       "../projects/codeline/4.jpg",
-      "../projects/codeline/5.jpg"
+      "../projects/codeline/5.jpg",
+      "../projects/codeline/6.jpeg"
     ],
     "links": [],
     "title": "Student matcher",
     "subtitle": "Match a junior and senior student",
-    "desc": "A simple web application for giving a hint with admin management",
+    "desc": "A simple web application for giving a hint with admin page that can manage that data. This is built to host the activity online due to COVID-19 pandemic.",
     "tech": ["Next.js", "Firebase", "Chakra UI"],
     "date": "25 Jun 2021"
   },
@@ -70,22 +71,29 @@
       "../projects/know/04.jpg",
       "../projects/know/05.jpg"
     ],
-    "links": [],
+
     "title": "K·NOW",
-    "subtitle": "All in one service installable website",
+    "subtitle": "KVIS Student Committee Website",
     "desc": "Website with useful resources for KVIS students",
     "tech": ["Next.js", "Firebase", "Chakra UI"],
-    "date": "24 Oct 2020"
+    "date": "24 Oct 2020",
+    "links": [
+      {
+        "title": "Visit K·NOW",
+        "to": "https://kvissc.now.sh"
+      }
+    ]
   },
   {
-    "alias": "menumemo",
-    "imgSrc": "./menumemo.jpeg",
+    "alias": "menu-memo",
+    "imgSrc": "./projects/menumemo/04.jpeg",
     "alt": "Menu Memo",
     "url": "/projects/menu-memo",
     "name": "Menu Memo",
     "img": [
-      "../menumemo.jpeg",
-      "../projects/menumemo/01.jpg",
+      "../projects/menumemo/04.jpeg",
+      "../projects/menumemo/01.jpeg",
+      "../projects/menumemo/05.jpeg",
       "../projects/menumemo/02.jpg",
       "../projects/menumemo/03.jpg"
     ],
@@ -93,12 +101,16 @@
       {
         "title": "Read On MEDIUM",
         "to": "https://medium.com/@itzmeowww/menu-memo-%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C%E0%B8%9A%E0%B8%AD%E0%B8%97%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-57ad464f62cd"
+      },
+      {
+        "title": "Visit Github",
+        "to": "https://github.com/itzmeowww/menu-memo"
       }
     ],
     "title": "Menu Memo",
-    "subtitle": "A LINE bot for telling menu",
-    "desc": "Menu Memo is a LINE bot that can ask for menu in each day. ",
-    "tech": ["Node.js"],
+    "subtitle": "A LINE bot for telling menu at Kamnoetvidya Science Academy",
+    "desc": "Menu Memo is a LINE bot that shows the menu in each day. Menu Memo helped more than 400 users by telling the menu!",
+    "tech": ["Node.js", "LINE Messaging API"],
     "date": "12 Oct 2020"
   },
   {
@@ -126,7 +138,7 @@
   },
   {
     "alias": "beta-task-toggler",
-    "imgSrc": "./beta-task-toggler.png",
+    "imgSrc": "./projects/beta-task-toggler/beta-task-toggler.png",
     "alt": "Thai Synonym Browser",
     "url": "/projects/beta-task-toggler",
     "name": "Beta Task Toggler",
@@ -144,17 +156,17 @@
     ],
     "title": "Beta Task Toggler",
     "subtitle": "Toggle, Random, Solve!",
-    "desc": "An extension for showing/hiding/randomizing programming tasks on beta.programming.in.th",
-    "tech": ["Html", "JavaScript", "CSS"],
+    "desc": "An extension that changes the way you code. This extension is for showing/hiding/randomizing programming tasks on beta.programming.in.th",
+    "tech": ["Html", "JavaScript", "Bootstrap"],
     "date": "11 Oct 2021"
   },
   {
     "alias": "wholdstill",
-    "imgSrc": "projects/wholdstill/icon.png",
+    "imgSrc": "projects/wholdstill/2.jpeg",
     "alt": "Wholdstill",
     "url": "/projects/wholdstill",
     "name": "Wholdstill",
-    "img": ["../projects/wholdstill/1.jpg"],
+    "img": ["../projects/wholdstill/icon.png", "../projects/wholdstill/1.jpg"],
     "links": [
       {
         "title": "Visit Website",
@@ -169,7 +181,7 @@
   },
   {
     "alias": "geacher",
-    "imgSrc": "projects/geacher/3.jpg",
+    "imgSrc": "projects/geacher/7.jpeg",
     "alt": "Geacher",
     "url": "/projects/geacher",
     "name": "Geacher",
@@ -191,5 +203,28 @@
     "desc": "A website for finding tutors with KVIS student degree",
     "tech": ["Next.js", "Tailwind CSS", "TypeScript"],
     "date": "7 Mar 2022"
+  },
+  {
+    "alias": "saratree",
+    "imgSrc": "projects/saratree/logo.png",
+    "alt": "SaraRree",
+    "url": "/projects/saratree",
+    "name": "SaraTree",
+    "img": ["../projects/saratree/0.jpeg", "../projects/saratree/1.jpeg"],
+    "links": [
+      {
+        "title": "Visit SaraTree",
+        "to": "https://saratree.vercel.app"
+      },
+      {
+        "title": "Visit Github",
+        "to": "https://github.com/itzmeowww/saratree"
+      }
+    ],
+    "title": "SaraTree",
+    "subtitle": "The tree of knowledge",
+    "desc": "A project I created with my team to submit to HACKVCIS, 36 Hour hackathon.",
+    "tech": ["Next.js", "Tailwind CSS", "TypeScript", "Firebase"],
+    "date": "11 Mar 2022"
   }
 ]

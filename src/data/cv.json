@@ -31,9 +31,10 @@
   "Achievement": [
     {
       "title": "TOI17",
-      "time": "TBA",
-      "desc": "Representative of MWIT Computer Center in TOI17 coding competition",
-      "tags": ["Coding"]
+      "time": "9 DEC - 12 DEC 2021",
+      "desc": "3rd place in total score and gold medal in TOI17 coding competition",
+      "tags": ["Coding"],
+      "reward": "3rd highest score, Gold Medal"
     },
     {
       "title": "KSASF 2021",
@@ -51,7 +52,7 @@
     },
     {
       "title": "Kolmogorov Reading",
-      "time": "3 — 6 MAY 2021",
+      "time": "3 MAY — 6 MAY 2021",
       "desc": "an international science conference for high school students",
       "tags": ["Research"],
       "reward": "KVIS Representative"
