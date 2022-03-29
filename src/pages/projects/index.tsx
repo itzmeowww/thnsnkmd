@@ -19,7 +19,7 @@ const Index = () => {
         <meta name="description" content={`Checkout latest projects by Thanasan Kumdee: ${projects.map((project) => {
           return project.name
         }).join(", ")}`} />
-        <meta property="og:image" content="https://thnsnkmd.netlify.app/preview_project.png" />
+        <meta property="og:image" content="https://thnsnkmd.vercel.app/preview_project.png" />
       </Head>
       <Flex
         w="100%"

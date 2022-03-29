@@ -56,7 +56,7 @@ const Me = () => {
         <title>
           about me — Thanasan Kumdee
         </title>
-        <meta property="og:image" content="https://thnsnkmd.netlify.app/preview_me.png" />
+        <meta property="og:image" content="https://thnsnkmd.vercel.app/preview_me.png" />
         <meta name="description" content="Thanasan Kumdee, the MEXT scholarship student with strong passions in coding, music, and art." />
       </Head>
       <IconButton

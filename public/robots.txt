@@ -1,4 +1,4 @@
 user-agent: *
 allow: /
 
-sitemap: https://thnsnkmd.netlify.app/sitemap.xml
+sitemap: https://thnsnkmd.vercel.app/sitemap.xml
