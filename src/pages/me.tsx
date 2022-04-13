@@ -14,22 +14,19 @@ import {
 } from "@chakra-ui/react";
 import { Section } from "../components/Section";
 import { Nav } from "../components/Nav";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { TriangleUpIcon } from "@chakra-ui/icons";
 import Head from "next/head"
 import cv from "../data/cv.json";
 import { ActivityDetail } from "../components/ActivityDetail";
+import * as Scroll from 'react-scroll';
+import { motion } from "framer-motion";
 
 const Me = () => {
-  //JUST BRUTE FORCE FOR NOW
-  const refEdu = useRef<HTMLDivElement>(null)!;
-  const refAwa = useRef<HTMLDivElement>(null)!;
-  const refRes = useRef<HTMLDivElement>(null)!;
-  const refSki = useRef<HTMLDivElement>(null)!;
+  const MotionFlex = motion(Flex);
+  const scroller = Scroll.scroller;
 
-  const refEx = useRef<HTMLDivElement>(null)!;
-  const refTop = useRef<HTMLDivElement>(null)!;
-  const refList = [refEdu, refAwa, refRes, refSki, refEx];
+  const animateScroll = Scroll.animateScroll;
 
   const [isCoding, setIsCoding] = useState(true);
   const [isResearch, setIsResearch] = useState(true);
@@ -41,14 +38,12 @@ const Me = () => {
     "Skills",
     "Extra Curriculum",
   ];
-  const scroll = (idx: any) => {
-    refList[idx].current?.scrollIntoView({
-      behavior: "smooth",
-    })!;
-  };
 
-  const scrollToRef = (ref: any) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+
+  const scrollToName = (name: string) => {
+    scroller.scrollTo(name, {
+      smooth: true
+    })
   };
   return (
     <Container >
@@ -63,16 +58,16 @@ const Me = () => {
         position="fixed"
         bottom="20px"
         right="20px"
-        aria-label="Search database"
+        aria-label="Scroll To Top"
         colorScheme="teal"
         icon={<TriangleUpIcon />}
         onClick={() => {
-          scrollToRef(refTop);
+          animateScroll.scrollToTop()
         }}
       />
       <Nav />
       <Flex
-        ref={refTop}
+
         h="100vh"
         w="100vw"
         maxW="100%"
@@ -120,7 +115,7 @@ const Me = () => {
                   colorScheme="teal"
                   variant="outline"
                   onClick={() => {
-                    scroll(idx);
+                    scrollToName(topicList[idx]);
                   }}
                   key={idx}
                   size="sm"
@@ -136,20 +131,22 @@ const Me = () => {
       <Section
         sectionKey={0}
         sectionName={topicList[0]}
-        sectionRef={refList[0]}
+
       >
         {cv["Education"].map((x, idx) => {
           return (
 
             <>
               <a href={x["section-detail"].url} >
-                <Flex
+                <MotionFlex
                   bgColor="gray.700"
                   borderRadius="md"
                   p="10px"
                   my="20px"
                   flexDir="column"
                   key={idx}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 1.05 }}
                 >
                   <Text fontSize="sm" fontFamily="mono">
                     {x["section-detail"].title}
@@ -160,7 +157,7 @@ const Me = () => {
                   <Text fontSize="xs" fontFamily="mono" color="green.200">
                     GPA : {x["section-detail"].gpa.toPrecision(3)}
                   </Text>
-                </Flex>
+                </MotionFlex>
               </a>
               {idx == cv["Education"].length - 1 ? (
                 <></>
@@ -180,7 +177,7 @@ const Me = () => {
       <Section
         sectionKey={1}
         sectionName={topicList[1]}
-        sectionRef={refList[1]}
+
       >
         <Stack spacing={6} direction="row" fontFamily="mono" fontWeight="100">
           <Checkbox
@@ -231,7 +228,7 @@ const Me = () => {
       <Section
         sectionKey={4}
         sectionName={topicList[4]}
-        sectionRef={refList[4]}
+
       >
         <Flex flexDir="column" mt="10px" >
           {cv["Extra Curriculum"].map((x, idx) => {
@@ -244,7 +241,7 @@ const Me = () => {
       <Section
         sectionKey={2}
         sectionName={topicList[2]}
-        sectionRef={refList[2]}
+
       >
         {cv["Research"].map((x, idx) => {
           return (
@@ -304,7 +301,7 @@ const Me = () => {
       <Section
         sectionKey={3}
         sectionName={topicList[3]}
-        sectionRef={refList[3]}
+
       >
         <Flex w="500px" maxW="90vw" flexWrap="wrap" align="center" justify="center">
           {cv["Skills"].map((x, k) => {

@@ -1,7 +1,6 @@
 import { Flex, HStack, Text, Divider, Tag } from "@chakra-ui/react";
-
 import { useState } from "react"
-
+import { motion } from "framer-motion";
 
 type DetailsType = {
     title: String,
@@ -23,8 +22,8 @@ export const ActivityDetail = ({ idx, details }: Props) => {
     const toggleOpen = () => {
         setOpen(!open)
     }
-
-    return (<Flex
+    const MotionFlex = motion(Flex);
+    return (<MotionFlex
         bgColor="gray.700"
         borderRadius="md"
         p="10px"
@@ -36,7 +35,8 @@ export const ActivityDetail = ({ idx, details }: Props) => {
         cursor="pointer"
         onClick={toggleOpen}
         title="Toggle Detail"
-
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 1.05 }}
     >
         <HStack justify="space-between">
             <Text fontSize="md" fontFamily="mono">
@@ -90,5 +90,5 @@ export const ActivityDetail = ({ idx, details }: Props) => {
             {details.desc}
         </Text>
 
-    </Flex>)
+    </MotionFlex>)
 }
