@@ -116,6 +116,7 @@ const Index = () => {
           </Button>
         </ScaleFade> */}
       </Flex>
+
       <Flex
         w="100%"
         justify="flex-start"
