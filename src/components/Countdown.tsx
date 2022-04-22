@@ -1,5 +1,4 @@
 import { Box, Flex, Skeleton, Text } from "@chakra-ui/react";
-import { timeEnd } from "console";
 import { useEffect, useState } from "react";
 import { Nav } from '../components/Nav'
 const Countdown = () => {
