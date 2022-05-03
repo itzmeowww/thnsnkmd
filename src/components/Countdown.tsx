@@ -9,7 +9,7 @@ const Countdown = () => {
         m: -1,
         s: -1
     });
-    const endDate = new Date('2022-05-12T16:59:00')
+    const endDate = new Date('2022-05-11T23:59:00')
 
 
     useEffect(() => {

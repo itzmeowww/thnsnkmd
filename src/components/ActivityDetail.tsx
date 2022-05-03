@@ -22,7 +22,14 @@ export const ActivityDetail = ({ idx, details }: Props) => {
     const toggleOpen = () => {
         setOpen(!open)
     }
+    const variants = {
+        open: { opacity: 1, height: '100' },
+        closed: { opacity: 0, height: '0' },
+    }
     const MotionFlex = motion(Flex);
+
+    const MotionText = motion(Text);
+
     return (<MotionFlex
         bgColor="gray.700"
         borderRadius="md"
@@ -31,13 +38,16 @@ export const ActivityDetail = ({ idx, details }: Props) => {
         minW="200px"
         maxW="300px"
         flexDir="column"
-        key={idx.toString()}
+
+        key={`${idx}`}
         cursor="pointer"
         onClick={toggleOpen}
         title="Toggle Detail"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 1.05 }}
+        overflow={"hidden"}
     >
+
         <HStack justify="space-between">
             <Text fontSize="md" fontFamily="mono">
                 {details.title}
@@ -64,31 +74,33 @@ export const ActivityDetail = ({ idx, details }: Props) => {
             })}
         </HStack>{" "}
         {
-            details.reward == undefined || details.reward == "" ? <></> : <>
+            (details.reward == undefined && details.reward == "") && <>
                 <Divider my="5px" />
-                <Text
+                <MotionText
                     fontSize="sm"
                     fontFamily="mono"
                     color="yellow.100"
                     textAlign="left"
                     letterSpacing="wide"
-                    hidden={!open}
+                    animate={open ? "open" : "closed"}
+                    variants={variants}
                 >
                     {details.reward}
-                </Text>
+                </MotionText>
             </>
         }
         <Divider my="5px" />
-        <Text
+        <MotionText
             fontSize="sm"
             fontFamily="mono"
             color="gray.300"
             textAlign="left"
             letterSpacing="wide"
-            hidden={!open}
+            animate={open ? "open" : "closed"}
+            variants={variants}
         >
             {details.desc}
-        </Text>
+        </MotionText>
 
     </MotionFlex>)
 }
