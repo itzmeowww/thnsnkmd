@@ -9,12 +9,12 @@ const Countdown = () => {
         m: -1,
         s: -1
     });
-    const endDate = new Date('2022-05-11T23:59:00')
+    const endDate = new Date('2022-05-12')
 
 
     useEffect(() => {
         setInterval(() => {
-            const ms = +endDate - +new Date();
+            const ms = -(+endDate - +new Date());
             let s = Math.floor(ms / 1000);
             let m = Math.floor(s / 60);
             s = s % 60;
@@ -33,7 +33,7 @@ const Countdown = () => {
         <Flex flexDir="column" justifyContent="center" alignItems="center" gridGap="2">
             <Nav />
             <Text fontFamily="mono" fontSize="md">
-                relocate to Japan
+                大阪！
             </Text>
             <Flex gridGap="2" fontSize="xs" color="gray.100">
                 <Box border="1px" borderColor="gray.600" width="9" display="flex" justifyContent="right" alignItems="center" borderLeftRadius="md" p="1.5">
