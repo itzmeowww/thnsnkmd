@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const links: {
+  title: string;
+  link: string;
+}[] = [
+  { title: "GitHub", link: "https://github.com/itzmeowww" },
+  { title: "Medium", link: "https://medium.com/@itzmeowww" },
+];
+
+const projects: {
+  title: string;
+  body: string;
+  href: string;
+  img: string;
+}[] = [
+  {
+    title: "Looooong Cat",
+    body: "Create a very long cat",
+    href: "https://looooongcat.vercel.app",
+    img: "/images/looooong-cat/icon.jpg",
+  },
+  {
+    title: "Geacher",
+    body: "Website for finding tutors from KVIS",
+    href: "https://geacher.vercel.app",
+    img: "/images/geacher/icon.jpg",
+  },
+  {
+    title: "Beta Task Toggler",
+    body: "Chrome extension for beta.programming.in.th",
+    href: "https://chrome.google.com/webstore/detail/beta-task-toggler/mgicmhhkcdbopogdbphnecplndijgfbn/related?hl=en",
+    img: "/images/beta-task-toggler/icon.jpg",
+  },
+];
+---
+
+<Layout title="Thanasan Kumdee">
+  <main class="h-screen flex flex-col justify-center items-center w-full pb-12">
+    <p class="text-3xl text-white">Thanasan Kumdee</p>
+
+    <div class="text-md text-gray-300">Student at Osaka University</div>
+    <div class="flex mt-4 gap-2">
+      {
+        links.map((data) => {
+          return (
+            <a
+              href={data.link}
+              class="text-white border hover:bg-slate-700 transition-colors
+			   border-slate-600 px-2 py-1 rounded-md"
+            >
+              {data.title}
+            </a>
+          );
+        })
+      }
+    </div>
+  </main>
+
+  <div class="min-h-screen w-full -mt-36">
+    <div class="w-full">
+      <p class="text-white font-bold text-xl mb-3 pl-1">PROJECTS</p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {
+          projects.map((projects) => (
+            <Card
+              title={projects.title}
+              body={projects.body}
+              href={projects.href}
+              img={projects.img}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
