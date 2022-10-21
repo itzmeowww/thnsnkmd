@@ -35,6 +35,8 @@ const { title, description, url, paddingTop } = Astro.props;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={`${Astro.site}favicon.svg`} />
+
+    <link rel="apple-touch-icon" href={`${Astro.site}favicon.svg`} />
   </head>
   <body class="w-screen bg-gray-900">
     <div
