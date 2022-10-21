@@ -1,9 +1,10 @@
 ---
 export interface Props {
   title: string;
+  paddingTop: boolean;
 }
 
-const { title } = Astro.props;
+const { title, paddingTop } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,10 +15,18 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="min-h-screen w-screen bg-slate-900">
+  <body class="w-screen bg-gray-900">
     <div
-      class="relative max-w-3xl mx-auto w-full flex flex-col justify-center items-center px-10"
+      class={`relative max-w-3xl mx-auto w-full min-h-screen flex flex-col justify-start items-center px-10 overflow-x-hidden md:overflow-x-visible ${
+        paddingTop && "pt-16"
+      }`}
     >
       <slot />
     </div>
