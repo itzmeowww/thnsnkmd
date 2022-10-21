@@ -14,7 +14,10 @@ const { title, description, url, paddingTop } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -36,9 +39,6 @@ const { title, description, url, paddingTop } = Astro.props;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={`${Astro.site}banner.svg`} />
-
-    <link rel="apple-touch-icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.ico" />
   </head>
   <body class="w-screen bg-gray-900">
     <div
