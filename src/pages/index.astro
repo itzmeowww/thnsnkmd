@@ -52,7 +52,12 @@ const projects: {
     }
   });
 </script>
-<Layout title="Thanasan Kumdee" paddingTop={false}>
+<Layout
+  title="Thanasan Kumdee"
+  description="a brief prologue of me"
+  url=""
+  paddingTop={false}
+>
   <div>
     <div
       class="w-48 h-48 -z-10 absolute -top-6 -right-6 rounded-full"
@@ -62,11 +67,11 @@ const projects: {
     </div>
   </div>
   <main class="h-screen flex flex-col justify-center items-center w-full pb-12">
-    <p class="text-3xl sm:text-5xl text-white">Thanasan Kumdee</p>
+    <h1 class="text-3xl sm:text-5xl text-white">Thanasan Kumdee</h1>
 
-    <div class="text-md sm:text-xl text-gray-300 pt-1">
+    <p class="text-md sm:text-xl text-gray-300 pt-1">
       Student at Osaka University
-    </div>
+    </p>
     <div class="flex mt-4 gap-2">
       {
         links.map((data) => {
