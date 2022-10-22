@@ -1,5 +1,6 @@
 ---
 import { directive } from "@babel/types";
+import ButtonLink from "../../components/ButtonLink.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -27,10 +28,9 @@ import Layout from "../../layouts/Layout.astro";
     }
   </div>
   <div class="mt-6">
-    <a
-      class="text-white border bg-gray-900 hover:bg-slate-700 transition-colors border-slate-600 px-2 py-1 rounded-md"
+    <ButtonLink
       href="https://chrome.google.com/webstore/detail/beta-task-toggler/mgicmhhkcdbopogdbphnecplndijgfbn"
-      >Chrome Webstore</a
-    >
+      >Chrome Webstore
+    </ButtonLink>
   </div>
 </Layout>>
