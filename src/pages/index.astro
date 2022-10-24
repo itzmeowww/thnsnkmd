@@ -47,9 +47,15 @@ const projects: {
 
       let t = window.scrollY / 250.0;
       let sqt = t * t;
-      let scale = sqt / (2.0 * (sqt - t) + 1.0);
+      let scale = sqt / (2 * (sqt - t) + 1.0);
 
       moonElem.style.scale = `${1 + scale}`;
+      // const scroll = window.scrollY;
+      // if (scroll > 100) {
+      //   moonElem.style.transform = `translate(${(scroll - 100) / 10.0}px,${
+      //     (scroll - 100) * 2
+      //   }px)`;
+      // }
     }
   });
 </script>
