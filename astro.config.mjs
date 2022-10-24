@@ -9,5 +9,10 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://thnsnkmd.com",
-  integrations: [tailwind(), sitemap()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      filter: (page) => page !== "https://thnsnkmd.com/tx",
+    }),
+  ],
 });
