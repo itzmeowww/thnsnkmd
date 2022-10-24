@@ -1,0 +1,53 @@
+---
+export interface Props {
+  target: Date;
+  title: string;
+  slug: string;
+}
+
+const { target, title, slug } = Astro.props;
+const isEnded = +new Date(target) - +new Date() <= 0 ? true : false;
+---
+{!isEnded &&
+<script define:vars={{ target, slug }}>
+  setInterval(() => {
+    let diff = +new Date(target) - +new Date();
+    const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+    diff %= 24 * 60 * 60 * 1000;
+    const hrs = Math.floor(diff / (60 * 60 * 1000));
+    diff %= 60 * 60 * 1000;
+    const mins = Math.floor(diff / (60 * 1000));
+    diff %= 60 * 1000;
+    const secs = Math.floor(diff / 1000);
+
+    document.getElementById(`${slug}-days`).innerText = days;
+    document.getElementById(`${slug}-hrs`).innerText = hrs;
+    document.getElementById(`${slug}-mins`).innerText = mins;
+    document.getElementById(`${slug}-secs`).innerText = secs;
+  }, 1000);
+</script>
+}
+
+<div
+  class="text-white flex flex-col items-center gap-1 font-mono bg-gray-700 pt-2 overflow-hidden rounded-md w-36"
+>
+  <div>{title}</div>
+  <div
+  class="text-md py-1 flex items-center justify-center gap-2 mt-1 w-full bg-gray-400 px-4 text-black text-center"
+  >
+    {
+      !isEnded && (
+        <>
+          <div id={`${slug}-days`}>00</div>
+
+          <div id={`${slug}-hrs`}>00</div>
+
+          <div id={`${slug}-mins`}>00</div>
+
+          <div id={`${slug}-secs`}>00</div>
+        </>
+      )
+    }
+    {isEnded && <div class="w-full">end!</div>}
+  </div>
+</div>

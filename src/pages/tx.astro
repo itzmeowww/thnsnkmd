@@ -1,0 +1,17 @@
+---
+import CountDown from "../components/CountDown.astro";
+import CountUp from "../components/CountUp.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout description="" paddingTop={true} title="Timer" url="tx">
+  <div class="flex flex-col gap-8 items-center justify-center">
+    <CountDown
+      target={new Date(2022, 10, 23)}
+      title="12月試験"
+      slug="12shiken"
+    />
+
+    <CountUp target={new Date(2022, 4, 12)} title="大阪" slug="oosaka" />
+  </div>
+</Layout>

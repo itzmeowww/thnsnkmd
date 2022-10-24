@@ -42,10 +42,10 @@ const projects: {
 <script>
   const moonElem: HTMLElement | null = document.getElementById("moon");
   window.addEventListener("scroll", () => {
-    if (moonElem && window.scrollY < 200) {
-      moonElem.style.rotate = `${window.scrollY}deg`;
+    if (moonElem && window.scrollY < 400) {
+      moonElem.style.rotate = `${window.scrollY / 2.0}deg`;
 
-      let t = window.scrollY / 300.0;
+      let t = window.scrollY / 250.0;
       let sqt = t * t;
       let scale = sqt / (2.0 * (sqt - t) + 1.0);
 
@@ -68,11 +68,9 @@ const projects: {
     </div>
   </div>
   <main class="h-screen flex flex-col justify-center items-center w-full pb-12">
-    <h1 class="text-3xl sm:text-5xl text-white">Thanasan Kumdee</h1>
+    <h1 class="text-3xl sm:text-4xl text-white">Thanasan Kumdee</h1>
 
-    <p class="text-md sm:text-xl text-gray-300 pt-1">
-      Student at Osaka University
-    </p>
+    <p class="text-md sm:text-lg text-gray-300">Student at Osaka University</p>
     <div class="flex mt-4 gap-2">
       {
         links.map((data) => {
@@ -84,7 +82,9 @@ const projects: {
 
   <div class="w-full -mt-36 mb-24">
     <div class="w-full">
-      <p class="text-white font-medium text-xl mb-3 pl-1">PROJECTS</p>
+      <p class="text-white tracking-wide text-xl sm:text-2xl mb-3 pl-1">
+        PROJECTS
+      </p>
       <div class="grid sm:grid-cols-2 gap-4">
         {
           projects.map((projects) => (
