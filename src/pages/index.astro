@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Moon from "../components/Moon.astro";
+// import Moon from "../components/Moon.astro";
+import { projects } from "./projects/projects";
 import ButtonLink from "../components/ButtonLink.astro";
 
 const links: {
@@ -12,52 +13,29 @@ const links: {
   { title: "Medium", link: "https://medium.com/@itzmeowww" },
 ];
 
-const projects: {
-  title: string;
-  body: string;
-  href: string;
-  img: string;
-}[] = [
-  {
-    title: "Looooong Cat",
-    body: "Create a very long cat",
-    href: "https://looooongcat.vercel.app",
-    img: "/images/looooong-cat/icon.jpg",
-  },
-  {
-    title: "Geacher",
-    body: "Website for finding tutors from KVIS",
-    href: "https://geacher.vercel.app",
-    img: "/images/geacher/icon.jpg",
-  },
-  {
-    title: "Beta Task Toggler",
-    body: "Chrome extension for beta.programming.in.th",
-    href: "projects/beta-task-toggler",
-    img: "/images/beta-task-toggler/icon.jpg",
-  },
-];
+const site = Astro.site;
 ---
 
-<script>
-  const moonElem: HTMLElement | null = document.getElementById("moon");
-  window.addEventListener("scroll", () => {
-    if (moonElem && window.scrollY < 400) {
-      moonElem.style.rotate = `${window.scrollY / 2.0}deg`;
+<script define:vars={projects}>
+  console.log(projects);
+  // const moonElem: HTMLElement | null = document.getElementById("moon");
+  // window.addEventListener("scroll", () => {
+  //   if (moonElem && window.scrollY < 400) {
+  //     moonElem.style.rotate = `${window.scrollY / 2.0}deg`;
 
-      let t = window.scrollY / 250.0;
-      let sqt = t * t;
-      let scale = sqt / (2 * (sqt - t) + 1.0);
+  //     let t = window.scrollY / 250.0;
+  //     let sqt = t * t;
+  //     let scale = sqt / (2 * (sqt - t) + 1.0);
 
-      moonElem.style.scale = `${1 + scale}`;
-      // const scroll = window.scrollY;
-      // if (scroll > 100) {
-      //   moonElem.style.transform = `translate(${(scroll - 100) / 10.0}px,${
-      //     (scroll - 100) * 2
-      //   }px)`;
-      // }
-    }
-  });
+  //     moonElem.style.scale = `${1 + scale}`;
+  //     // const scroll = window.scrollY;
+  //     // if (scroll > 100) {
+  //     //   moonElem.style.transform = `translate(${(scroll - 100) / 10.0}px,${
+  //     //     (scroll - 100) * 2
+  //     //   }px)`;
+  //     // }
+  //   }
+  // });
 </script>
 <Layout
   title="Thanasan Kumdee"
@@ -66,12 +44,12 @@ const projects: {
   paddingTop={false}
 >
   <div>
-    <div
+    <!-- <div
       class="w-48 h-48 -z-10 absolute -top-6 -right-6 rounded-full"
       id="moon"
     >
       <Moon />
-    </div>
+    </div> -->
   </div>
   <main class="h-screen flex flex-col justify-center items-center w-full pb-12">
     <h1 class="text-3xl sm:text-4xl text-white">Thanasan Kumdee</h1>
@@ -93,12 +71,12 @@ const projects: {
       </p>
       <div class="grid sm:grid-cols-2 gap-4">
         {
-          projects.map((projects) => (
+          projects.map((project) => (
             <Card
-              title={projects.title}
-              body={projects.body}
-              href={projects.href}
-              img={projects.img}
+              title={project.title}
+              body={project.body}
+              href={`/projects/${project.slug}`}
+              img={project.img}
             />
           ))
         }

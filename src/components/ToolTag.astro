@@ -1,0 +1,39 @@
+---
+import type { Tool } from "../types/tools";
+export interface Props {
+  tool: Tool;
+}
+import { Icon } from "astro-icon";
+const { tool } = Astro.props;
+const name: {
+  [key in Tool]: {
+    title: string;
+    icon: string;
+  };
+} = {
+  javascript: {
+    title: "JavaScript",
+    icon: "logos:javascript",
+  },
+  bootstrap: {
+    title: "Bootstrap",
+    icon: "logos:bootstrap",
+  },
+  svelte: {
+    title: "Svelte",
+    icon: "logos:svelte-icon",
+  },
+  tailwind: {
+    title: "TailwindCss",
+    icon: "logos:tailwindcss-icon",
+  },
+  nextjs: {
+    title: "NextJs",
+    icon: "logos:nextjs-icon",
+  },
+};
+---
+
+<div class="text-white flex gap-1 items-center">
+  <Icon name={name[tool].icon} height="20" />{name[tool].title}
+</div>
