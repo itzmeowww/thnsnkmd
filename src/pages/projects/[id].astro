@@ -39,7 +39,11 @@ const { title, tools, preview, body, links } = Astro.props;
   <div class="h-72 w-full flex mt-12 gap-2 overflow-x-scroll">
     {
       preview.map((src: string) => (
-        <img src={src} alt="This is alt" class="rounded-lg object-contain" />
+        <img
+          src={src}
+          alt={`Preview image of ${title}`}
+          class="rounded-lg object-contain"
+        />
       ))
     }
   </div>

@@ -1,0 +1,28 @@
+---
+import Japan from "../components/Japan.astro";
+import type { Prefecture } from "../types/prefecture";
+import Layout from "../layouts/Layout.astro";
+const prefectures: Prefecture[] = ["Osaka", "Nara", "Hyogo", "Kyoto", "Mie"];
+---
+
+<Layout
+  title="Japan"
+  paddingTop={false}
+  url="japan"
+  description={`Since I came to Japan in 12 May 2022, I have been to ${prefectures.length} out of 47 prefectures in Japan`}
+>
+  <div
+    class="bg-white w-16 h-14 rounded text-gray-800 text-center text-xl top-10 z-10 absolute flex flex-col justify-center items-center"
+  >
+    <p class="border-b w-full text-center border-gray-500 text-3xl">
+      {prefectures.length}
+    </p>
+    <p class="text-xs">47</p>
+  </div>
+  <div class="absolute bottom-8">
+    <p class="text-xs font-mono text-gray-400">since 12 May 2022</p>
+  </div>
+  <div class="w-full h-screen flex flex-col items-center justify-center">
+    <Japan prefectures={prefectures} />
+  </div>
+</Layout>
