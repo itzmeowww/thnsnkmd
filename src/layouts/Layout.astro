@@ -5,10 +5,11 @@ export interface Props {
   title: string;
   description: string;
   paddingTop: boolean;
+  paddingX?: boolean;
   url: string;
 }
 
-const { title, description, url, paddingTop } = Astro.props;
+const { title, description, url, paddingTop, paddingX } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,9 +17,9 @@ const { title, description, url, paddingTop } = Astro.props;
   <HeadComponet description={description} title={title} url={url} />
   <body class="w-screen bg-gray-900 overflow-x-hidden">
     <div
-      class={`relative max-w-3xl mx-auto w-full min-h-screen flex flex-col justify-start items-center px-10 overflow-x-hidden md:overflow-x-visible ${
-        paddingTop && "pt-16"
-      }`}
+      class={`relative max-w-3xl mx-auto w-full min-h-screen flex flex-col justify-start items-center ${
+        paddingX && "px-10"
+      } overflow-x-hidden md:overflow-x-visible ${paddingTop && "pt-16"}`}
     >
       <slot />
     </div>

@@ -8,6 +8,7 @@ const prefectures: Prefecture[] = ["Osaka", "Nara", "Hyogo", "Kyoto", "Mie"];
 <Layout
   title="Japan"
   paddingTop={false}
+  paddingX={false}
   url="japan"
   description={`Since I came to Japan in 12 May 2022, I have been to ${prefectures.length} out of 47 prefectures in Japan`}
 >
@@ -19,10 +20,13 @@ const prefectures: Prefecture[] = ["Osaka", "Nara", "Hyogo", "Kyoto", "Mie"];
     </p>
     <p class="text-xs">47</p>
   </div>
-  <div class="absolute bottom-8">
+  <div class="absolute bottom-8 flex flex-col justify-center items-center">
+    <p id="current-pref" class="text-white font-mono"></p>
     <p class="text-xs font-mono text-gray-400">since 12 May 2022</p>
   </div>
-  <div class="w-full h-screen flex flex-col items-center justify-center">
+  <div
+    class="w-full max-w-full h-screen flex flex-col items-center justify-center overflow-scroll"
+  >
     <Japan prefectures={prefectures} />
   </div>
 </Layout>

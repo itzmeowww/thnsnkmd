@@ -7,7 +7,9 @@ export interface Props {
 const { prefectures } = Astro.props;
 
 const wentColor = "#86efac";
+const darkerWentColor = "#4ade80";
 const notYetColor = "#f0fdf4";
+const darkerNotYetColor = "#fde047";
 
 const japan: {
   d: string;
@@ -204,11 +206,33 @@ const japan: {
 ];
 ---
 
-<svg width="490" height="490" id="japan-map">
+<script
+  is:inline
+  define:vars={{ wentColor, notYetColor, darkerWentColor, darkerNotYetColor }}
+>
+  window.onload = function () {
+    const elems = document.getElementsByTagName("path");
+    const showName = function (name) {
+      const currenntPref = document.getElementById("current-pref");
+      if (currenntPref) currenntPref.innerText = name;
+    };
+
+    for (let i = 0; i < elems.length; i++) {
+      elems[i].onmouseenter = () => {
+        showName(elems[i].id);
+      };
+      elems[i].onmouseleave = () => {};
+      elems[i].onclick = () => showName(elems[i].id);
+    }
+  };
+</script>
+
+<svg viewBox="20 0 450 490" id="japan-map" class="pt-10">
   {
     japan.map((pref) => {
       return (
         <path
+          class="hover:cursor-pointer "
           d={pref.d}
           id={pref.id}
           fill={prefectures.includes(pref.id) ? wentColor : notYetColor}
