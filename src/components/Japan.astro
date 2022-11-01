@@ -211,18 +211,18 @@ const japan: {
   define:vars={{ wentColor, notYetColor, darkerWentColor, darkerNotYetColor }}
 >
   window.onload = function () {
-    const elems = document.getElementsByTagName("path");
+    const prefs = document.getElementsByTagName("path");
     const showName = function (name) {
       const currenntPref = document.getElementById("current-pref");
       if (currenntPref) currenntPref.innerText = name;
     };
 
-    for (let i = 0; i < elems.length; i++) {
-      elems[i].onmouseenter = () => {
-        showName(elems[i].id);
+    for (let i = 0; i < prefs.length; i++) {
+      prefs[i].onmouseenter = () => {
+        showName(prefs[i].id);
       };
-      elems[i].onmouseleave = () => {};
-      elems[i].onclick = () => showName(elems[i].id);
+      prefs[i].onmouseleave = () => {};
+      prefs[i].onclick = () => showName(prefs[i].id);
     }
   };
 </script>

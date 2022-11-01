@@ -1,4 +1,5 @@
 ---
+import ButtonLink from "../components/ButtonLink.astro";
 import HeadComponet from "../components/HeadComponet.astro";
 
 export interface Props {
@@ -7,20 +8,44 @@ export interface Props {
   paddingTop: boolean;
   paddingX?: boolean;
   url: string;
+  showNav?: boolean;
 }
 
-const { title, description, url, paddingTop, paddingX } = Astro.props;
+const { title, description, url, paddingTop, paddingX, showNav } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <HeadComponet description={description} title={title} url={url} />
-  <body class="w-screen bg-gray-900 overflow-x-hidden">
+  <script is:inline>
+    console.log("hi");
+    window.onload = () => {
+      console.log("load");
+      const elems = document.getElementsByClassName("fade-in");
+
+      for (let i = 0; i < elems.length; i++) {
+        elems[i].style.opacity = 1;
+        elems[i].style.top = 0;
+      }
+    };
+  </script>
+
+  <body
+    class="w-screen bg-gray-900 overflow-x-hidden fade-in transition-opacity duration-500 absolute"
+    style="opacity: 0"
+  >
     <div
       class={`relative max-w-3xl mx-auto w-full min-h-screen flex flex-col justify-start items-center ${
         paddingX && "px-10"
-      } overflow-x-hidden md:overflow-x-visible ${paddingTop && "pt-16"}`}
+      } overflow-x-hidden md:overflow-x-visible ${paddingTop && "pt-12"}`}
     >
+      {
+        showNav && (
+          <div class="pb-4 w-full mb-4 border-b">
+            <ButtonLink href="/">Home</ButtonLink>
+          </div>
+        )
+      }
       <slot />
     </div>
   </body>
