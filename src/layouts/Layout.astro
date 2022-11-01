@@ -17,20 +17,30 @@ const { title, description, url, paddingTop, paddingX, showNav } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <HeadComponet description={description} title={title} url={url} />
-  <script is:inline>
+  <!-- <script is:inline hoist>
     document.addEventListener("DOMContentLoaded", () => {
       const elems = document.getElementsByClassName("fade-in");
       for (let i = 0; i < elems.length; i++) {
         elems[i].style.opacity = 1;
       }
     });
-    document.addEventListener("onload", () => {
-      const elems = document.getElementsByClassName("fade-in");
-      for (let i = 0; i < elems.length; i++) {
-        elems[i].style.opacity = 1;
-      }
-    });
-  </script>
+    // const elems = document.getElementsByClassName("fade-in");
+    // for (let i = 0; i < elems.length; i++) {
+    //   elems[i].style.opacity = 1;
+    // }
+    // console.log("hi");
+    // alert(document);
+    // const elems = document.getElementsByClassName("fade-in");
+    // console.log(elems);
+    // document.onload = (e) => {
+    //   console.log("hi");
+    //   const elems = document.getElementsByClassName("fade-in");
+    //   for (let i = 0; i < elems.length; i++) {
+    //     elems[i].style.opacity = 1;
+    //   }
+    // };
+    // alert(document);
+  </script> -->
 
   <body
     class="w-screen bg-gray-900 overflow-x-hidden fade-in transition-opacity duration-500 absolute"
@@ -38,8 +48,8 @@ const { title, description, url, paddingTop, paddingX, showNav } = Astro.props;
   >
     <div
       class={`relative max-w-3xl mx-auto w-full min-h-screen flex flex-col justify-start items-center ${
-        paddingX && "px-10"
-      } overflow-x-hidden md:overflow-x-visible ${paddingTop && "pt-8"}`}
+        paddingX ? "px-10" : ""
+      } overflow-x-hidden md:overflow-x-visible ${paddingTop ? "pt-8" : ""}`}
     >
       {
         showNav && (
