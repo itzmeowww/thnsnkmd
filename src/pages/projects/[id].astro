@@ -38,13 +38,15 @@ const { title, tools, preview, body, links } = Astro.props;
     {body}
   </p>
 
-  <div class="h-72 w-full flex mt-12 gap-2 overflow-x-scroll">
+  <div
+    class="h-72 w-full flex mt-12 overflow-x-scroll bg-gray-800 p-2 gap-2 rounded-lg"
+  >
     {
       preview.map((src: string) => (
         <img
           src={src}
           alt={`Preview image of ${title}`}
-          class="rounded-lg object-contain"
+          class="rounded-lg object-contain text-white w-full h-full"
         />
       ))
     }
@@ -60,7 +62,7 @@ const { title, tools, preview, body, links } = Astro.props;
   <div class="w-full mt-4">
     <p class="text-white font-medium text-xl pl-1 mb-3">Crafted By</p>
     <div
-      class="border rounded-md w-full flex justify-center flex-wrap-reverse py-6 gap-4"
+      class="border border-gray-500 rounded-md w-full flex justify-center flex-wrap-reverse py-6 mb-20 gap-4"
     >
       {
         tools.map((tool: Tool) => {
