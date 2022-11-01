@@ -20,10 +20,14 @@ const { title, description, url, paddingTop, paddingX, showNav } = Astro.props;
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const elems = document.getElementsByClassName("fade-in");
-
       for (let i = 0; i < elems.length; i++) {
         elems[i].style.opacity = 1;
-        elems[i].style.top = 0;
+      }
+    });
+    document.addEventListener("onload", () => {
+      const elems = document.getElementsByClassName("fade-in");
+      for (let i = 0; i < elems.length; i++) {
+        elems[i].style.opacity = 1;
       }
     });
   </script>
