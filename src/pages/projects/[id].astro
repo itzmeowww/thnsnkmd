@@ -18,13 +18,13 @@ export function getStaticPaths() {
   return ret;
 }
 
-const { title, tools, preview, body, links } = Astro.props;
+const { title, tools, preview, body, links, slug } = Astro.props;
 ---
 
 <Layout
-  title="Beta Task Toggler; Thanasan Kumdee"
-  url="projects/beta-task-toggler"
-  description="Chrome extension for beta.programming.in.th crafted with love by Thanasan Kumdee"
+  title={`${title}"; Thanasan Kumdee`}
+  url={`projects/${slug}`}
+  description={body}
   paddingTop={true}
   paddingX={true}
   showNav={true}
