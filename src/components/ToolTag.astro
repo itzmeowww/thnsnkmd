@@ -13,27 +13,29 @@ const name: {
 } = {
   javascript: {
     title: "JavaScript",
-    icon: "logos:javascript",
+    icon: "simple-icons:javascript",
   },
   bootstrap: {
     title: "Bootstrap",
-    icon: "logos:bootstrap",
+    icon: "simple-icons:bootstrap",
   },
   svelte: {
     title: "Svelte",
-    icon: "logos:svelte-icon",
+    icon: "simple-icons:svelte",
   },
   tailwind: {
     title: "TailwindCss",
-    icon: "logos:tailwindcss-icon",
+    icon: "simple-icons:tailwindcss",
   },
   nextjs: {
     title: "NextJs",
-    icon: "logos:nextjs-icon",
+    icon: "simple-icons:nextdotjs",
   },
 };
 ---
 
-<div class="text-white flex gap-1 items-center">
+<div
+  class="text-black flex gap-1 items-center bg-gray-100 px-2 py-0.5 rounded-md"
+>
   <Icon name={name[tool].icon} height="20" />{name[tool].title}
 </div>

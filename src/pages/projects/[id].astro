@@ -30,11 +30,11 @@ const { title, tools, preview, body, links, slug } = Astro.props;
   showNav={true}
 >
   <h1
-    class="text-white text-3xl mb-1 font-medium w-full rounded-l-md text-center"
+    class="text-gray-100 text-3xl mb-1 font-medium w-full rounded-l-md text-center"
   >
     {title}
   </h1>
-  <p class="text-gray-300 text-md text-center w-full pl-3">
+  <p class="text-gray-300 text-md text-center w-full">
     {body}
   </p>
 
@@ -52,7 +52,7 @@ const { title, tools, preview, body, links, slug } = Astro.props;
     }
   </div>
 
-  <div class="mt-6 flex gap-2 mb-3">
+  <div class="mt-6 flex gap-3 mb-3">
     {
       links.map((link: { href: string; title: string }) => {
         return <ButtonLink href={link.href}>{link.title}</ButtonLink>;
@@ -60,9 +60,9 @@ const { title, tools, preview, body, links, slug } = Astro.props;
     }
   </div>
   <div class="w-full mt-4">
-    <p class="text-white font-medium text-xl pl-1 mb-3">Crafted By</p>
+    <p class="text-gray-100 font-medium text-xl pl-1 mb-3">Crafted By</p>
     <div
-      class="border border-gray-500 rounded-md w-full flex justify-center flex-wrap-reverse py-6 mb-20 gap-4"
+      class="border border-gray-500 rounded-md w-full flex justify-center flex-wrap-reverse py-6 mb-20 gap-3"
     >
       {
         tools.map((tool: Tool) => {

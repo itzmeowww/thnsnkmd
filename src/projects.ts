@@ -21,7 +21,11 @@ export const projects: Project[] = [
       },
     ],
     img: "/images/looooong-cat/icon.jpg",
-    preview: ["/images/looooong-cat/icon.jpg", "/images/looooong-cat/icon.jpg"],
+    preview: [
+      "/images/looooong-cat/icon.jpg",
+      "/images/looooong-cat/icon.jpg",
+      "/images/looooong-cat/icon.jpg",
+    ],
     slug: "looooong-cat",
     tools: ["svelte", "tailwind"],
   },

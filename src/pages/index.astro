@@ -54,10 +54,14 @@ const site = Astro.site;
     </div> -->
   </div>
   <main class="h-screen flex flex-col justify-center items-center w-full pb-12">
-    <h1 class="text-3xl sm:text-4xl text-white">Thanasan Kumdee</h1>
+    <h1 class="text-4xl sm:text-5xl font-medium text-gray-100">
+      Thanasan Kumdee
+    </h1>
 
-    <p class="text-md sm:text-lg text-gray-300">Student at Osaka University</p>
-    <div class="flex mt-4 gap-2">
+    <p class="text-lg sm:text-xl text-gray-300 mt-1">
+      Student at Osaka University
+    </p>
+    <div class="flex mt-4 gap-3">
       {
         links.map((data) => {
           return <ButtonLink href={data.link}>{data.title}</ButtonLink>;
@@ -68,8 +72,8 @@ const site = Astro.site;
 
   <div class="w-full -mt-36 mb-24">
     <div class="w-full">
-      <p class="text-white tracking-wide text-xl sm:text-2xl mb-3 pl-1">
-        PROJECTS
+      <p class="text-gray-100 text-xl sm:text-2xl mb-3 pl-1 font-medium">
+        Projects
       </p>
       <div class="grid sm:grid-cols-2 gap-4">
         {
