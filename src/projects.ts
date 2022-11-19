@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     title: "Beyond Tic Tac Toe",
-    body: "Even more challenging tic tac toe game, empowered with AI player",
+    body: "Even more challenging tic tac toe game, with AI player",
     links: [
       {
         href: "https://beyond-tic-tac-toe.vercel.app",

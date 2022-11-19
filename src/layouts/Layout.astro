@@ -9,14 +9,28 @@ export interface Props {
   paddingX?: boolean;
   url: string;
   showNav?: boolean;
+  previewImgUrl?: string;
 }
 
-const { title, description, url, paddingTop, paddingX, showNav } = Astro.props;
+const {
+  title,
+  description,
+  url,
+  paddingTop,
+  paddingX,
+  showNav,
+  previewImgUrl,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <HeadComponet description={description} title={title} url={url} />
+  <HeadComponet
+    description={description}
+    title={title}
+    url={url}
+    previewImgUrl={previewImgUrl}
+  />
   <!-- <script is:inline hoist>
     document.addEventListener("DOMContentLoaded", () => {
       const elems = document.getElementsByClassName("fade-in");

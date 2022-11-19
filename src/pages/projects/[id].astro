@@ -18,7 +18,7 @@ export function getStaticPaths() {
   return ret;
 }
 
-const { title, tools, preview, body, links, slug } = Astro.props;
+const { title, tools, preview, body, links, slug, img } = Astro.props;
 ---
 
 <Layout
@@ -28,6 +28,7 @@ const { title, tools, preview, body, links, slug } = Astro.props;
   paddingTop={true}
   paddingX={true}
   showNav={true}
+  previewImgUrl={img}
 >
   <h1
     class="text-gray-100 text-3xl mb-1 font-medium w-full rounded-l-md text-center"
