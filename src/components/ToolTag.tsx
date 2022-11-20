@@ -1,10 +1,5 @@
----
 import type { Tool } from "../types/tools";
-export interface Props {
-  tool: Tool;
-}
-import { Icon } from "astro-icon";
-const { tool } = Astro.props;
+
 const name: {
   [key in Tool]: {
     title: string;
@@ -32,10 +27,10 @@ const name: {
     icon: "simple-icons:nextdotjs",
   },
 };
----
 
-<div
-  class="text-black flex gap-1 items-center bg-gray-100 px-2 py-0.5 rounded-md"
->
-  <Icon name={name[tool].icon} height="20" />{name[tool].title}
-</div>
+export const ToolTag = ({ tool }: { tool: Tool }) =>
+  <div
+    className="text-black flex gap-1 items-center bg-gray-100  transition-colors px-2 py-0.5 rounded-md"
+  >
+    {name[tool].title}
+  </div>
