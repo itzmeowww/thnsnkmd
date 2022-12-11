@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout description="" paddingTop={true} title={frontmatter.title} url="">
-  <h1 class="text-3xl font-medium">{frontmatter.title}</h1>
+  <h1 class="text-3xl font-medium text-white">{frontmatter.title}</h1>
   <hr class="bg-gray-600 mt-2 mb-1 w-full" />
   <div class="text-gray-200 w-full flex justify-between items-center px-2">
     <p>{frontmatter.author}</p>
@@ -22,4 +22,3 @@ const { frontmatter } = Astro.props;
     <slot />
   </div>
 </Layout>
-
