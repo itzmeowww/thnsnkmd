@@ -10,7 +10,7 @@ const links: {
   { title: "GitHub", link: "https://github.com/itzmeowww" },
   { title: "Medium", link: "https://medium.com/@itzmeowww" },
   { title: "Japan", link: "/japan" },
-  // { title: "Blog", link: "/blog" },
+  { title: "Blog", link: "/blog" },
 ];
 
 const site = Astro.site;
@@ -46,13 +46,18 @@ const site = Astro.site;
 >
   <div></div>
   <main class="h-screen flex flex-col justify-center items-center w-full pb-12">
-    <h1 class="text-4xl sm:text-5xl font-medium text-gray-100">
+    <h1 class="text-3xl sm:text-5xl font-medium text-neutral-100">
       Thanasan Kumdee
     </h1>
 
-    <p class="text-lg sm:text-xl text-gray-300 mt-1">
+    <!-- <p class="text-lg sm:text-xl text-neutral-300 mt-1">
       Student at Osaka University
-    </p>
+    </p> -->
+    <div class="w-full flex flex-row justify-center items-center gap-2 mt-1">
+      <div class="w-1/3 border-b bg-neutral-100"></div>
+      <div class="">⭐</div>
+      <div class="w-1/3 border-b bg-neutral-100"></div>
+    </div>
     <div class="flex mt-4 gap-3">
       {
         links.map((data) => {
@@ -65,8 +70,8 @@ const site = Astro.site;
   <div class="w-full -mt-36 mb-24">
     <div class="w-full">
       <a href="/projects">
-        <p class="text-gray-100 text-xl sm:text-2xl mb-3 pl-1 font-medium">
-          Projects
+        <p class="text-neutral-100 text-xl sm:text-2xl mb-3 pl-1 font-medium">
+          📚 Projects
         </p>
       </a>
       <ProjectList />

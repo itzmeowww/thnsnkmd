@@ -1,7 +1,10 @@
 ---
 import ButtonLink from "../components/ButtonLink.astro";
 import HeadComponet from "../components/HeadComponet.astro";
-
+import "@fontsource/poppins";
+import "@fontsource/kanit";
+import "@fontsource/noto-sans-jp";
+import "@fontsource/noto-sans-thai";
 export interface Props {
   title: string;
   description: string;
@@ -57,7 +60,7 @@ const {
   </script> -->
 
   <body
-    class="w-screen bg-gray-900 overflow-x-hidden fade-in transition-opacity duration-500 absolute"
+    class="w-screen bg-neutral-900 overflow-x-hidden fade-in transition-opacity duration-500 absolute"
     style="opacity: 1"
   >
     <div
@@ -67,7 +70,7 @@ const {
     >
       {
         showNav && (
-          <div class="pb-4 w-full mb-4 border-b  border-gray-500 z-50">
+          <div class="pb-4 w-full mb-4 border-b border-neutral-500 z-50">
             <ButtonLink href="/">Home</ButtonLink>
           </div>
         )

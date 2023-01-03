@@ -30,7 +30,7 @@ const name: {
 
 export const ToolTag = ({ tool }: { tool: Tool }) =>
   <div
-    className="text-black flex gap-1 items-center bg-gray-100  transition-colors px-2 py-0.5 rounded-md"
+    className="text-black text-sm flex gap-1 items-center bg-neutral-100  transition-colors px-2 py-0.5 rounded-md"
   >
     {name[tool].title}
   </div>

@@ -485,10 +485,35 @@
   resolved "https://registry.yarnpkg.com/@esbuild/linux-loong64/-/linux-loong64-0.15.12.tgz#475b33a2631a3d8ca8aa95ee127f9a61d95bf9c1"
   integrity sha512-tZEowDjvU7O7I04GYvWQOS4yyP9E/7YlsB0jjw1Ycukgr2ycEzKyIk5tms5WnLBymaewc6VmRKnn5IJWgK4eFw==
 
+"@fontsource/kanit@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/kanit/-/kanit-4.5.10.tgz#603bd61ad3a648edbf5f584ed67f4bbd0c332500"
+  integrity sha512-spOSUiwTw6Y7pD0mU6mzydiG5i3SUilXbzISCJKAWWDGljGpTF724lGHUdQ/QFiLrPo9KAYbThcwbNKGUx+/NA==
+
+"@fontsource/noto-sans-jp@^4.5.12":
+  version "4.5.12"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-jp/-/noto-sans-jp-4.5.12.tgz#e9cfbe3b62da8c656f464df86256d7852ae0faf8"
+  integrity sha512-tdJAUEyuyyCRD4Ot4ZE8+3uyGeSJQD/soSHr7LoltEQr22IotDDWOlqQKF7CpTaJPwt4iOBoXWtAoSN0huVW6A==
+
+"@fontsource/noto-sans-thai@^4.5.12":
+  version "4.5.12"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-thai/-/noto-sans-thai-4.5.12.tgz#d98439c43933c2445d33c8b6308bd7049d27e146"
+  integrity sha512-9p/zA9iQT9G2mbaaffiMBrMp97aHdFJ+4en+zNwlNrWHsQSylfsZPeieY02fdZVE2L9WeTyhP55HUpSI3nNVqA==
+
+"@fontsource/poppins@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.10.tgz#44dbfeacb5d89efca5ad7ad6cc941b2ac1ee424b"
+  integrity sha512-oYZVHsnlwV3VWM1SE/m6SUxVh0QLk5+2wB+lBiXcI7N/0KVQWmV9YykaPqfJHBLvmdya+MAOnv+BQHeLU1vOOw==
+
 "@fontsource/roboto@^4.5.8":
   version "4.5.8"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.8.tgz#56347764786079838faf43f0eeda22dd7328437f"
   integrity sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==
+
+"@fontsource/rubik@^4.5.13":
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-4.5.13.tgz#c390b7197e893d5dfeb67dfa76cf68f7c9203442"
+  integrity sha512-oykfZOFcr+yHiCisHEbX9byVhr7dH4V0XvUSTFZt6xk1Qx+3FFyi8iV4iy/aiKLJOFfgfN6aPMtgifGR6hvIUA==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"

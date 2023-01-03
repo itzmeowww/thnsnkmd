@@ -1,23 +1,8 @@
-
-import type { Tool } from "../types/tools";
-// import { ToolTag } from "./ToolTag";
 import type { Project } from "../projects";
 import { projects } from "../projects";
 import { Card } from "./Card";
 
-// const tools: Tool[] = [
-//     "bootstrap",
-//     "javascript",
-//     "nextjs",
-//     "svelte",
-//     "tailwind",
-// ];
 export const ProjectList = () => {
-
-
-
-
-
     return (
         <div>
             {/* <div className="text-white flex gap-4 text-sm py-3 flex-wrap justify-center">
@@ -32,10 +17,11 @@ export const ProjectList = () => {
                     })
                 }
             </div> */}
-            <div className="grid sm:grid-cols-2 gap-4 mt-6">
+            <div className="grid sm:grid-cols-2 gap-5 mt-6">
                 {
-                    projects.map((project: Project) => {
+                    projects.map((project: Project, idx) => {
                         return <Card
+                            key={`project-${idx}`}
                             title={project.title}
                             body={project.body}
                             href={`/projects/${project.slug}`}

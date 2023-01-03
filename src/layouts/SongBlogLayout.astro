@@ -1,0 +1,52 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import Layout from "./Layout.astro";
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  author: string;
+  artist: string;
+  spotifyLink: string;
+  youtubeLink: string;
+  appleMusicLink: string;
+  date: string;
+  img: string;
+}>;
+const { frontmatter, url } = Astro.props;
+---
+
+<Layout
+  description={`แปลเพลง ${frontmatter.spotifyLink} ของ ${frontmatter.artist}`}
+  paddingTop
+  paddingX
+  title={`แปลเพลง ${frontmatter.spotifyLink} ของ ${frontmatter.artist}`}
+  url={url ? url.substring(1) : ""}
+  previewImgUrl={frontmatter.img}
+  showNav
+>
+  <div class="text-center font-medium border-b border-neutral-500 w-full pb-2">
+    <h1 class="max-w-lg mx-auto flex flex-col">
+      <span class="text-neutral-200">แปลเพลง</span>
+      <span class="text-orange-300 text-xl">
+        {frontmatter.title}
+      </span>
+      <span class="text-neutral-200">ของ</span>
+      <span class="text-orange-300 text-xl">{frontmatter.artist}</span>
+    </h1>
+  </div>
+  <div
+    class="text-neutral-100 flex flex-col items-center max-w-sm w-full gap-2 mt-2"
+  >
+    <img src={frontmatter.img} alt="" class="w-full rounded" />
+    <div class="flex flex-wrap w-full items-center justify-center gap-2">
+      <ButtonLink href={frontmatter.spotifyLink}>Spotify</ButtonLink>
+      <ButtonLink href={frontmatter.youtubeLink}>YouTube</ButtonLink>
+      <ButtonLink href={frontmatter.appleMusicLink}>Apple Music</ButtonLink>
+    </div>
+  </div>
+  <div class="prose prose-md prose-invert py-6 prose-p:my-0 prose-h4:mb-0">
+    <slot />
+  </div>
+</Layout>

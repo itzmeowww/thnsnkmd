@@ -1,1 +1,39 @@
-<div></div>
+---
+import Layout from "../../layouts/Layout.astro";
+
+const blogs = await Astro.glob("./*.md"); // returns an array of posts that live at ./src/pages/post/*.md
+---
+
+<Layout description="" paddingTop paddingX showNav title="" url="" previewImgUrl="">
+  <div class="grid sm:grid-cols-2 gap-5 mt-6 w-full">
+    {
+      blogs.map((blog) => {
+        if (!blog.frontmatter.draft)
+          return (
+            <a
+              class="border  border-neutral-500 w-full h-32 bg-neutral-800 hover:bg-neutral-700 transition-colors rounded-xl flex justify-start items-center  p-4 gap-4"
+              href={`${blog.url}`}
+            >
+              <div class="w-24 h-24 bg-neutral-400 rounded-md ">
+                {blog.frontmatter.img && blog.frontmatter.img != "" ? (
+                  <img src={blog.frontmatter.img} alt="" class="my-0" />
+                ) : (
+                  <div />
+                )}
+              </div>
+              <div class="flex-1 h-full flex flex-col items-center justify-center">
+                <h1 class="text-md font-medium text-neutral-100">
+                  <span>แปลเพลง</span>
+                  <span class="text-orange-300">{blog.frontmatter.title}</span>
+                  <span>ของ</span>
+                  <span class="text-orange-300">{blog.frontmatter.artist}</span>
+                  
+                </h1>
+              </div>
+            </a>
+          );
+        else return <></>;
+      })
+    }
+  </div>
+</Layout>
