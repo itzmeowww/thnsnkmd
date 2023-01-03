@@ -18,10 +18,10 @@ const { frontmatter, url } = Astro.props;
 ---
 
 <Layout
-  description={`แปลเพลง ${frontmatter.spotifyLink} ของ ${frontmatter.artist}`}
+  description={`แปลเพลง ${frontmatter.title} ของ ${frontmatter.artist}`}
   paddingTop
   paddingX
-  title={`แปลเพลง ${frontmatter.spotifyLink} ของ ${frontmatter.artist}`}
+  title={`แปลเพลง ${frontmatter.title} ของ ${frontmatter.artist}`}
   url={url ? url.substring(1) : ""}
   previewImgUrl={frontmatter.img}
   showNav
@@ -46,7 +46,9 @@ const { frontmatter, url } = Astro.props;
       <ButtonLink href={frontmatter.appleMusicLink}>Apple Music</ButtonLink>
     </div>
   </div>
-  <div class="prose prose-md prose-invert py-6 prose-p:my-0 prose-h4:mb-0">
+  <div
+    class="prose prose-md prose-invert py-6 prose-p:my-0 prose-h4:mb-0 pb-16"
+  >
     <slot />
   </div>
 </Layout>
