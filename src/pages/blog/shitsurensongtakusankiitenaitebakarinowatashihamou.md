@@ -7,7 +7,7 @@ appleMusicLink: "https://music.apple.com/jp/album/shitsurensongtakusankiitenaite
 artist: "りりあ。"
 artistLink: "https://open.spotify.com/artist/1J6OD7vLbjEuFVgVRlusmS?si=tGH4Krg1ReOLzHXoZrdIjg"
 author: "Thanasan Kumdee"
-img: "https://i.scdn.co/image/ab67616d0000b273ece6a7f727ccaf9e685de082"
+img: "/images/blog/shitsurensongtakusankiitenaitebakarinowatashihamou.jpeg"
 date: "1 Jan 2023"
 draft: false
 ---
@@ -197,3 +197,6 @@ draft: false
 #### 君のことなんて忘れちゃうからね
 
 อยากที่จะลืมเรื่องของเธอ
+
+|---|---|
+|失恋|อกหัก|
