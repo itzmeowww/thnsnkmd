@@ -46,7 +46,9 @@ const { frontmatter, url } = Astro.props;
       <ButtonLink href={frontmatter.appleMusicLink}>Apple Music</ButtonLink>
     </div>
   </div>
-  <div class="prose prose-md prose-invert py-6 prose-p:my-0 prose-h4:mb-">
+  <div
+    class="prose prose-md prose-invert py-6 prose-p:my-0 prose-h4:mb-0 prose-h4:font-semibold w-full text-center"
+  >
     <slot />
   </div>
   <ButtonLink
@@ -55,4 +57,6 @@ const { frontmatter, url } = Astro.props;
   >
   <br />
   <br />
+
+  <!-- <div class="mb-10 text-white">บล้อกอื่น ๆ</div> -->
 </Layout>

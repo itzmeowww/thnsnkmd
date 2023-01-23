@@ -14,7 +14,7 @@ const blogs = await Astro.glob("./*.md"); // returns an array of posts that live
               class="border  border-neutral-500 w-full h-32 bg-neutral-800 hover:bg-neutral-700 transition-colors rounded-xl flex justify-start items-center  p-4 gap-4"
               href={`${blog.url}`}
             >
-              <div class="w-24 h-24 bg-neutral-400 rounded-md ">
+              <div class="w-24 h-24 bg-neutral-400 rounded-md flex  justify-center items-center">
                 {blog.frontmatter.img && blog.frontmatter.img != "" ? (
                   <img src={blog.frontmatter.img} alt="" class="my-0" />
                 ) : (
