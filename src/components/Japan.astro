@@ -61,7 +61,7 @@ const name_in_japan: { [key in Prefecture]: string } = {
   Yamanashi: "山梨県",
 };
 
-const japan: {
+const japan_map: {
   d: string;
   id: Prefecture;
 }[] = [
@@ -287,7 +287,7 @@ const japan: {
 
 <svg viewBox="20 0 450 490" id="japan-map" class="pt-10">
   {
-    japan.map((pref) => {
+    japan_map.map((pref) => {
       return (
         <path
           class="hover:cursor-pointer "
