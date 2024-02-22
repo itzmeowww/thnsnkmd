@@ -3,4 +3,6 @@ export type Tool =
   | "bootstrap"
   | "svelte"
   | "tailwind"
-  | "nextjs";
+  | "nextjs"
+  | "prisma"
+  | "typescript";

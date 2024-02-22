@@ -18,7 +18,7 @@ export function getStaticPaths() {
   return ret;
 }
 
-const { title, tools, preview, body, links, slug, img } = Astro.props;
+const { title, tools, preview, body, links, slug, img, detail } = Astro.props;
 ---
 
 <Layout
@@ -38,6 +38,9 @@ const { title, tools, preview, body, links, slug, img } = Astro.props;
   <p class="text-neutral-300 text-md text-center w-full">
     {body}
   </p>
+  <p class="text-neutral-300 text-md text-center w-full">
+    {detail}
+  </p>
 
   <div
     class="h-72 w-full flex mt-12 overflow-x-scroll bg-neutral-800 p-2 gap-2 rounded-lg"
@@ -56,7 +59,7 @@ const { title, tools, preview, body, links, slug, img } = Astro.props;
   <div class="mt-6 flex gap-3 mb-3">
     {
       links.map((link: { href: string; title: string }) => {
-        return <ButtonLink href={link.href}>{link.title}</ButtonLink>;
+        return <ButtonLink href={link.href}>{link.title} </ButtonLink>;
       })
     }
   </div>

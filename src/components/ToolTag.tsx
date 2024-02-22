@@ -26,6 +26,11 @@ const name: {
     title: "NextJs",
     icon: "simple-icons:nextdotjs",
   },
+  prisma: { icon: '', title: 'Prisma' },
+  typescript: {
+    icon: '',
+    title: 'TypeScript'
+  }
 };
 
 export const ToolTag = ({ tool }: { tool: Tool }) =>

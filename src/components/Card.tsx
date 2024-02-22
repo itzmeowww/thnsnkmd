@@ -17,6 +17,6 @@ export const Card = ({ title, body, href, blog, img }: {
       <p className="text-md font-medium text-neutral-100 row-span-1 truncate">
         {title}
       </p>
-      <p className="text-sm font-thin text-neutral-400 row-span-3">{body}</p>
+      <p className="text-sm font-thin text-neutral-400 row-span-3 h-full overflow-auto">{body}</p>
     </div>
   </a>

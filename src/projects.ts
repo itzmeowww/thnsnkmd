@@ -2,6 +2,7 @@ import type { Tool } from "./types/tools";
 export type Project = {
   title: string;
   body: string;
+  detail?: string;
   links: { href: string; title: string }[];
   slug: string;
   img: string;
@@ -11,23 +12,152 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Looooong Cat",
-    body: "Create an extremely long cat",
+    title: "Napori Mobile Order Service",
+    body: "An easy-to-use ordering app for a shop name Napori located in Nishi-Koyama.",
+    detail:
+      "Orders can be placed by scanning the QR code on the table. The management dashboard allows for inventory management, order history, and statistical analysis. (The images below are mock data fo demo purpose)",
     links: [
-      { href: "https://looooongcat.vercel.app", title: "Looooong Cat" },
       {
-        href: "https://github.com/itzmeowww/looooong-cat",
+        href: "https://youtu.be/uqc1EG9HlCw",
+        title: "Demo Video",
+      },
+    ],
+    img: "/images/napori/icon.jpg",
+    slug: "napori",
+    tools: ["nextjs", "tailwind", "prisma", "typescript"],
+    preview: [
+      "/images/napori/01.jpg",
+      "/images/napori/02.jpg",
+      "/images/napori/03.jpg",
+      "/images/napori/04.jpg",
+      "/images/napori/05.jpg",
+    ],
+  },
+  {
+    title: "Fahprathan5939 Website",
+    body: "A website for restaurants and cafes that includes detailed menus for food and drinks.",
+    links: [
+      {
+        href: "https://fahprathan5939.com",
+        title: "Fahprathan5939 Website",
+      },
+    ],
+    img: "/images/fahprathan5939/01.jpg",
+    slug: "fahprathan5939",
+    tools: ["nextjs", "tailwind", "typescript"],
+    preview: [
+      "/images/fahprathan5939/01.jpg",
+      "/images/fahprathan5939/02.jpg",
+      "/images/fahprathan5939/03.jpg",
+      "/images/fahprathan5939/04.jpg",
+      "/images/fahprathan5939/05.jpg",
+    ],
+  },
+  {
+    title: "Devvingedth, Consultation Service",
+    body: "A website for providing individual consultation and support to students wishing to study abroad.",
+    links: [
+      {
+        href: "https://devvingedth.com",
+        title: "Devvingedth Website",
+      },
+    ],
+
+    img: "/images/devvingedth/01.jpg",
+    slug: "devvingedth",
+    preview: [
+      "/images/devvingedth/01.jpg",
+      "/images/devvingedth/02.jpg",
+      "/images/devvingedth/03.jpg",
+      "/images/devvingedth/04.jpg",
+    ],
+    tools: ["nextjs", "tailwind", "typescript"],
+  },
+  {
+    title: "Comatresarch Website",
+    body: "The official website of a Comat research group that introduces projects, publications, members, and more.",
+    links: [
+      {
+        href: "https://comatresearch.com",
+        title: "Comatresearch Website",
+      },
+    ],
+    img: "/images/comatresearch/01.jpg",
+    slug: "comatresearch",
+    preview: [
+      "/images/comatresearch/01.jpg",
+      "/images/comatresearch/02.jpg",
+      "/images/comatresearch/03.jpg",
+      "/images/comatresearch/04.jpg",
+      "/images/comatresearch/05.jpg",
+      "/images/comatresearch/06.jpg",
+      "/images/comatresearch/07.jpg",
+      "/images/comatresearch/08.jpg",
+    ],
+    tools: ["nextjs", "tailwind", "typescript"],
+  },
+  {
+    title: "Geacher, Find your tutor",
+    body: "A platform that connects tutors covering various subjects with students' need.",
+    links: [
+      {
+        href: "https://geacher.thnsnkmd.com",
+        title: "Geacher Website",
+      },
+      {
+        href: "https://github.com/itzmeowww/geacher",
         title: "GitHub",
       },
     ],
-    img: "/images/looooong-cat/icon.jpg",
+    img: "/images/geacher/icon.jpg",
+
     preview: [
-      "/images/looooong-cat/icon.jpg",
-      "/images/looooong-cat/screenshot_1.jpeg",
-      "/images/looooong-cat/screenshot_2.jpeg",
+      "/images/geacher/icon.jpg",
+      "/images/geacher/4.jpg",
+      "/images/geacher/5.jpg",
+      "/images/geacher/6.jpg",
     ],
-    slug: "looooong-cat",
-    tools: ["svelte", "tailwind"],
+    slug: "geacher",
+    tools: ["nextjs", "tailwind"],
+  },
+  {
+    title: "Thai Synonym Search Tool",
+    body: "An online tool for finding synonyms in Thai language.",
+    links: [
+      {
+        href: "https://thai-synonym.vercel.app",
+        title: "Thai Synonym Website",
+      },
+    ],
+    img: "/images/thai-synonym/01.jpg",
+    slug: "thai-synonym",
+    preview: [
+      "/images/thai-synonym/01.jpg",
+      "/images/thai-synonym/02.jpg",
+      "/images/thai-synonym/03.jpg",
+    ],
+
+    tools: ["nextjs", "javascript"],
+  },
+  {
+    title: "Pincassociation",
+    body: "Pincassociation's art pieces showcase",
+    links: [
+      {
+        href: "https://pincassociation.com",
+        title: "Website",
+      },
+    ],
+
+    slug: "pincassociation",
+    preview: [
+      "/images/pincassociation/01.jpg",
+      "/images/pincassociation/02.jpg",
+      "/images/pincassociation/03.jpg",
+      "/images/pincassociation/04.jpg",
+    ],
+    img: "/images/pincassociation/01.jpg",
+    tools: ["nextjs", "tailwind", "typescript"],
   },
   {
     title: "Beyond Tic Tac Toe",
@@ -51,26 +181,7 @@ export const projects: Project[] = [
     slug: "beyond-tic-tac-toe",
     tools: ["nextjs", "tailwind"],
   },
-  {
-    title: "Geacher",
-    body: " Find your tutors from KVIS",
-    links: [
-      { href: "https://geacher.thnsnkmd.com", title: "Geacher" },
-      {
-        href: "https://github.com/itzmeowww/geacher",
-        title: "GitHub",
-      },
-    ],
-    img: "/images/geacher/icon.jpg",
-    preview: [
-      "/images/geacher/icon.jpg",
-      "/images/geacher/4.jpg",
-      "/images/geacher/5.jpg",
-      "/images/geacher/6.jpg",
-    ],
-    slug: "geacher",
-    tools: ["nextjs", "tailwind"],
-  },
+
   {
     title: "Beta Task Toggler",
     body: "Chrome extension for beta.programming.in.th",
