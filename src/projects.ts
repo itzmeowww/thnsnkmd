@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Napori Mobile Order Service",
     body: "An easy-to-use ordering app for a shop name Napori located in Nishi-Koyama.",
     detail:
-      "Orders can be placed by scanning the QR code on the table. The management dashboard allows for inventory management, order history, and statistical analysis. (The images below are mock data fo demo purpose)",
+      "Orders can be placed by scanning the QR code on the table. The management dashboard allows for inventory management, order history, and statistical analysis. (The images below are mock data for demo purpose)",
     links: [
       {
         href: "https://youtu.be/uqc1EG9HlCw",
