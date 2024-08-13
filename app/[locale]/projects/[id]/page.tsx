@@ -23,7 +23,7 @@ const Project = ({ params: { id } }: { params: { id: string } }) => {
 
     if (!project) return notFound()
     return (
-        <div className="flex flex-col gap-2 w-full max-w-3xl mx-auto">
+        <div className="flex flex-col gap-2 w-full max-w-4xl mx-auto">
             <Bread current={project.slug} links={[{ name: "Projects", href: "/projects" }]} />
             <HashHeader text={project.title} />
 

@@ -7,6 +7,10 @@ export default createMiddleware({
 });
  
 console.log(locales.join('|'))
+// export const config = {
+//   matcher: ['/', "/(en|th|ja)/:path*"]
+// };
+
 export const config = {
-  matcher: ['/', "/(en|th|ja)/:path*"]
+  matcher: ['/', "/(en)/:path*"]
 };

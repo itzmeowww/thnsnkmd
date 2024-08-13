@@ -65,10 +65,10 @@ export const projects: Project[] = [
       },
     ],
     comments: [
-      {
-        comment: "",
-        author: "Napori (translated)",
-      },
+      // {
+      //   comment: "",
+      //   author: "Napori (translated)",
+      // },
       {
         comment:
           "I learned how to use the Notification API to send notifications to both browsers and phones.",
@@ -193,7 +193,7 @@ export const projects: Project[] = [
     comments: [],
   },
   {
-    title: "Comatresarch Website",
+    title: "Comatresarch",
     body: "The official website of a Comat research group that introduces projects, publications, members, and more.",
     links: [],
     slug: "comatresearch",
@@ -286,7 +286,7 @@ export const projects: Project[] = [
       },
       {
         comment:
-          "The name was inspired by Geese and Teacher as our highschool, KVIS, has a lot of geese",
+          "The name was inspired by Geese and Teacher as our highschool, KVIS, has a lot of geese.",
         author: "Thanasan Kumdee",
       },
     ],

@@ -29,8 +29,8 @@ const NavigationBar = ({ locale }: { locale: string }) => {
                     </SelectTrigger>
                     <SelectContent >
                         <SelectItem value="en">English</SelectItem>
-                        <SelectItem value="ja">日本語</SelectItem>
-                        <SelectItem value="th">ภาษาไทย</SelectItem>
+                        <SelectItem value="ja" disabled>日本語</SelectItem>
+                        <SelectItem value="th" disabled>ภาษาไทย</SelectItem>
                     </SelectContent>
                 </Select>
                 {/* <Button size={'icon'} variant={'outline'}>

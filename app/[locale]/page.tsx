@@ -1,10 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 
-import { Book, Hash } from 'lucide-react'
 import { Link } from '@/navigation';
 import { projects } from '@/data/projects';
-import Image from 'next/image';
 import ProjectCard from '@/components/project-card';
 import HashHeader from '@/components/hash-header';
 export default function Home() {
@@ -18,10 +16,10 @@ export default function Home() {
             <div className="w-full flex flex-col gap-2" id='about-me'>
                 <HashHeader text='about-me' />
                 <p className=''>
-                    You can call me Win or Thanasan Kumdee.
+                    Call me Win or Thanasan Kumdee.
                     <br />
-                    I'm an undergraduate student in Computer Science at the {" "}
-                    <Link target='_blank' href={'https://www.titech.ac.jp'} className='text-yellow-500 underline'> 
+                    {"I'm an undergraduate student in Computer Science at the  "}
+                    <Link target='_blank' href={'https://www.titech.ac.jp'} className='text-yellow-500 underline'>
                         Tokyo Institute of Technology
                     </Link>
                     {" "}
@@ -59,10 +57,10 @@ export default function Home() {
             <div className="w-full flex flex-col gap-2 mt-6 ">
                 <HashHeader text='my-stuffs' />
                 <p className='mb-4'>
-                    I do coding 'cause it is fun and here are some of my stuffs.
+                    I do coding for fun and here are some of my stuffs.
                 </p>
 
-                <div className='grid sm:grid-cols-2  lg:grid-cols-3 gap-4'>
+                <div className='grid sm:grid-cols-2  lg:grid-cols-3 gap-4 bg-secondary p-4 rounded-xl'>
                     {projects.slice(0, 6).map((project, idx) => {
                         return (
                             <ProjectCard key={idx} project={project} />

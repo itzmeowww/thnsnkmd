@@ -1,13 +1,12 @@
 import { Link } from "@/navigation";
-import { Button } from "./ui/button";
 
 const Footer = () => {
     return (
-        <div className="border-t min-h-32 flex py-6 px-8  gap-4 flex-col items-center">
+        <div className="border-t min-h-32 flex py-6 px-8 gap-4 flex-col items-center">
             <p className="text-sm text-muted-foreground">
-                I write Chicken Tender and eat code.
+                I write chicken tender and eat code.
             </p>
-            <div className="grid w-full mx-auto">
+            <div className="grid w-full mx-auto max-w-5xl ">
                 <div className="flex flex-col gap-1 text-sm">
                     <h3 className="font-bold mb-3">Quick Links</h3>
                     {[

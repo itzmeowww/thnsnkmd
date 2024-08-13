@@ -6,7 +6,7 @@ import { Prefecture } from "@/data/types/prefecture";
 import { Metadata } from "next";
 
 const has_been: { to: Prefecture, on: Date | undefined }[] = [
-    { to: "Osaka", on: new Date("23 Mar 2023")  },
+    { to: "Osaka", on: new Date("23 Mar 2023") },
     { to: "Nara", on: new Date("23 Aug 2022") },
     { to: "Hyogo", on: new Date("16 Mar 2023") },
     { to: "Kyoto", on: new Date("12 Dec 2022") },
@@ -34,7 +34,7 @@ const Japan = () => {
         <div className="flex flex-col gap-2 w-full max-w-3xl mx-auto">
             <Bread current={"Japan"} links={[]} />
             <HashHeader text='japan-log' />
-            <p>Since arriving in Japan on May 12, 2022, I've set a goal to visit every prefecture in the country. So far, I’ve been to {has_been.length} out of 47 prefectures.</p>
+            <p>{`Since arriving in Japan on May 12, 2022, I've set a goal to visit every prefecture in the country. So far, I’ve been to ${has_been.length} out of 47 prefectures`}.</p>
 
             <div className="flex gap-2 items-center"><Badge className="w-fit" variant={'outline'}>TIP</Badge>
                 <span className="text-muted-foreground text-sm"> Click on the map to see more detail.</span></div>
