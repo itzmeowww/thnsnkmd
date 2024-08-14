@@ -34,7 +34,7 @@ const ImageCarousel = ({ project }: { project: Project }) => {
                     {project.previews.map((preview, index) => (
                         <CarouselItem key={index} className={`flex flex-col items-center gap-2 w-full ${preview.height > preview.width && 'basis-1/2 md:basis-1/3'}`}>
                             <div className="p-1 border rounded-lg overflow-hidden">
-                                <Image src={preview.url} height={preview.height} width={preview.width} alt="" className=""></Image>
+                                <Image src={preview.url} height={preview.height} width={preview.width} alt="" className="rounded-sm overflow-hidden"></Image>
                             </div>
                             <span className="text-muted-foreground text-sm">{preview.alt}</span>
                         </CarouselItem>

@@ -28,14 +28,14 @@ const Bread = ({ links, current }: BreadProps) => {
                 <BreadcrumbSeparator />
                 {links.map((link, index) => (
                     <>
-                        <BreadcrumbItem key={`it-${index}`}>
+                        <BreadcrumbItem key={`it-${link.name}`}>
                             <BreadcrumbLink asChild>
                                 <Link href={link.href}>
                                     {link.name}
                                 </Link>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
-                        <BreadcrumbSeparator key={`sep-${index}`} />
+                        <BreadcrumbSeparator key={`sep-${link.name}`} />
                     </>
 
                 ))}

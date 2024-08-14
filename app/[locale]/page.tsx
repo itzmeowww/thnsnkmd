@@ -15,30 +15,28 @@ export default function Home() {
 
             <div className="w-full flex flex-col gap-2" id='about-me'>
                 <HashHeader text='about-me' />
-                <p className=''>
+                <p className='font-light text-foreground'>
                     Call me Win or Thanasan Kumdee.
                     <br />
                     {"I'm an undergraduate student in Computer Science at the  "}
-                    <Link target='_blank' href={'https://www.titech.ac.jp'} className='text-yellow-500 underline'>
+                    <Link target='_blank' href={'https://www.titech.ac.jp'} className='text-primary underline'>
                         Tokyo Institute of Technology
                     </Link>
                     {" "}
                     in Japan.
                 </p>
 
-                <p>
-                </p>
             </div>
 
             <div className="w-full flex flex-col gap-2" id='connect'>
                 <HashHeader text='connect' />
-                <p className='mb-4'>
+                <p className='font-light text-foreground'>
                     Here are some links to link with me.
                 </p>
-                <div className='flex gap-2 flex-wrap'>
+                <div className='flex gap-2 flex-wrap my-2'>
 
                     <Link href={'https://github.com/itzmeowww'} target='_blank'>
-                        <Button variant={'secondary'} size={'sm'}>
+                        <Button variant={'outline'} size={'sm'} >
                             GitHub
                         </Button>
                     </Link>
@@ -46,7 +44,7 @@ export default function Home() {
 
 
                     <Link href={'https://medium.com/@itzmeowww'} target='_blank'>
-                        <Button variant={'secondary'} size={'sm'}>
+                        <Button variant={'outline'} size={'sm'}>
                             medium
                         </Button>
                     </Link>
@@ -54,13 +52,13 @@ export default function Home() {
             </div>
 
 
-            <div className="w-full flex flex-col gap-2 mt-6 ">
+            <div className="w-full flex flex-col gap-2 ">
                 <HashHeader text='my-stuffs' />
-                <p className='mb-4'>
+                <p className='font-light text-foreground'>
                     I do coding for fun and here are some of my stuffs.
                 </p>
 
-                <div className='grid sm:grid-cols-2  lg:grid-cols-3 gap-4 bg-secondary p-4 rounded-xl'>
+                <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-secondary p-4 rounded-2xl my-2 border'>
                     {projects.slice(0, 6).map((project, idx) => {
                         return (
                             <ProjectCard key={idx} project={project} />
@@ -81,7 +79,7 @@ export default function Home() {
                 </p>
                 <div>
                     <Link href={'/japan'}>
-                        <Button variant={'secondary'}>Japan Log</Button>
+                        <Button variant={'outline'}>Japan Log</Button>
                     </Link>
                 </div>
             </div>

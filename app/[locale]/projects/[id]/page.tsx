@@ -9,6 +9,7 @@ import HashHeader from "@/components/hash-header";
 import { notFound } from "next/navigation";
 import ImageCarousel from "@/components/image-carousel";
 import Bread from "@/components/bread";
+import BadgeList from "@/components/bagde-list";
 
 
 
@@ -16,7 +17,7 @@ import Bread from "@/components/bread";
 const Leading = ({ title }: { title: string }) => {
     return <>
         <hr className="mt-12" />
-        <h2 className="text-xl font-bold bg-white -mt-8 pr-4 w-fit mb-2">{title}</h2></>
+        <h2 className="text-xl font-bold  bg-white dark:bg-black -mt-8 pr-4 w-fit mb-2">{title}</h2></>
 }
 const Project = ({ params: { id } }: { params: { id: string } }) => {
     const project = projects.find(p => p.slug === id)
@@ -25,17 +26,16 @@ const Project = ({ params: { id } }: { params: { id: string } }) => {
     return (
         <div className="flex flex-col gap-2 w-full max-w-4xl mx-auto">
             <Bread current={project.slug} links={[{ name: "Projects", href: "/projects" }]} />
+            <BadgeList tools={project.tools}/>
             <HashHeader text={project.title} />
 
-            <div className="flex gap-2 mb-4"> {project.tools.map((tool, idx) => {
-                return (
-                    <Badge key={idx} variant={'outline'} className="flex gap-2">
-                        {tool}
-                    </Badge>
-                )
-            })}</div>
-            <p>{project.body}</p>
-            <p>{project.detail}</p>
+
+            <p className='font-light text-foreground'>
+                {project.body}
+            </p>
+            <p className='font-light text-foreground'>
+                {project.detail}
+            </p>
 
             <Leading title="Previews" />
             <ImageCarousel project={project} />
@@ -62,9 +62,9 @@ const Project = ({ params: { id } }: { params: { id: string } }) => {
 
 
                             return <div key={idx} className="border p-4 rounded-xl flex flex-col gap-2">
-                                <div>
+                                <p className="font-light text-foreground">
                                     {comment.comment}
-                                </div>
+                                </p>
                                 <span className="text-xs ml-auto text-muted-foreground flex items-center gap-1">
                                     <UserCircle size={14} /> {comment.author}
                                     {year != undefined && <><Calendar size={14} className="ml-2" /> {`${month} ${day}, ${year}`}</>}

@@ -34,7 +34,7 @@ const Japan = () => {
         <div className="flex flex-col gap-2 w-full max-w-3xl mx-auto">
             <Bread current={"Japan"} links={[]} />
             <HashHeader text='japan-log' />
-            <p>{`Since arriving in Japan on May 12, 2022, I've set a goal to visit every prefecture in the country. So far, I’ve been to ${has_been.length} out of 47 prefectures`}.</p>
+            <p className='font-light text-foreground'>{`Since arriving in Japan on May 12, 2022, I've set a goal to visit every prefecture in the country. So far, I’ve been to ${has_been.length} out of 47 prefectures`}.</p>
 
             <div className="flex gap-2 items-center"><Badge className="w-fit" variant={'outline'}>TIP</Badge>
                 <span className="text-muted-foreground text-sm"> Click on the map to see more detail.</span></div>

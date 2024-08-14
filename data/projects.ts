@@ -242,7 +242,7 @@ export const projects: Project[] = [
     tools: ["nextjs", "tailwind", "typescript"],
     comments: [
       {
-        comment: "This site is now unavailable",
+        comment: "This site is now unavailable and no longer maintained.",
         author: "Thanasan Kumdee",
         date: new Date("Aug 10, 2024"),
       },

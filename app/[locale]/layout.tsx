@@ -6,6 +6,7 @@ import "../globals.css";
 import NavigationBar from '@/components/navigation-bar';
 import { cn } from '@/lib/utils';
 import Footer from '@/components/footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,15 +26,21 @@ export default async function RootLayout({
     return (
         <html lang={locale}>
             <body className={cn(inter.className, "relative")}>
-                
-                <NextIntlClientProvider messages={messages}>
-                <NavigationBar locale={locale} />
-                    <main className="flex min-h-screen flex-col items-start gap-6 p-8 md:p-16 max-w-6xl mx-auto w-full">
-                        {children}
-                    </main>
-                    <Footer/>
-                </NextIntlClientProvider>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
 
+                    <NextIntlClientProvider messages={messages}>
+                        <NavigationBar locale={locale} />
+                        <main className="flex min-h-screen flex-col items-start gap-6 p-8 md:p-16 max-w-6xl mx-auto w-full">
+                            {children}
+                        </main>
+                        <Footer />
+                    </NextIntlClientProvider>
+                </ThemeProvider>
             </body>
         </html>
     );
