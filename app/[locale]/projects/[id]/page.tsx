@@ -26,7 +26,7 @@ const Project = ({ params: { id } }: { params: { id: string } }) => {
     return (
         <div className="flex flex-col gap-2 w-full max-w-4xl mx-auto">
             <Bread current={project.slug} links={[{ name: "Projects", href: "/projects" }]} />
-            <BadgeList tools={project.tools}/>
+            <BadgeList tools={project.tools} />
             <HashHeader text={project.title} />
 
 
@@ -36,9 +36,11 @@ const Project = ({ params: { id } }: { params: { id: string } }) => {
             <p className='font-light text-foreground'>
                 {project.detail}
             </p>
+            {project.previews.length > 0 && <>
+                <Leading title="Previews" />
+                <ImageCarousel project={project} />
+            </>}
 
-            <Leading title="Previews" />
-            <ImageCarousel project={project} />
             {project.links.length > 0 &&
                 <>
                     <Leading title="Links" />

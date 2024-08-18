@@ -5,4 +5,7 @@ export type Tool =
   | "tailwind"
   | "nextjs"
   | "prisma"
-  | "typescript";
+  | "typescript"
+  | "rails"
+  | "swiftui"
+  | "shadcn/ui";

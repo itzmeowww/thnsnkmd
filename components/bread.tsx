@@ -1,6 +1,5 @@
 import {
     Breadcrumb,
-    BreadcrumbEllipsis,
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbList,
@@ -28,14 +27,14 @@ const Bread = ({ links, current }: BreadProps) => {
                 <BreadcrumbSeparator />
                 {links.map((link, index) => (
                     <>
-                        <BreadcrumbItem key={`it-${link.name}`}>
+                        <BreadcrumbItem key={`it-${link.name}-${index}`}>
                             <BreadcrumbLink asChild>
                                 <Link href={link.href}>
                                     {link.name}
                                 </Link>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
-                        <BreadcrumbSeparator key={`sep-${link.name}`} />
+                        <BreadcrumbSeparator key={`sep-${link.name}-${index}`} />
                     </>
 
                 ))}

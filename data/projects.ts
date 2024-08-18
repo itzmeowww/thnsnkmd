@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   body: string;
   detail?: string;
+  since?: Date;
   links: { href: string; title: string }[];
   slug: string;
   previews: Image[];
@@ -25,10 +26,58 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "Yondaaa",
+    body: "iOS application for exchanging and giving away books.",
+    detail:
+      "This project is a part of creative programming class at TokyoTech.",
+    since: new Date("August, 2024"),
+
+    links: [
+      {
+        href: "https://apps.apple.com/jp/app/yondaaa/id6503911356?l=en-US",
+        title: "App Store",
+      },
+      {
+        href: "https://yondaaa.thnsnkmd.com",
+        title: "Homepage",
+      },
+    ],
+    previews: [],
+    slug: "yondaaa",
+    tools: ["swiftui", "rails"],
+    comments: [
+      {
+        comment: "I lost the source of frontend so I am remaking it 😭.",
+        // "ทำให้เวลาทำโจทย์ไปเยอะๆ แล้วสามารถเลื่อนหาข้อที่ยังไม่ได้ทำได้ง่ายขึ้นครับ ใช้มาครึ่งปีแล้วว",
+        author: "Thanasan Kumdee",
+        date: new Date("Aug 19, 2024"),
+      },
+    ],
+  },
+  {
+    title: "Snake: comparing search algos",
+    body: "A simulation of snake using different search algorithms.",
+    detail:
+      "This project is a part of artificial intelligent class at TokyoTech. Five search algorithms are compared.",
+    since: new Date("August, 2024"),
+
+    links: [
+      {
+        href: "https://snake.thnsnkmd.com/",
+        title: "Visit",
+      },
+    ],
+    previews: [],
+    slug: "snake-search",
+    tools: ["nextjs", "tailwind", "shadcn/ui"],
+    comments: [],
+  },
+  {
     title: "Napori Mobile Order",
     body: "An online food ordering service for Napori, a restaurant in Nishi-Koyama, Tokyo.",
     detail:
       "Customers can order by scanning the QR code on the table. The management dashboard handles inventory, order history, and statistical analysis.",
+    since: new Date("December, 2023"),
     links: [
       {
         href: "https://youtu.be/uqc1EG9HlCw",
@@ -92,11 +141,28 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Memoiz: your second brain ",
+    body: "Me and Nutchanon Taechasuk (Quatton) won the first prize from lablabai hackathon.",
+    detail: "Generative AI + vector database + dairy.",
+    since: new Date("April, 2023"),
+
+    links: [
+      {
+        href: "https://lablab.ai/event/ai-startup-hackathon-episode-2/we-absolutely-have-no-idea/memoiz",
+        title: "Visit",
+      },
+    ],
+    previews: [],
+    slug: "memoiz",
+    tools: ["nextjs", "tailwind", "shadcn/ui"],
+    comments: [],
+  },
+  {
     title: "fahprathan5939.com",
     body: "A website for a company with a restaurant and a cafe.",
     detail:
       "The website includes two subpages, one for the restaurant 'Yuan' and another for 'Etc. Cafe.' Both pages provide information such as locations, images, and menus.",
-
+    since: new Date("March, 2023"),
     links: [
       {
         href: "https://fahprathan5939.com",
@@ -160,6 +226,7 @@ export const projects: Project[] = [
   {
     title: "devvingedth.com",
     body: "A website for consulting service with individual consultation and support to students wishing to study abroad.",
+    since: new Date("December, 2022"),
     links: [
       {
         href: "https://devvingedth.com",
@@ -304,6 +371,11 @@ export const projects: Project[] = [
     slug: "thai-synonym",
     previews: [
       {
+        url: "/images/thai-synonym/00.png",
+        width: 2880,
+        height: 1640,
+      },
+      {
         url: "/images/thai-synonym/01.jpg",
         height: 2410,
         width: 1170,
@@ -323,6 +395,7 @@ export const projects: Project[] = [
     tools: ["nextjs", "javascript"],
     comments: [],
   },
+
   {
     title: "Pincassociation",
     body: "Pincassociation's art pieces showcase",
@@ -335,6 +408,11 @@ export const projects: Project[] = [
 
     slug: "pincassociation",
     previews: [
+      {
+        url: "/images/pincassociation/00.png",
+        width: 2880,
+        height: 1640,
+      },
       {
         url: "/images/pincassociation/01.jpg",
         height: 2396,
@@ -379,6 +457,11 @@ export const projects: Project[] = [
       },
     ],
     previews: [
+      {
+        url: "/images/beyond-tic-tac-toe/screenshot_0.png",
+        width: 2880,
+        height: 1640,
+      },
       {
         url: "/images/beyond-tic-tac-toe/screenshot_1.jpeg",
         width: 1170,
@@ -471,5 +554,22 @@ export const projects: Project[] = [
         author: "Thanasan Kumdee",
       },
     ],
+  },
+  {
+    title: "Menu Memo ",
+    body: "A LINE chatbot for telling school's menu at my high school, KVIS",
+    detail: "",
+    since: new Date("July, 2020"),
+
+    links: [
+      {
+        href: "https://github.com/itzmeowww/menu-memo",
+        title: "GitHub",
+      },
+    ],
+    previews: [],
+    slug: "menu-memo",
+    tools: ["javascript"],
+    comments: [],
   },
 ];

@@ -77,11 +77,13 @@ export default function Home() {
                 <p className='mb-4'>
                     You might also wanna check these out.
                 </p>
-                <div>
+                <div className='flex gap-2 flex-wrap my-2'>
                     <Link href={'/japan'}>
                         <Button variant={'outline'}>Japan Log</Button>
                     </Link>
                 </div>
+
+
             </div>
         </>
     );
