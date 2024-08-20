@@ -42,13 +42,18 @@ export const projects: Project[] = [
         title: "Homepage",
       },
     ],
-    previews: [],
+    previews: [
+      {
+        url: "/images/yondaaa/00.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
     slug: "yondaaa",
     tools: ["swiftui", "rails"],
     comments: [
       {
-        comment: "I lost the source of frontend so I am remaking it 😭.",
-        // "ทำให้เวลาทำโจทย์ไปเยอะๆ แล้วสามารถเลื่อนหาข้อที่ยังไม่ได้ทำได้ง่ายขึ้นครับ ใช้มาครึ่งปีแล้วว",
+        comment: "I lost the source of frontend so I have remake it 😭.",
         author: "Thanasan Kumdee",
         date: new Date("Aug 19, 2024"),
       },
@@ -67,7 +72,13 @@ export const projects: Project[] = [
         title: "Visit",
       },
     ],
-    previews: [],
+    previews: [
+      {
+        url: "/images/snake-search/00.png",
+        height: 1652,
+        width: 2880,
+      },
+    ],
     slug: "snake-search",
     tools: ["nextjs", "tailwind", "shadcn/ui"],
     comments: [],
@@ -557,8 +568,8 @@ export const projects: Project[] = [
   },
   {
     title: "Menu Memo ",
-    body: "A LINE chatbot for telling school's menu at my high school, KVIS",
-    detail: "",
+    body: "A LINE chatbot for telling school's menu at my high school, KVIS.",
+    detail: "It has been used since 2020, until now (2024) with over 800 friends.",
     since: new Date("July, 2020"),
 
     links: [
@@ -567,7 +578,16 @@ export const projects: Project[] = [
         title: "GitHub",
       },
     ],
-    previews: [],
+    previews: [{
+      url:'/images/menumemo/01.jpeg',
+      width: 1170,
+      height: 2532,
+    },
+    {
+      url:'/images/menumemo/02.jpeg',
+      width: 1170,
+      height: 2532,
+    }],
     slug: "menu-memo",
     tools: ["javascript"],
     comments: [],

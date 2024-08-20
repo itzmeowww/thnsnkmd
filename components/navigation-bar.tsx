@@ -45,16 +45,18 @@ const NavigationBar = ({ locale }: { locale: string }) => {
                     onValueChange={(value: string) => {
                         router.replace('/', { locale: value });
                     }}
+
                 >
                     <SelectTrigger className="w-[140px]">
                         <Globe size={16} className="" />
                         <SelectValue placeholder="English" />
                     </SelectTrigger>
-                    <SelectContent >
+                    <SelectContent className="max-sm:hidden">
                         <SelectItem value="en">English</SelectItem>
                         <SelectItem value="ja" disabled>日本語</SelectItem>
                         <SelectItem value="th" disabled>ภาษาไทย</SelectItem>
                     </SelectContent>
+
                 </Select>
                 {/* <Button size={'icon'} variant={'outline'}>
                     <MenuIcon />
