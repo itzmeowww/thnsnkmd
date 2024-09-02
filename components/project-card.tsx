@@ -3,6 +3,7 @@ import { Link } from "@/navigation";
 import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { ImageOffIcon } from "lucide-react";
+import BadgeList from "./bagde-list";
 
 const ProjectCard = ({ project }: { project: Project }) => {
     return (
@@ -17,8 +18,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 <CardHeader>
 
                     <CardTitle className="text-xl">{project.title} {project.since && <span className="text-xs text-muted-foreground ml-auto"> {`since ${project.since.getFullYear()}`}</span>} </CardTitle>
-                    <CardDescription>{project.body}</CardDescription>
+                    <CardDescription>
+                        {project.body}
 
+                    </CardDescription>
+                    <div className="">
+                        <BadgeList tools={project.tools} />
+                    </div>
                 </CardHeader>
             </Card>
         </Link>

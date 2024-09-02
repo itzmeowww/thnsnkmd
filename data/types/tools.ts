@@ -8,4 +8,5 @@ export type Tool =
   | "typescript"
   | "rails"
   | "swiftui"
-  | "shadcn/ui";
+  | "shadcn/ui"
+  | "redis"

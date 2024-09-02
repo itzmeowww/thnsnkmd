@@ -48,6 +48,46 @@ export const projects: Project[] = [
         width: 1920,
         height: 1080,
       },
+      {
+        url: "/images/yondaaa/01.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/02.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/03.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/04.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/05.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/06.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/07.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/yondaaa/08.PNG",
+        width: 1170,
+        height: 2532,
+      },
     ],
     slug: "yondaaa",
     tools: ["swiftui", "rails"],
@@ -70,6 +110,10 @@ export const projects: Project[] = [
       {
         href: "https://snake.thnsnkmd.com/",
         title: "Visit",
+      },
+      {
+        href: "https://github.com/itzmeowww/snake-search",
+        title: "GitHub",
       },
     ],
     previews: [
@@ -154,7 +198,8 @@ export const projects: Project[] = [
   {
     title: "Memoiz: your second brain ",
     body: "Me and Nutchanon Taechasuk (Quatton) won the first prize from lablabai hackathon.",
-    detail: "Generative AI + vector database + dairy.",
+    detail:
+      "The concept of this is to use generative AI and vector database with user's dairy.",
     since: new Date("April, 2023"),
 
     links: [
@@ -163,10 +208,22 @@ export const projects: Project[] = [
         title: "Visit",
       },
     ],
-    previews: [],
+    previews: [
+      {
+        height: 402,
+        width: 720,
+        url: "/images/memoiz/slide.png",
+      },
+    ],
     slug: "memoiz",
-    tools: ["nextjs", "tailwind", "shadcn/ui"],
-    comments: [],
+    tools: ["nextjs", "tailwind", "shadcn/ui", "redis"],
+    comments: [
+      {
+        author: "Pawel Czech (Co-founder/Partner)",
+        comment:
+          '"Super original idea. Good use of tech and connections to DB set up. I would love to see you build it further "',
+      },
+    ],
   },
   {
     title: "fahprathan5939.com",
@@ -569,7 +626,8 @@ export const projects: Project[] = [
   {
     title: "Menu Memo ",
     body: "A LINE chatbot for telling school's menu at my high school, KVIS.",
-    detail: "It has been used since 2020, until now (2024) with over 800 friends.",
+    detail:
+      "It has been used since 2020, until now (2024) with over 800 friends.",
     since: new Date("July, 2020"),
 
     links: [
@@ -578,16 +636,18 @@ export const projects: Project[] = [
         title: "GitHub",
       },
     ],
-    previews: [{
-      url:'/images/menumemo/01.jpeg',
-      width: 1170,
-      height: 2532,
-    },
-    {
-      url:'/images/menumemo/02.jpeg',
-      width: 1170,
-      height: 2532,
-    }],
+    previews: [
+      {
+        url: "/images/menumemo/01.jpeg",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/menumemo/02.jpeg",
+        width: 1170,
+        height: 2532,
+      },
+    ],
     slug: "menu-memo",
     tools: ["javascript"],
     comments: [],
