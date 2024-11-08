@@ -325,7 +325,12 @@ export const projects: Project[] = [
       },
     ],
     tools: ["nextjs", "tailwind", "typescript"],
-    comments: [],
+    comments: [
+      {
+        author:"Dawit (Founder of Devvingedth)",
+        comment:"Win did an amazing job creating a website for my college consulting company, Devving EdTh: Developing Education for Thailand. The website has a beautiful and modern design, and the layout is very user-friendly, well-suited for the target audience of students and parents. Win organized all the important information on the website brilliantly. In fact, when I had an interview with an American company for an internship, the employers mentioned that they really liked and were impressed with the website. It helped them understand and learn about my company easily. I am very pleased with my decision to have Win create the website for my company."
+      }
+    ],
   },
   {
     title: "Comatresarch",
