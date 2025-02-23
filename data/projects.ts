@@ -26,6 +26,80 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "t-lub",
+    body: "Friend’s travel suggestions made easy",
+    since: new Date("October, 2024"),
+    links: [
+      {
+        title: "Instagram",
+        href: "https://www.instagram.com/tlub.official",
+      },
+    ],
+    previews: [
+      {
+        url: "/images/tlub/bg.jpg",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    slug: "tlub",
+    tools: ["swiftui", "firebase"],
+    comments: [],
+    detail:
+      "T-lub is a new social media platform that allows users to share their favorite places with others.",
+  },
+  {
+    title: "Fuguru",
+    body: "Your Personalized Content",
+    since: new Date("February, 2025"),
+    links: [
+      {
+        title: "Zenn Article",
+        href: "https://zenn.dev/yay1/articles/4c2615d147089c",
+      },
+      {
+        title: "Demo",
+        href: "https://youtu.be/KaBPv0tJiAE"
+      },
+    ],
+    comments: [],
+    previews: [
+      {
+        url: "/images/fuguru/bg.webp",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    slug: "fuguru",
+    tools: ["flutter", "firebase", "gcp"],
+    detail:
+      "Fuguru automatically detects information that the user already knows and removes it from new materials, enhancing learning efficiency. This allows users to focus on acquiring only the necessary knowledge without wasting time on redundant content.",
+  },
+  {
+    title: "Ciary",
+    body: "A diary that cares about you",
+    since: new Date("October, 2024"),
+    links: [
+      {
+        title:
+          "東京工業大学が開催した生成AIを活用したアプリ作成コンテストに東京医科歯科大学とNECが協力",
+        href: "https://prtimes.jp/main/html/rd/p/000000688.000078149.html",
+      },
+    ],
+    previews: [
+      {
+        url: "/images/ciary/bg.jpg",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    slug: "ciary",
+    tools: ["openai", "nextjs", "tailwind"],
+    comments: [],
+    detail: "",
+  },
+
+  {
     title: "Yondaaa",
     body: "iOS application for exchanging and giving away books.",
     detail:
@@ -327,9 +401,10 @@ export const projects: Project[] = [
     tools: ["nextjs", "tailwind", "typescript"],
     comments: [
       {
-        author:"Dawit (Founder of Devvingedth)",
-        comment:"Win did an amazing job creating a website for my college consulting company, Devving EdTh: Developing Education for Thailand. The website has a beautiful and modern design, and the layout is very user-friendly, well-suited for the target audience of students and parents. Win organized all the important information on the website brilliantly. In fact, when I had an interview with an American company for an internship, the employers mentioned that they really liked and were impressed with the website. It helped them understand and learn about my company easily. I am very pleased with my decision to have Win create the website for my company."
-      }
+        author: "Dawit (Founder of Devvingedth)",
+        comment:
+          "Win did an amazing job creating a website for my college consulting company, Devving EdTh: Developing Education for Thailand. The website has a beautiful and modern design, and the layout is very user-friendly, well-suited for the target audience of students and parents. Win organized all the important information on the website brilliantly. In fact, when I had an interview with an American company for an internship, the employers mentioned that they really liked and were impressed with the website. It helped them understand and learn about my company easily. I am very pleased with my decision to have Win create the website for my company.",
+      },
     ],
   },
   {
