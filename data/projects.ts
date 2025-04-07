@@ -27,13 +27,17 @@ type Image = {
 export const projects: Project[] = [
   {
     title: "t-lub",
-    body: "Friend’s travel suggestions made easy",
+    body: "Share Hidden Gems",
     since: new Date("October, 2024"),
     links: [
       {
         title: "Instagram",
         href: "https://www.instagram.com/tlub.official",
       },
+      {
+        title: "App Store",
+        href: "https://apps.apple.com/app/t-lub/id6670796341",
+      }
     ],
     previews: [
       {
@@ -41,12 +45,53 @@ export const projects: Project[] = [
         width: 1920,
         height: 1080,
       },
+      {
+        url: "/images/tlub/0x0ss.png",
+        width: 1320,
+        height: 2868,
+      },
+      {
+        url: "/images/tlub/0x0ss-2.png",
+        width: 1320,
+        height: 2868,
+      },
+      {
+        url: "/images/tlub/0x0ss-3.png",
+        width: 1320,
+        height: 2868,
+      },
+      {
+        url: "/images/tlub/0x0ss-4.png",
+        width: 1320,
+        height: 2868,
+      },
+      {
+        url: "/images/tlub/0x0ss-5.png",
+        width: 1320,
+        height: 2868,
+      },
+      {
+        url: "/images/tlub/0x0ss-6.png",
+        width: 1320,
+        height: 2868,
+      },
+      {
+        url: "/images/tlub/0x0ss-7.png",
+        width: 1320,
+        height: 2868,
+      },
+
+      {
+        url: "/images/tlub/0x0ss-8.png",
+        width: 1320,
+        height: 2868,
+      },
     ],
     slug: "tlub",
     tools: ["swiftui", "firebase"],
     comments: [],
     detail:
-      "T-lub is a new social media platform that allows users to share their favorite places with others.",
+      "t-lub - Map Your World, Share Your Journey We created this app because we wanted a simple way to REMEMBER the places that made our days, DISCOVER new spots that bring joy, and SHARE all the little gems we find with the PEOPLE WHO MATTER.",
   },
   {
     title: "Fuguru",
@@ -59,7 +104,7 @@ export const projects: Project[] = [
       },
       {
         title: "Demo",
-        href: "https://youtu.be/KaBPv0tJiAE"
+        href: "https://youtu.be/KaBPv0tJiAE",
       },
     ],
     comments: [],
