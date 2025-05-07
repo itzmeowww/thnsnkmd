@@ -37,6 +37,10 @@ export const projects: Project[] = [
       {
         title: "App Store",
         href: "https://apps.apple.com/app/t-lub/id6670796341",
+      },
+      {
+        title: "Website",
+        href: "https://t-lub.com",
       }
     ],
     previews: [
