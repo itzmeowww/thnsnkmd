@@ -27,6 +27,8 @@ const has_been: { to: Prefecture, on: Date | undefined }[] = [
     { to: "Hokkaido", on: new Date("17 Jan 2025") },
     { to: "Gunma", on: new Date("11 Feb 2025") },
     { to: "Okinawa", on: new Date("6 Jun 2025") },
+    { to: "Akita", on: new Date("19 July 2025") },
+    { to: "Iwate", on: new Date("20 July 2026") }
 ]
 export const metadata: Metadata = {
     title: "Japan Log of Thanasan Kumdee",
