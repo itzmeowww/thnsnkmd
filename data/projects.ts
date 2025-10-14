@@ -26,6 +26,109 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "HiNan!",
+    body: "Make evacuation drills a habit",
+    detail:
+      "An iOS app that gamifies disaster preparedness by walking to nearby shelters using AI-generated scenarios. Transforms evacuation training from a mandatory activity to a fun, repeatable experience through badges and challenges. Developed in 2 days at JPHACKS 2025 HackDay Tokyo.",
+    since: new Date("October, 2025"),
+    links: [
+      {
+        title: "GitHub",
+        href: "https://github.com/jphacks/tk_a_2505",
+      },
+      {
+        title: "Demo Video",
+        href: "https://youtu.be/QmWcuJ1-3J0",
+      },
+    ],
+
+    previews: [
+      {
+        url: "/images/jphacks2025/icon.jpeg",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        url: "/images/jphacks2025/banner.jpg",
+        width: 3000,
+        height: 947,
+      },
+      {
+        url: "/images/jphacks2025/frame1.jpeg",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        url: "/images/jphacks2025/frame2.jpeg",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        url: "/images/jphacks2025/frame3.jpeg",
+        width: 1200,
+        height: 1200,
+      },
+    ],
+    slug: "hinan",
+    tools: ["swiftui", "gemini", "claude"],
+    comments: [
+      {
+        comment:
+          "Received Corporate Award from Kawada Techno System Co., Ltd. at JPHACKS 2025 HackDay Tokyo (A Schedule) held at the University of Tokyo on October 11–12.",
+        author: "Thanasan Kumdee",
+        date: new Date("October 12, 2025"),
+      },
+      {
+        comment:
+          "I primarily worked on SwiftUI maps implementation and localization for the app.",
+        author: "Thanasan Kumdee",
+      },
+      {
+        comment:
+          "Used Gemini 2.5 Flash for generating unique daily disaster scenarios and Flux.1 Schnell for image generation.",
+        author: "Thanasan Kumdee",
+      },
+    ],
+  },
+  {
+    title: "Postcard",
+    body: "Post your message on a paper plane",
+    detail:
+      "An SNS where posts fly like paper planes powered by logistics data as wind. Messages are randomly delivered based on open logistics data from Project LINKS, creating a unique experience where delivery destinations are determined by the wind.",
+    since: new Date("September, 2025"),
+    links: [
+      {
+        title: "GitHub",
+        href: "https://github.com/Riochin/postcard",
+      },
+      {
+        title: "Article",
+        href: "https://topaz.dev/projects/9d70dd666df36b317b20",
+      },
+    ],
+    previews: [
+      {
+        url: "/images/postcard/icon.png",
+        width: 1024,
+        height: 1024,
+      },
+    ],
+    slug: "postcard",
+    tools: ["nextjs", "typescript", "python", "claude"],
+    comments: [
+      {
+        comment:
+          "We reimagined logistics data as 'wind' that carries posts across the map, making data feel alive and interactive.",
+        author: "Thanasan Kumdee",
+      },
+      {
+        comment:
+          "Used Claude Code extensively for development. To save tokens, we wrote prompts in English, reset conversations regularly, and created task instructions with Gemini before passing them to Claude.",
+        author: "Thanasan Kumdee",
+      },
+    ],
+  },
+  {
     title: "t-lub",
     body: "Share Hidden Gems",
     since: new Date("October, 2024"),
@@ -41,7 +144,7 @@ export const projects: Project[] = [
       {
         title: "Website",
         href: "https://t-lub.com",
-      }
+      },
     ],
     previews: [
       {

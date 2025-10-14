@@ -17,3 +17,5 @@ export type Tool =
   | "firebase"
   | "flutter"
   | "gcp"
+  | "gemini"
+  | "claude"
