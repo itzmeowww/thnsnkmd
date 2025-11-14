@@ -37,6 +37,10 @@ export const projects: Project[] = [
         href: "https://github.com/jphacks/tk_a_2505",
       },
       {
+        title: "Project Page",
+        href:"https://jphacks.github.io/tk_a_2505/en/"
+      },
+      {
         title: "Demo Video",
         href: "https://youtu.be/QmWcuJ1-3J0",
       },
@@ -74,9 +78,20 @@ export const projects: Project[] = [
     comments: [
       {
         comment:
-          "Received Corporate Award from Kawada Techno System Co., Ltd. at JPHACKS 2025 HackDay Tokyo (A Schedule) held at the University of Tokyo on October 11–12.",
+          "Advanced to the final round of JPHACKS 2025, one of Japan's largest hackathons. Received Sponsor Awards from MEEQ Inc. and SoftBank during the final competition.",
+        author: "Thanasan Kumdee",
+        date: new Date("November 9, 2025"),
+      },
+      {
+        comment:
+          "Previously received Corporate Award from Kawada Techno System Co., Ltd. at JPHACKS 2025 HackDay Tokyo (A Schedule) held at the University of Tokyo on October 11–12.",
         author: "Thanasan Kumdee",
         date: new Date("October 12, 2025"),
+      },
+      {
+        comment:
+          "Served as the iOS developer for our team AI4U (tk_a_2505). Implemented the app, pushed it to production, and navigated the Apple App Review process. Also created the project's landing website.",
+        author: "Thanasan Kumdee",
       },
       {
         comment:
