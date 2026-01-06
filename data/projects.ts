@@ -26,6 +26,67 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "Thrivre",
+    body: "Creating a world where everyone lives with purpose",
+    detail:
+      "Trusted by Thrivre to create the website for their impactful career coaching service based in Bangkok, Thailand, helping professionals align their strengths and values with meaningful work. The website features a 5-step Career Design process and comprehensive Get Hired Kit including resume writing, LinkedIn optimization, and interview preparation, showcasing a modern, professional design with dark aesthetics and responsive layouts optimized for both mobile and desktop users.",
+    since: new Date("Jan, 2026"),
+    links: [
+      {
+        title: "Website",
+        href: "https://www.thrivre.com",
+      },
+    ],
+    previews: [
+      {
+        url: "/images/thrivre/Home page.png",
+        width: 2400,
+        height: 1260,
+        alt: "Thrivre",
+      },
+      {
+        url: "/images/thrivre/home.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
+        url: "/images/thrivre/about.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
+        url: "/images/thrivre/career-design.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
+        url: "/images/thrivre/get-hired-kit.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
+        url: "/images/thrivre/stories.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
+        url: "/images/thrivre/contact.png",
+        width: 3104,
+        height: 1962,
+      },
+    ],
+    slug: "thrivre",
+    tools: [],
+    comments: [
+      {
+        comment:
+          "The design was created by Jessie, special thanks to her for designing such an incredible website.",
+        author: "Thanasan Kumdee",
+      },
+      
+    ],
+  },
+  {
     title: "HiNan!",
     body: "Make evacuation drills a habit",
     detail:
@@ -38,7 +99,7 @@ export const projects: Project[] = [
       },
       {
         title: "Project Page",
-        href:"https://jphacks.github.io/tk_a_2505/en/"
+        href: "https://jphacks.github.io/tk_a_2505/en/",
       },
       {
         title: "Demo Video",
