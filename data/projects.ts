@@ -50,7 +50,7 @@ export const projects: Project[] = [
         height: 1962,
       },
       {
-        url: "/images/thrivre/about.png",
+        url: "/images/thrivre/stories.png",
         width: 3104,
         height: 1962,
       },
@@ -65,7 +65,7 @@ export const projects: Project[] = [
         height: 1962,
       },
       {
-        url: "/images/thrivre/stories.png",
+        url: "/images/thrivre/about.png",
         width: 3104,
         height: 1962,
       },
