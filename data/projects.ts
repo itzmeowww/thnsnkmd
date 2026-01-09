@@ -55,12 +55,22 @@ export const projects: Project[] = [
         height: 1962,
       },
       {
+        url: "/images/thrivre/storie-detail.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
         url: "/images/thrivre/career-design.png",
         width: 3104,
         height: 1962,
       },
       {
         url: "/images/thrivre/get-hired-kit.png",
+        width: 3104,
+        height: 1962,
+      },
+      {
+        url: "/images/thrivre/pricing.png",
         width: 3104,
         height: 1962,
       },
