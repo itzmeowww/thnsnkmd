@@ -26,6 +26,70 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "TSAJ Kanto Virtual Run",
+    body: "A virtual run event website organized by the Thai Student Association in Japan (TSAJ) in the Kanto region.",
+    detail:
+      "A complete virtual run event website featuring registration, a live leaderboard, and activity tracking. The event was held in 2025 and attracted over 10 participants. Built with Next.js and Tailwind CSS, using Supabase for authentication and database. The website is no longer maintained and is now unavailable.",
+    since: new Date("November, 2025"),
+    links: [],
+    previews: [
+      {
+        url: "/images/tsaj-run/IMG_5688.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5689.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5690.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5691.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5692.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5693.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5694.PNG",
+        width: 1170,
+        height: 2532,
+      },
+      {
+        url: "/images/tsaj-run/IMG_5696.PNG",
+        width: 1170,
+        height: 2532,
+      },
+    ],
+    slug: "tsaj-run",
+    tools: ["nextjs", "tailwind", "supabase"],
+    comments: [
+      {
+        comment:
+          "Over 10 participants might seem small, but for an online community event like this, it was a big success. It was a great experience building something end-to-end for a real event with real users.",
+          author: "Thanasan Kumdee",
+      },
+      {
+        comment: "Special thanks to P'Mim for creating the illustrations for the event and the award design — they really brought the whole thing together.",
+        author: "Thanasan Kumdee",
+      }
+    ],
+    
+  },
+  {
     title: "Thrivre",
     body: "Creating a world where everyone lives with purpose",
     detail:
@@ -86,14 +150,13 @@ export const projects: Project[] = [
       },
     ],
     slug: "thrivre",
-    tools: [],
+    tools: ["nextjs", "tailwind","strapi"],
     comments: [
       {
         comment:
           "The design was created by Jessie, special thanks to her for designing such an incredible website.",
         author: "Thanasan Kumdee",
       },
-      
     ],
   },
   {
