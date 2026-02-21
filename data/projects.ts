@@ -34,6 +34,11 @@ export const projects: Project[] = [
     links: [],
     previews: [
       {
+        url: "/images/tsaj-run/post.jpg",
+        width: 1280,
+        height: 1280,
+      },
+      {
         url: "/images/tsaj-run/IMG_5688.PNG",
         width: 1170,
         height: 2532,
