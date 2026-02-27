@@ -26,6 +26,59 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "mossify",
+    body: "The app that grows while you live",
+    detail: "Mossify is a unique iOS app that wants you to live your life. Download it and see how it grows with you! Step away. Breathe. Come back to a little world that quietly grew while you were gone.",
+    since: new Date("January, 2026"),
+    links: [
+      {
+        title: "Download",
+        href: "https://apps.apple.com/jp/app/mossify/id6755780523",
+      },
+      {
+        title: "Learn More",
+        href: "https://mossify.thnsnkmd.com",
+      }
+    ],
+    previews: [
+      {
+        url: "/images/mossify/preview.jpeg",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        url: "/images/mossify/screen1.jpg",
+        width: 1242,
+        height: 2688,
+      },
+      {
+        url: "/images/mossify/screen2.jpg",
+        width: 1242,
+        height: 2688,
+      },
+      {
+        url: "/images/mossify/screen3.jpg",
+        width: 1242,
+        height: 2688,
+      },
+      {
+        url: "/images/mossify/screen4.jpg",
+        width: 1242,
+        height: 2688,
+      },
+    ],
+    comments: [
+      {
+        comment:
+          "Please download and try it out! I would love to hear your feedback.",
+        author: "Thanasan Kumdee",
+      },
+    ],
+    slug: "mossify",
+    tools: ["swiftui"],
+  },
+
+  {
     title: "TSAJ Kanto Virtual Run",
     body: "A virtual run event website organized by the Thai Student Association in Japan (TSAJ) in the Kanto region.",
     detail:
@@ -85,14 +138,14 @@ export const projects: Project[] = [
       {
         comment:
           "Over 10 participants might seem small, but for an online community event like this, it was a big success. It was a great experience building something end-to-end for a real event with real users.",
-          author: "Thanasan Kumdee",
+        author: "Thanasan Kumdee",
       },
       {
-        comment: "Special thanks to P'Mim for creating the illustrations for the event and the award design — they really brought the whole thing together.",
+        comment:
+          "Special thanks to P'Mim for creating the illustrations for the event and the award design — they really brought the whole thing together.",
         author: "Thanasan Kumdee",
-      }
+      },
     ],
-    
   },
   {
     title: "Thrivre",
@@ -155,7 +208,7 @@ export const projects: Project[] = [
       },
     ],
     slug: "thrivre",
-    tools: ["nextjs", "tailwind","strapi"],
+    tools: ["nextjs", "tailwind", "strapi"],
     comments: [
       {
         comment:
