@@ -26,9 +26,89 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: "AYUMI",
+    body: "Trace the paths of those who came before you",
+    detail:
+      "AYUMI is a career navigation web app built at a hackathon held at APU (Ritsumeikan Asia Pacific University) in March 2026. Inspired by GitHub's commit history, it lets users trace the life decisions of role models — visualized as a tree — and chat with an AI persona based on their career journey. Users log their own turning points and explore alternative paths they didn't take, helping them decide their next move.",
+    since: new Date("March, 2026"),
+    links: [
+      {
+        title: "GitHub",
+        href: "https://github.com/Asheze1127/hackathon-2026-in-apu",
+      },
+    ],
+    previews: [
+      {
+        url: "/images/ayumi/icon.png",
+        width: 1444,
+        height: 1444,
+        alt: "AYUMI icon",
+      },
+      {
+        url: "/images/ayumi/home.png",
+        width: 1570,
+        height: 2932,
+        alt: "Life decision tree",
+      },
+      {
+        url: "/images/ayumi/search.png",
+        width: 1570,
+        height: 2932,
+        alt: "Role model search",
+      },
+      {
+        url: "/images/ayumi/rolemodel.png",
+        width: 1570,
+        height: 2932,
+        alt: "Role model profile",
+      },
+      {
+        url: "/images/ayumi/rolemodel-2.png",
+        width: 1570,
+        height: 2932,
+        alt: "Decision path timeline",
+      },
+      {
+        url: "/images/ayumi/chat-model.png",
+        width: 1570,
+        height: 2932,
+        alt: "AI persona chat",
+      },
+      {
+        url: "/images/ayumi/chat.png",
+        width: 1570,
+        height: 2932,
+        alt: "Direct chat with role model",
+      },
+      
+    ],
+    slug: "ayumi",
+    tools: ["nextjs", "typescript", "tailwind", "supabase", "prisma", "openai"],
+    comments: [
+      {
+        comment: "Awarded 2nd place at APU Hackathon 2026.",
+        author: "Thanasan Kumdee",
+        date: new Date("16 March, 2026"),
+      },
+      {
+        comment: "I proposed the idea — I wanted to see a tree of my own life.",
+        author: "Thanasan Kumdee",
+        date: new Date("16 March, 2026"),
+      },
+      {
+        comment:
+          "Joined solo and was placed into a team with 2 members from Kyushu Institute of Technology (KIT) and 2 from Science Tokyo. Competed against 12 teams from three universities.",
+        author: "Thanasan Kumdee",
+        date: new Date("16 March, 2026"),
+      },
+    ],
+  },
+
+  {
     title: "mossify",
     body: "The app that grows while you live",
-    detail: "Mossify is a unique iOS app that wants you to live your life. Download it and see how it grows with you! Step away. Breathe. Come back to a little world that quietly grew while you were gone.",
+    detail:
+      "Mossify is a unique iOS app that wants you to live your life. Download it and see how it grows with you! Step away. Breathe. Come back to a little world that quietly grew while you were gone.",
     since: new Date("January, 2026"),
     links: [
       {
@@ -38,7 +118,7 @@ export const projects: Project[] = [
       {
         title: "Learn More",
         href: "https://mossify.thnsnkmd.com",
-      }
+      },
     ],
     previews: [
       {
