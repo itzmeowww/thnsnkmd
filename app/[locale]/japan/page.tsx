@@ -32,7 +32,7 @@ const has_been: { to: Prefecture, on: Date | undefined }[] = [
     { to: "Ishikawa", on: new Date("16 Jan 2026") },
     { to: "Fukui", on: new Date("17 Jan 2026") },
     { to: "Oita", on: new Date("14 Mar 2026") },
-    { to: "Fukushima", on new Date("1 April 2026")}
+    { to: "Fukushima", on: new Date("1 April 2026") }
 
 ]
 export const metadata: Metadata = {
