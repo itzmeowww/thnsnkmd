@@ -2,7 +2,6 @@ import { projects } from "@/data/projects";
 import { Calendar, UserCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "@/navigation";
 
 import HashHeader from "@/components/hash-header";
@@ -10,6 +9,8 @@ import { notFound } from "next/navigation";
 import ImageCarousel from "@/components/image-carousel";
 import Bread from "@/components/bread";
 import BadgeList from "@/components/bagde-list";
+import { Locale, pick } from "@/lib/localized";
+import { getFormatter, getTranslations } from "next-intl/server";
 
 
 
@@ -19,31 +20,33 @@ const Leading = ({ title }: { title: string }) => {
         <hr className="mt-12" />
         <h2 className="text-xl font-bold  bg-white dark:bg-black -mt-8 pr-4 w-fit mb-2">{title}</h2></>
 }
-const Project = ({ params: { id } }: { params: { id: string } }) => {
+const Project = async ({ params: { id, locale } }: { params: { id: string; locale: Locale } }) => {
     const project = projects.find(p => p.slug === id)
 
     if (!project) return notFound()
+    const t = await getTranslations();
+    const f = await getFormatter();
     return (
         <div className="flex flex-col gap-2 w-full max-w-4xl mx-auto">
-            <Bread current={project.slug} links={[{ name: "Projects", href: "/projects" }]} />
+            <Bread current={project.slug} links={[{ name: t('Breadcrumb.projects'), href: "/projects" }]} />
             <BadgeList tools={project.tools} />
-            <HashHeader text={project.title} />
+            <HashHeader text={pick(project.title, locale)} />
 
 
             <p className='font-light text-foreground'>
-                {project.body}
+                {pick(project.body, locale)}
             </p>
             <p className='font-light text-foreground'>
-                {project.detail}
+                {pick(project.detail, locale)}
             </p>
             {project.previews.length > 0 && <>
-                <Leading title="Previews" />
-                <ImageCarousel project={project} />
+                <Leading title={t('ProjectPage.previews')} />
+                <ImageCarousel project={project} locale={locale} />
             </>}
 
             {project.links.length > 0 &&
                 <>
-                    <Leading title="Links" />
+                    <Leading title={t('ProjectPage.links')} />
                     <div className="flex gap-2">
                         {project.links.map((link, key) => {
                             return (
@@ -57,19 +60,16 @@ const Project = ({ params: { id } }: { params: { id: string } }) => {
             }
             {
                 project.comments.length > 0 && <>
-                    <Leading title="Comments" />
+                    <Leading title={t('ProjectPage.comments')} />
                     <div className="flex flex-col gap-2">
                         {project.comments.map((comment, idx) => {
-                            const [_, month, day, year] = comment.date?.toDateString().split(' ') || [undefined, undefined, undefined, undefined]
-
-
                             return <div key={idx} className="border p-4 rounded-xl flex flex-col gap-2">
                                 <p className="font-light text-foreground">
-                                    {comment.comment}
+                                    {pick(comment.comment, locale)}
                                 </p>
                                 <span className="text-xs ml-auto text-muted-foreground flex items-center gap-1">
                                     <UserCircle size={14} /> {comment.author}
-                                    {year != undefined && <><Calendar size={14} className="ml-2" /> {`${month} ${day}, ${year}`}</>}
+                                    {comment.date && <><Calendar size={14} className="ml-2" /> {f.dateTime(comment.date, { year: 'numeric', month: 'short', day: 'numeric' })}</>}
                                 </span>
                             </div>
                         })}

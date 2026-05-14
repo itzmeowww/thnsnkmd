@@ -1,6 +1,124 @@
 {
+  "Metadata": {
+    "rootTitle": "Thanasan Kumdee - get to know me",
+    "rootDescription": "wanna take a glance of stuff that I made?",
+    "projectsTitle": "Projects by Thanasan Kumdee",
+    "projectsDescription": "wanna see what I have made?",
+    "japanTitle": "Japan Log of Thanasan Kumdee",
+    "japanDescription": "wanna see where have I been?",
+    "projectTitleTemplate": "{title} by Thanasan Kumdee"
+  },
+  "Navigation": {
+    "fullName": "Thanasan Kumdee",
+    "shortName": "Thanasan K."
+  },
+  "Theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Language": {
+    "placeholder": "English",
+    "en": "English",
+    "ja": "日本語",
+    "th": "ภาษาไทย"
+  },
+  "Footer": {
+    "tagline": "I write chicken tender and eat code.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "projects": "Projects",
+    "japanLog": "Japan Log"
+  },
+  "Breadcrumb": {
+    "home": "Home",
+    "projects": "Projects",
+    "japan": "Japan"
+  },
   "HomePage": {
     "greeting": "Greetings, mate!",
-    "about me": "about me"
+    "aboutHeader": "about-me",
+    "aboutBody": "Call me Win or Thanasan Kumdee. I'm an undergraduate student in Computer Science at the <tit>Tokyo Institute of Technology</tit> in Japan.",
+    "connectHeader": "connect",
+    "connectText": "Here are some links to link with me.",
+    "myStuffsHeader": "my-stuffs",
+    "myStuffsText": "I do coding for fun and here are some of my stuffs.",
+    "seeAll": "See All of My Stuff",
+    "miscHeader": "misc",
+    "miscText": "You might also wanna check these out.",
+    "japanLogButton": "Japan Log"
+  },
+  "ProjectsPage": {
+    "header": "my-stuffs"
+  },
+  "ProjectPage": {
+    "previews": "Previews",
+    "links": "Links",
+    "comments": "Comments"
+  },
+  "ProjectCard": {
+    "noImage": "No Image",
+    "since": "{year}"
+  },
+  "JapanPage": {
+    "header": "japan-log",
+    "intro": "Since arriving in Japan on May 12, 2022, I've set a goal to visit every prefecture in the country. So far, I've been to {count} out of 47 prefectures.",
+    "tip": "TIP",
+    "clickHint": "Click on the map to see more detail."
+  },
+  "JapanMap": {
+    "lastVisit": "Last visit: {date}",
+    "idk": "idk",
+    "never": "never"
+  },
+  "Prefectures": {
+    "Aichi": "Aichi",
+    "Akita": "Akita",
+    "Aomori": "Aomori",
+    "Chiba": "Chiba",
+    "Ehime": "Ehime",
+    "Fukui": "Fukui",
+    "Fukuoka": "Fukuoka",
+    "Fukushima": "Fukushima",
+    "Gifu": "Gifu",
+    "Gunma": "Gunma",
+    "Hiroshima": "Hiroshima",
+    "Hokkaido": "Hokkaido",
+    "Hyogo": "Hyogo",
+    "Ibaraki": "Ibaraki",
+    "Ishikawa": "Ishikawa",
+    "Iwate": "Iwate",
+    "Kagawa": "Kagawa",
+    "Kagoshima": "Kagoshima",
+    "Kanagawa": "Kanagawa",
+    "Kochi": "Kochi",
+    "Kumamoto": "Kumamoto",
+    "Kyoto": "Kyoto",
+    "Mie": "Mie",
+    "Miyagi": "Miyagi",
+    "Miyazaki": "Miyazaki",
+    "Nagano": "Nagano",
+    "Nagasaki": "Nagasaki",
+    "Nara": "Nara",
+    "Niigata": "Niigata",
+    "Oita": "Oita",
+    "Okayama": "Okayama",
+    "Okinawa": "Okinawa",
+    "Osaka": "Osaka",
+    "Saga": "Saga",
+    "Saitama": "Saitama",
+    "Shiga": "Shiga",
+    "Shimane": "Shimane",
+    "Shizuoka": "Shizuoka",
+    "Tochigi": "Tochigi",
+    "Tokushima": "Tokushima",
+    "Tokyo": "Tokyo",
+    "Tottori": "Tottori",
+    "Toyama": "Toyama",
+    "Wakayama": "Wakayama",
+    "Yamagata": "Yamagata",
+    "Yamaguchi": "Yamaguchi",
+    "Yamanashi": "Yamanashi"
   }
 }

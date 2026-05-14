@@ -1,6 +1,124 @@
 {
+  "Metadata": {
+    "rootTitle": "Kumdee Thanasan - 自己紹介",
+    "rootDescription": "僕が作ったものをちょっと覗いてみませんか？",
+    "projectsTitle": "Kumdee Thanasanのプロジェクト",
+    "projectsDescription": "僕が作ったものを見てみませんか？",
+    "japanTitle": "Kumdee Thanasanの日本ログ",
+    "japanDescription": "僕が行ったことのある場所を見てみませんか？",
+    "projectTitleTemplate": "{title} - Kumdee Thanasan"
+  },
+  "Navigation": {
+    "fullName": "Kumdee Thanasan",
+    "shortName": "Kumdee T."
+  },
+  "Theme": {
+    "toggle": "テーマを切り替える",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "Language": {
+    "placeholder": "日本語",
+    "en": "English",
+    "ja": "日本語",
+    "th": "ภาษาไทย"
+  },
+  "Footer": {
+    "tagline": "チキンテンダーを書いて、コードを食べる。",
+    "quickLinks": "クイックリンク",
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "japanLog": "日本ログ"
+  },
+  "Breadcrumb": {
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "japan": "日本"
+  },
   "HomePage": {
     "greeting": "こんにちは!",
-    "about me": "僕について"
+    "aboutHeader": "about-me",
+    "aboutBody": "ウィンまたはカムディー　タナーサンと呼んでください。<tit>東京工業大学</tit>の情報科学科の学部生で、日本に住んでいます。",
+    "connectHeader": "connect",
+    "connectText": "僕とつながるためのリンクをいくつか載せておきます。",
+    "myStuffsHeader": "my-stuffs",
+    "myStuffsText": "趣味でコーディングをしていて、作ったものをいくつか紹介します。",
+    "seeAll": "すべての作品を見る",
+    "miscHeader": "misc",
+    "miscText": "こちらもよかったらどうぞ。",
+    "japanLogButton": "日本ログ"
+  },
+  "ProjectsPage": {
+    "header": "my-stuffs"
+  },
+  "ProjectPage": {
+    "previews": "プレビュー",
+    "links": "リンク",
+    "comments": "コメント"
+  },
+  "ProjectCard": {
+    "noImage": "画像なし",
+    "since": "{year}年"
+  },
+  "JapanPage": {
+    "header": "japan-log",
+    "intro": "2022年5月12日に日本に来てから、47都道府県すべてを訪れるのを目標にしています。今までに47都道府県のうち{count}都道府県に行きました。",
+    "tip": "ヒント",
+    "clickHint": "地図をクリックすると詳細が見られます。"
+  },
+  "JapanMap": {
+    "lastVisit": "最終訪問: {date}",
+    "idk": "不明",
+    "never": "未訪問"
+  },
+  "Prefectures": {
+    "Aichi": "愛知県",
+    "Akita": "秋田県",
+    "Aomori": "青森県",
+    "Chiba": "千葉県",
+    "Ehime": "愛媛県",
+    "Fukui": "福井県",
+    "Fukuoka": "福岡県",
+    "Fukushima": "福島県",
+    "Gifu": "岐阜県",
+    "Gunma": "群馬県",
+    "Hiroshima": "広島県",
+    "Hokkaido": "北海道",
+    "Hyogo": "兵庫県",
+    "Ibaraki": "茨城県",
+    "Ishikawa": "石川県",
+    "Iwate": "岩手県",
+    "Kagawa": "香川県",
+    "Kagoshima": "鹿児島県",
+    "Kanagawa": "神奈川県",
+    "Kochi": "高知県",
+    "Kumamoto": "熊本県",
+    "Kyoto": "京都府",
+    "Mie": "三重県",
+    "Miyagi": "宮城県",
+    "Miyazaki": "宮崎県",
+    "Nagano": "長野県",
+    "Nagasaki": "長崎県",
+    "Nara": "奈良県",
+    "Niigata": "新潟県",
+    "Oita": "大分県",
+    "Okayama": "岡山県",
+    "Okinawa": "沖縄県",
+    "Osaka": "大阪府",
+    "Saga": "佐賀県",
+    "Saitama": "埼玉県",
+    "Shiga": "滋賀県",
+    "Shimane": "島根県",
+    "Shizuoka": "静岡県",
+    "Tochigi": "栃木県",
+    "Tokushima": "徳島県",
+    "Tokyo": "東京都",
+    "Tottori": "鳥取県",
+    "Toyama": "富山県",
+    "Wakayama": "和歌山県",
+    "Yamagata": "山形県",
+    "Yamaguchi": "山口県",
+    "Yamanashi": "山梨県"
   }
 }

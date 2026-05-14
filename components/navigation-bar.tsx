@@ -2,20 +2,22 @@
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link, useRouter } from "@/navigation";
-import { Globe, Menu, MenuIcon, MoonIcon, SunIcon } from "lucide-react";
+import { Globe, MoonIcon, SunIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 const NavigationBar = ({ locale }: { locale: string }) => {
     const router = useRouter();
-    const { setTheme } = useTheme()
+    const { setTheme } = useTheme();
+    const t = useTranslations();
     return (
         <div className="w-full border-b h-16 flex justify-between items-center px-4 md:px-6 sticky top-0 bg-white dark:bg-black backdrop-blur-sm  z-50 ">
             <Link href={'/'}>
                 <Button variant={'ghost'}>
-                    <h1 className="max-sm:hidden">Thanasan Kumdee</h1>
-                    <h1 className="sm:hidden">Thanasan K.</h1>
+                    <h1 className="max-sm:hidden">{t('Navigation.fullName')}</h1>
+                    <h1 className="sm:hidden">{t('Navigation.shortName')}</h1>
                 </Button>
             </Link>
             <div className="flex gap-2">
@@ -24,18 +26,18 @@ const NavigationBar = ({ locale }: { locale: string }) => {
                         <Button variant="outline" size="icon">
                             <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                             <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                            <span className="sr-only">Toggle theme</span>
+                            <span className="sr-only">{t('Theme.toggle')}</span>
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                         <DropdownMenuItem onClick={() => setTheme("light")}>
-                            Light
+                            {t('Theme.light')}
                         </DropdownMenuItem>
                         <DropdownMenuItem onClick={() => setTheme("dark")}>
-                            Dark
+                            {t('Theme.dark')}
                         </DropdownMenuItem>
                         <DropdownMenuItem onClick={() => setTheme("system")}>
-                            System
+                            {t('Theme.system')}
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
@@ -49,12 +51,12 @@ const NavigationBar = ({ locale }: { locale: string }) => {
                 >
                     <SelectTrigger className="w-[140px]">
                         <Globe size={16} className="" />
-                        <SelectValue placeholder="English" />
+                        <SelectValue placeholder={t('Language.placeholder')} />
                     </SelectTrigger>
                     <SelectContent className="max-sm:hidden">
-                        <SelectItem value="en">English</SelectItem>
-                        <SelectItem value="ja" disabled>日本語</SelectItem>
-                        <SelectItem value="th" disabled>ภาษาไทย</SelectItem>
+                        <SelectItem value="en">{t('Language.en')}</SelectItem>
+                        <SelectItem value="ja">{t('Language.ja')}</SelectItem>
+                        <SelectItem value="th" disabled>{t('Language.th')}</SelectItem>
                     </SelectContent>
 
                 </Select>

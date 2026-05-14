@@ -1,5 +1,6 @@
 import type { Prefecture } from "@/data/types/prefecture";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { useFormatter, useTranslations } from "next-intl";
 export interface Props {
     prefectures: Prefecture[];
 }
@@ -203,56 +204,6 @@ const darkerWentColor = "#4ade80";
 const notYetColor = "#f0fdf4";
 const darkerNotYetColor = "#fde047";
 
-const name_in_japan: { [key in Prefecture]: string } = {
-    Aichi: "愛知県",
-    Akita: "秋田県",
-    Aomori: "青森県",
-    Chiba: "千葉県",
-    Ehime: "愛媛県",
-    Fukui: "福井県",
-    Fukuoka: "福岡県",
-    Fukushima: "福島県",
-    Gifu: "岐阜県",
-    Gunma: "群馬県",
-    Hiroshima: "広島県",
-    Hokkaido: "北海道",
-    Hyogo: "兵庫県",
-    Ibaraki: "茨城県",
-    Ishikawa: "石川県",
-    Iwate: "岩手県",
-    Kagawa: "香川県",
-    Kagoshima: "鹿児島県",
-    Kanagawa: "神奈川県",
-    Kochi: "高知県",
-    Kumamoto: "熊本県",
-    Kyoto: "京都府",
-    Mie: "三重県",
-    Miyagi: "宮城県",
-    Miyazaki: "宮崎県",
-    Nagano: "長野県",
-    Nagasaki: "長崎県",
-    Nara: "奈良県",
-    Niigata: "新潟県",
-    Oita: "大分県",
-    Okayama: "岡山県",
-    Okinawa: "沖縄県",
-    Osaka: "大阪府",
-    Saga: "佐賀県",
-    Saitama: "埼玉県",
-    Shiga: "滋賀県",
-    Shimane: "島根県",
-    Shizuoka: "静岡県",
-    Tochigi: "栃木県",
-    Tokushima: "徳島県",
-    Tokyo: "東京都",
-    Tottori: "鳥取県",
-    Toyama: "富山県",
-    Wakayama: "和歌山県",
-    Yamagata: "山形県",
-    Yamaguchi: "山口県",
-    Yamanashi: "山梨県",
-};
-
 const PrefectureComponent = ({ prefecture, been, on }: {
     prefecture: {
         d: string;
@@ -261,6 +212,13 @@ const PrefectureComponent = ({ prefecture, been, on }: {
     been: boolean
     on: Date | undefined
 }) => {
+    const t = useTranslations();
+    const f = useFormatter();
+    const dateLabel = been
+        ? on
+            ? f.dateTime(on, { year: 'numeric', month: 'short', day: 'numeric' })
+            : t('JapanMap.idk')
+        : t('JapanMap.never');
     return <>
         <Popover>
             <PopoverTrigger asChild>
@@ -274,9 +232,9 @@ const PrefectureComponent = ({ prefecture, been, on }: {
             </PopoverTrigger>
             <PopoverContent className="mx-4 w-fit">
                 <div className="flex flex-col gap-2">
-                    <h4 className="font-medium leading-none">{prefecture.id} ({name_in_japan[prefecture.id]})</h4>
+                    <h4 className="font-medium leading-none">{t(`Prefectures.${prefecture.id}`)}</h4>
                     <p className="text-sm text-muted-foreground">
-                        Last visit: {been ? on ? on.toDateString() : "idk" : 'never'}
+                        {t('JapanMap.lastVisit', { date: dateLabel })}
                     </p>
                 </div>
             </PopoverContent>

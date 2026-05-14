@@ -4,6 +4,7 @@ import JapanMap from "@/components/japan-map";
 import { Badge } from "@/components/ui/badge";
 import { Prefecture } from "@/data/types/prefecture";
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 const has_been: { to: Prefecture, on: Date | undefined }[] = [
     { to: "Osaka", on: new Date("23 Mar 2023") },
@@ -35,20 +36,24 @@ const has_been: { to: Prefecture, on: Date | undefined }[] = [
     { to: "Fukushima", on: new Date("1 April 2026") }
 
 ]
-export const metadata: Metadata = {
-    title: "Japan Log of Thanasan Kumdee",
-    description: "wanna see where have I been?",
-};
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+    return {
+        title: t('japanTitle'),
+        description: t('japanDescription'),
+    };
+}
 
-const Japan = () => {
+const Japan = async () => {
+    const t = await getTranslations();
     return (
         <div className="flex flex-col gap-2 w-full max-w-3xl mx-auto">
-            <Bread current={"Japan"} links={[]} />
-            <HashHeader text='japan-log' />
-            <p className='font-light text-foreground'>{`Since arriving in Japan on May 12, 2022, I've set a goal to visit every prefecture in the country. So far, I’ve been to ${has_been.length} out of 47 prefectures`}.</p>
+            <Bread current={t('Breadcrumb.japan')} links={[]} />
+            <HashHeader text={t('JapanPage.header')} />
+            <p className='font-light text-foreground'>{t('JapanPage.intro', { count: has_been.length })}</p>
 
-            <div className="flex gap-2 items-center"><Badge className="w-fit" variant={'outline'}>TIP</Badge>
-                <span className="text-muted-foreground text-sm"> Click on the map to see more detail.</span></div>
+            <div className="flex gap-2 items-center"><Badge className="w-fit" variant={'outline'}>{t('JapanPage.tip')}</Badge>
+                <span className="text-muted-foreground text-sm"> {t('JapanPage.clickHint')}</span></div>
             <div className="w-full flex justify-center items-center mt-12">
                 <JapanMap been={has_been} />
             </div>

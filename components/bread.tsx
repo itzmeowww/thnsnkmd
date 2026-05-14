@@ -7,20 +7,22 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Link } from "@/navigation";
+import { getTranslations } from "next-intl/server";
 
 interface BreadProps {
     links: { name: string; href: string }[];
     current: string;
 }
 
-const Bread = ({ links, current }: BreadProps) => {
+const Bread = async ({ links, current }: BreadProps) => {
+    const t = await getTranslations("Breadcrumb");
     return (
         <Breadcrumb>
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink asChild>
                         <Link href="/">
-                            Home
+                            {t("home")}
                         </Link>
                     </BreadcrumbLink>
                 </BreadcrumbItem>
