@@ -42,6 +42,11 @@ export default function Home({ params: { locale } }: { params: { locale: Locale 
                         </Button>
                     </Link>
 
+                    <Link href={'https://www.linkedin.com/in/thanasan-kumdee/'} target='_blank'>
+                        <Button variant={'outline'} size={'sm'} >
+                            LinkedIn
+                        </Button>
+                    </Link>
 
 
                     <Link href={'https://medium.com/@itzmeowww'} target='_blank'>
