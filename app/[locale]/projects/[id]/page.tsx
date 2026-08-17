@@ -2,7 +2,6 @@ import { projects } from "@/data/projects";
 import { Calendar, UserCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "@/navigation";
 
 import HashHeader from "@/components/hash-header";
 import { notFound } from "next/navigation";
@@ -51,9 +50,9 @@ const Project = async ({ params }: { params: Promise<{ id: string; locale: Local
                     <div className="flex gap-2">
                         {project.links.map((link, key) => {
                             return (
-                                <Link key={key} href={link.href} target='_blank' className="w-fit">
+                                <a key={key} href={link.href} target='_blank' rel="noopener noreferrer" className="w-fit">
                                     <Button variant={'outline'} className="w-fit">{link.title}</Button>
-                                </Link>
+                                </a>
                             )
                         })}
                     </div>
