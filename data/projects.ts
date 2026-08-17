@@ -47,14 +47,14 @@ export const projects: Project[] = [
     previews: [
       {
         url: "/images/yans2026/sign.jpeg",
-        width: 3024,
-        height: 4032,
+        width: 1200,
+        height: 1600,
         alt: { en: "YANS2026", ja: "YANS2026" },
       },
       {
         url: "/images/yans2026/poster.jpeg",
-        width: 2599,
-        height: 2599,
+        width: 1600,
+        height: 1600,
         alt: { en: "YANS2026 Poster", ja: "YANS2026 ポスター" },
       }
     ],
