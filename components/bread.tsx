@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
+import { Fragment } from "react";
 
 interface BreadProps {
     links: { name: string; href: string }[];
@@ -28,17 +29,16 @@ const Bread = async ({ links, current }: BreadProps) => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 {links.map((link, index) => (
-                    <>
-                        <BreadcrumbItem key={`it-${link.name}-${index}`}>
+                    <Fragment key={`${link.name}-${index}`}>
+                        <BreadcrumbItem>
                             <BreadcrumbLink asChild>
                                 <Link href={link.href}>
                                     {link.name}
                                 </Link>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
-                        <BreadcrumbSeparator key={`sep-${link.name}-${index}`} />
-                    </>
-
+                        <BreadcrumbSeparator />
+                    </Fragment>
                 ))}
                 <BreadcrumbItem>
                     <BreadcrumbPage>{current}</BreadcrumbPage>
