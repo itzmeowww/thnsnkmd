@@ -28,6 +28,51 @@ type Image = {
 
 export const projects: Project[] = [
   {
+    title: { en: "YANS2026", ja: "YANS2026" },
+    body: {
+      en: "[S01-22] Learning Autonomous Context Management for Long-Horizon LLM Agents",
+      ja: "[S01-22] 長期タスクにおけるLLMエージェントの自律的文脈管理能力の学習",
+    },
+    detail: {
+      en: "I took part in YANS2026. Joining the symposium's hackathon and presenting a poster on my current research, \"Learning Autonomous Context Management for Long-Horizon LLM Agents\" (poster S01-22).",
+      ja: "YANS2026に参加し、シンポジウムのハッカソンに参加するとともに、現在取り組んでいる研究「長期タスクにおけるLLMエージェントの自律的文脈管理能力の学習」についてポスター発表を行いました。",
+    },
+    since: new Date("Aug, 2026"),
+    links: [
+      {
+        title: "Poster",
+        href: "/images/yans2026/poster_kumdee_thanasan.pdf",
+      },
+    ],
+    previews: [
+      {
+        url: "/images/yans2026/sign.jpeg",
+        width: 3024,
+        height: 4032,
+        alt: { en: "YANS2026", ja: "YANS2026" },
+      },
+      {
+        url: "/images/yans2026/poster.jpeg",
+        width: 2599,
+        height: 2599,
+        alt: { en: "YANS2026 Poster", ja: "YANS2026 ポスター" },
+      }
+    ],
+    slug: "yans2026",
+    tools: ["python", "openai", "vllm", "inspect ai"],
+    comments: [
+      {
+        comment: {
+          en: "Thank you to everyone who came by. I really enjoyed the conversations at YANS2026!",
+          ja: "YANS2026で立ち寄ってくださった皆さん、本当にありがとうございました！お話しできてとても楽しかったです。",
+        },
+        author: "Thanasan Kumdee",
+      },
+    ],
+  },
+
+
+  {
     title: { en: "AYUMI", ja: "AYUMI" },
     body: {
       en: "Trace the paths of those who came before you",
