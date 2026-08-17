@@ -10,7 +10,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'Metadata' });
     return {
         title: t('rootTitle'),
@@ -20,14 +21,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default async function RootLayout({
     children,
-    params: { locale }
+    params
 }: Readonly<{
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }>) {
+    const { locale } = await params;
     const messages = await getMessages();
     return (
-        <html lang={locale}>
+        <html lang={locale} suppressHydrationWarning>
             <body className={cn(inter.className, "relative")}>
                 <ThemeProvider
                     attribute="class"
@@ -36,7 +38,7 @@ export default async function RootLayout({
                     disableTransitionOnChange
                 >
 
-                    <NextIntlClientProvider messages={messages}>
+                    <NextIntlClientProvider locale={locale} messages={messages}>
                         <NavigationBar locale={locale} />
                         <main className="flex min-h-screen flex-col items-start gap-6 p-8 md:p-16 max-w-6xl mx-auto w-full">
                             {children}

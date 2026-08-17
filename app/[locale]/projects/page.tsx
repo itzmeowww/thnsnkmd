@@ -6,7 +6,8 @@ import { Locale } from "@/lib/localized";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'Metadata' });
     return {
         title: t('projectsTitle'),
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 
-const AllProjects = async ({ params: { locale } }: { params: { locale: Locale } }) => {
+const AllProjects = async ({ params }: { params: Promise<{ locale: Locale }> }) => {
+    const { locale } = await params;
     const t = await getTranslations();
     return (
         <>

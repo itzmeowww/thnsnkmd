@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 
 import { Link } from '@/navigation';
@@ -7,8 +7,9 @@ import ProjectCard from '@/components/project-card';
 import HashHeader from '@/components/hash-header';
 import { Locale } from '@/lib/localized';
 
-export default function Home({ params: { locale } }: { params: { locale: Locale } }) {
+export default function Home() {
     const t = useTranslations('HomePage');
+    const locale = useLocale() as Locale;
 
     return (
         <>

@@ -20,7 +20,8 @@ const Leading = ({ title }: { title: string }) => {
         <hr className="mt-12" />
         <h2 className="text-xl font-bold  bg-white dark:bg-black -mt-8 pr-4 w-fit mb-2">{title}</h2></>
 }
-const Project = async ({ params: { id, locale } }: { params: { id: string; locale: Locale } }) => {
+const Project = async ({ params }: { params: Promise<{ id: string; locale: Locale }> }) => {
+    const { id, locale } = await params;
     const project = projects.find(p => p.slug === id)
 
     if (!project) return notFound()
