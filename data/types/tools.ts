@@ -30,3 +30,5 @@ export type Tool =
   | "redis"
   | "supabase"
   | "strapi"
+  | "vllm"
+  | "inspect ai"
