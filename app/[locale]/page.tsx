@@ -47,6 +47,12 @@ export default function Home() {
                         </Button>
                     </Link>
 
+                    <Link href={'/cards'} target='_blank'>
+                        <Button variant={'outline'} size={'sm'}>
+                            Card
+                        </Button>
+                    </Link>
+
                     <Link href={'https://www.linkedin.com/in/thanasan-kumdee/'} target='_blank'>
                         <Button variant={'outline'} size={'sm'} >
                             LinkedIn
