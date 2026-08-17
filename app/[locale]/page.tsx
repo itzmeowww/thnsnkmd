@@ -21,7 +21,7 @@ export default function Home() {
                 <p className='font-light text-foreground'>
                     {t.rich('aboutBody', {
                         tit: (chunks) => (
-                            <Link target='_blank' href={'https://www.titech.ac.jp'} className='text-primary underline'>
+                            <Link target='_blank' href={'hhttps://www.isct.ac.jp'} className='text-primary underline'>
                                 {chunks}
                             </Link>
                         ),
