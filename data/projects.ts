@@ -56,6 +56,12 @@ export const projects: Project[] = [
         width: 1600,
         height: 1600,
         alt: { en: "YANS2026 Poster", ja: "YANS2026 ポスター" },
+      },
+      {
+        url: "/images/yans2026/zunda.jpeg",
+        width: 1200,
+        height: 1600,
+        alt: { en: "Zunda Shake during the hackathon", ja: "ハッカソン中のずんだシェーク" },
       }
     ],
     slug: "yans2026",
