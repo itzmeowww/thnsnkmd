@@ -20,8 +20,8 @@ export default function Home() {
                 <HashHeader text={t('aboutHeader')} />
                 <p className='font-light text-foreground'>
                     {t.rich('aboutBody', {
-                        tit: (chunks) => (
-                            <Link target='_blank' href={'hhttps://www.isct.ac.jp'} className='text-primary underline'>
+                        uni: (chunks) => (
+                            <Link target='_blank' href={'https://www.isct.ac.jp'} className='text-primary underline'>
                                 {chunks}
                             </Link>
                         ),
