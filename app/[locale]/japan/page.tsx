@@ -33,7 +33,9 @@ const has_been: { to: Prefecture, on: Date | undefined }[] = [
     { to: "Ishikawa", on: new Date("16 Jan 2026") },
     { to: "Fukui", on: new Date("17 Jan 2026") },
     { to: "Oita", on: new Date("14 Mar 2026") },
-    { to: "Fukushima", on: new Date("1 April 2026") }
+    { to: "Fukushima", on: new Date("1 April 2026") },
+    { to: "Yamanashi", on: new Date("24 August 2026") },
+    { to: "Shizuoka", on: new Date("26 October 2026") },
 
 ]
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
